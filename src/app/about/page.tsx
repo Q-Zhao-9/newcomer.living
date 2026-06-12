@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = { title: "关于加拿大生活工具箱", description: "了解加拿大生活工具箱的使命：为中文用户提供实用加拿大生活指南、清单和工具。" };
+export const metadata: Metadata = {
+  title: "关于加拿大生活工具箱",
+  description: "了解加拿大生活工具箱的使命：为中文用户提供实用加拿大生活指南、清单和工具。",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return (

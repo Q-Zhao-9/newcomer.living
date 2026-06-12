@@ -10,7 +10,11 @@ export function generateStaticParams() { return categories.map((category) => ({ 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const category = getCategory(slug);
-  return { title: category ? `${category.titleZh}指南与工具` : "分类", description: category?.description };
+  return {
+    title: category ? `${category.titleZh}指南与工具` : "分类",
+    description: category?.description,
+    alternates: { canonical: `/categories/${slug}` },
+  };
 }
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

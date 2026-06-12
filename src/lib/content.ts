@@ -32,7 +32,7 @@ export const site = {
   nameZh: "加拿大生活工具箱",
   tagline: "为留学生、新移民和华人家庭提供实用的加拿大生活指南、清单和计算工具。",
   description: "加拿大生活工具箱：为留学生、新移民和华人家庭提供实用的加拿大生活指南、清单和计算工具。",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://newcomer.living",
 };
 
 export const categories: Category[] = [

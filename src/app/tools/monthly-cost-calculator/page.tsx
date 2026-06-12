@@ -3,7 +3,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CalculatorForm } from "@/components/CalculatorForm";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 
-export const metadata: Metadata = { title: "加拿大月生活成本计算器", description: "估算加拿大每月房租、食品、交通、车险、电话和其他生活成本。" };
+export const metadata: Metadata = {
+  title: "加拿大月生活成本计算器",
+  description: "估算加拿大每月房租、食品、交通、车险、电话和其他生活成本。",
+  alternates: { canonical: "/tools/monthly-cost-calculator" },
+};
 export default function MonthlyCostCalculatorPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">

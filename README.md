@@ -1,6 +1,8 @@
 # Canada Life Toolkit / 加拿大生活工具箱
 
-A local production-ready Next.js content-and-tool website for Chinese-speaking newcomers, students, workers, and families in Canada.
+A production-ready Next.js content-and-tool website for Chinese-speaking newcomers, students, workers, and families in Canada.
+
+Production domain: https://newcomer.living
 
 ## Pages
 
@@ -37,6 +39,10 @@ Open http://localhost:3011.
 npm run lint
 npm run build
 ```
+
+## Configuration
+
+The canonical site URL defaults to `https://newcomer.living` in `src/lib/content.ts`. Set `NEXT_PUBLIC_SITE_URL` only if a deployment environment needs to override the canonical base URL.
 
 ## Structure
 

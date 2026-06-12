@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = { title: "免责声明", description: "加拿大生活工具箱网站免责声明。" };
+export const metadata: Metadata = {
+  title: "免责声明",
+  description: "加拿大生活工具箱网站免责声明。",
+  alternates: { canonical: "/disclaimer" },
+};
 
 export default function DisclaimerPage() {
   return (

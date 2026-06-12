@@ -3,7 +3,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ChecklistSection } from "@/components/ChecklistSection";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 
-export const metadata: Metadata = { title: "加拿大新移民第一个月清单", description: "加拿大新移民抵达前、第一周和第一个月生活事项互动清单。" };
+export const metadata: Metadata = {
+  title: "加拿大新移民第一个月清单",
+  description: "加拿大新移民抵达前、第一周和第一个月生活事项互动清单。",
+  alternates: { canonical: "/tools/newcomer-checklist" },
+};
 export default function NewcomerChecklistPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">

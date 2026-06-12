@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = { title: "隐私政策", description: "加拿大生活工具箱隐私政策，说明访问数据、Cookie、第三方服务和信息保护原则。" };
+export const metadata: Metadata = {
+  title: "隐私政策",
+  description: "加拿大生活工具箱隐私政策，说明访问数据、Cookie、第三方服务和信息保护原则。",
+  alternates: { canonical: "/privacy-policy" },
+};
 
 export default function PrivacyPolicyPage() {
   return (
