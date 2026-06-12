@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { ParentQuestionCard, SchoolStageCard, RelatedTools } from "@/components/school";
 import { buildPageMetadata } from "@/lib/seo";
-import { parentQuestions, schoolGuides, schoolStageCards, schoolTools } from "@/lib/school";
+import { parentQuestions, schoolGuides, schoolProvinces, schoolStageCards, schoolTools } from "@/lib/school";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "孩子在加拿大上学：家长指南",
@@ -23,6 +23,26 @@ export default function SchoolPage() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link className="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white hover:bg-teal-800" href="/school/ontario">进入安省孩子上学指南</Link>
           <Link className="rounded-full border border-teal-200 bg-white px-5 py-3 text-sm font-semibold text-teal-700 hover:bg-teal-50" href="/tools/ontario-grade-estimator">估算孩子年级</Link>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Browse by province</p>
+        <h2 className="mt-2 text-3xl font-bold text-slate-950">按省份浏览</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {Object.entries(schoolProvinces).map(([slug, province]) => province.active && province.href ? (
+            <Link key={slug} href={province.href} className="rounded-3xl border border-teal-100 bg-teal-50 p-5 shadow-sm hover:bg-teal-100/70">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Available now</p>
+              <h3 className="mt-3 text-lg font-semibold text-slate-950">{province.name} / {province.nameZh}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">当前已建立安省学校专题，包含注册、身份、年级和工具页面。</p>
+            </Link>
+          ) : (
+            <div key={slug} className="rounded-3xl border border-slate-200 bg-white p-5 text-slate-500">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">后续省份</p>
+              <h3 className="mt-3 text-lg font-semibold text-slate-700">{province.name} / {province.nameZh}</h3>
+              <p className="mt-3 text-sm leading-6">本站会优先保持安省内容完整；其他省份将在资料充分核对后再整理。</p>
+            </div>
+          ))}
         </div>
       </section>
 

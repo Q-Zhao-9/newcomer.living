@@ -5,6 +5,7 @@ import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { GuideCard } from "@/components/GuideCard";
 import { ToolCard } from "@/components/ToolCard";
 import { categories, firstContentClusterGuides, guides, site, tools } from "@/lib/content";
+import { schoolGuides, schoolTools } from "@/lib/school";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -44,6 +45,35 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-4"><div><p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">生活分类</p><h2 className="mt-2 text-3xl font-bold text-slate-950">主要生活主题</h2></div></div>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{categories.map((category) => <CategoryCard key={category.slug} category={category} />)}</div>
+      </section>
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-[2rem] border border-teal-100 bg-gradient-to-br from-teal-50 via-white to-emerald-50 p-8 shadow-sm sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">Ontario School Guide</p>
+              <h2 className="mt-3 text-3xl font-bold text-slate-950">安省孩子上学指南</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-700">为新移民、留学生和工签家庭准备的 Ontario 孩子上学实用指南。先从学校体系、注册文件、身份问题、年级估算和注册清单开始。</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/school" className="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white hover:bg-teal-800">进入孩子上学专题</Link>
+                <Link href="/school/ontario" className="rounded-full border border-teal-200 bg-white px-5 py-3 text-sm font-semibold text-teal-700 hover:bg-teal-50">查看安省指南</Link>
+              </div>
+            </div>
+            <div className="grid gap-3">
+              {schoolGuides.slice(0, 2).map((guide) => (
+                <Link key={guide.slug} href={`/school/ontario/${guide.slug}`} className="rounded-2xl border border-slate-200 bg-white p-4 hover:border-teal-200 hover:shadow-sm">
+                  <h3 className="font-semibold text-slate-950">{guide.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{guide.description}</p>
+                </Link>
+              ))}
+              {schoolTools.slice(0, 1).map((tool) => (
+                <Link key={tool.slug} href={tool.href} className="rounded-2xl border border-teal-100 bg-teal-50 p-4 hover:bg-teal-100/70">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">实用工具</p>
+                  <h3 className="mt-1 font-semibold text-slate-950">{tool.titleZh}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
       <section className="bg-slate-50 py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

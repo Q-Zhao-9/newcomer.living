@@ -1,3 +1,5 @@
+export type SchoolProvince = "ontario" | "british-columbia" | "alberta" | "manitoba";
+
 export type SchoolStage = "child-care" | "kindergarten" | "elementary" | "high-school" | "general";
 
 export type SchoolSource = {
@@ -10,7 +12,7 @@ export type SchoolGuide = {
   title: string;
   slug: string;
   category: "school";
-  province?: "ontario";
+  province?: SchoolProvince;
   stage?: SchoolStage;
   description: string;
   updatedAt: string;
@@ -26,6 +28,21 @@ export type SchoolGuide = {
   relatedGuides?: string[];
   relatedTools?: string[];
 };
+
+export const schoolProvinces: Record<SchoolProvince, { name: string; nameZh: string; href?: string; active: boolean }> = {
+  ontario: { name: "Ontario", nameZh: "安省", href: "/school/ontario", active: true },
+  "british-columbia": { name: "British Columbia", nameZh: "BC 省", active: false },
+  alberta: { name: "Alberta", nameZh: "阿尔伯塔省", active: false },
+  manitoba: { name: "Manitoba", nameZh: "曼尼托巴省", active: false },
+};
+
+export function guidesForProvince(province: SchoolProvince) {
+  return schoolGuides.filter((guide) => guide.province === province);
+}
+
+export function toolsForCategory(category: "school") {
+  return schoolTools.filter((tool) => tool.category === category);
+}
 
 export const schoolStageCards = [
   {
@@ -116,6 +133,7 @@ export const schoolTools = [
     title: "Ontario Grade Estimator",
     titleZh: "安省年级估算器",
     description: "根据孩子出生年份和目标入学年份，粗略估算可能对应的安省年级。",
+    category: "school",
     href: "/tools/ontario-grade-estimator",
   },
   {
@@ -123,6 +141,7 @@ export const schoolTools = [
     title: "Ontario School Registration Checklist",
     titleZh: "安省学校注册文件清单",
     description: "按文件类别勾选身份证明、住址证明、身份文件、免疫和学校沟通事项。",
+    category: "school",
     href: "/tools/ontario-school-registration-checklist",
   },
 ];
