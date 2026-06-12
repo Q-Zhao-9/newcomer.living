@@ -25,6 +25,23 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
               <section key={section.heading}>
                 <h2>{section.heading}</h2>
                 {section.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.table ? (
+                  <div className="not-prose my-6 overflow-x-auto rounded-2xl border border-slate-200">
+                    <table className="min-w-full divide-y divide-slate-200 text-sm">
+                      <thead className="bg-slate-50 text-left text-slate-700">
+                        <tr>{section.table.headers.map((header) => <th key={header} className="px-4 py-3 font-semibold">{header}</th>)}</tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 bg-white">
+                        {section.table.rows.map((row) => <tr key={row.join("-")}>{row.map((cell) => <td key={cell} className="px-4 py-3 align-top text-slate-700">{cell}</td>)}</tr>)}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : null}
+                {section.links ? (
+                  <div className="not-prose mt-4 flex flex-wrap gap-3">
+                    {section.links.map((link) => <Link key={link.href} className="rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-700 hover:bg-teal-100" href={link.href}>{link.label}</Link>)}
+                  </div>
+                ) : null}
               </section>
             ))}
           </div>
