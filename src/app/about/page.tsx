@@ -19,7 +19,7 @@ export default function AboutPage() {
         <section className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
           <h2 className="text-2xl font-bold text-slate-950">作者与编辑说明</h2>
           <p className="mt-3">本站内容由加拿大生活工具箱编辑整理，面向中文使用者提供一般生活信息。我们会优先使用谨慎、清晰、可核对的表达，并持续根据用户反馈更新内容。</p>
-          <p className="mt-3">如果你发现信息过期或需要更正，请通过 <a className="font-semibold text-teal-700 underline" href="mailto:contact@newcomer.living">contact@newcomer.living</a> 联系我们。</p>
+          <p className="mt-3">如果你发现信息过期或需要更正，请通过 <a className="font-semibold text-teal-700 underline" href="mailto:service50183816@gmail.com">service50183816@gmail.com</a> 联系我们。</p>
         </section>
         <p>涉及政府政策、学校要求、移民、税务、法律、医疗或财务事项时，用户仍应以官方信息和专业人士意见为准。</p>
       </div>
