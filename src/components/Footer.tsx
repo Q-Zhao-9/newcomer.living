@@ -18,6 +18,7 @@ export function Footer() {
         <div>
           <p className="font-semibold text-slate-900">重要链接</p>
           <Link className="mt-3 block text-sm text-slate-600 hover:text-teal-700" href="/about">关于本站</Link>
+          <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/contact">联系我们</Link>
           <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/disclaimer">免责声明</Link>
           <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/privacy-policy">隐私政策</Link>
         </div>

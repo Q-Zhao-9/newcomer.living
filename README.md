@@ -12,6 +12,7 @@ Production domain: https://newcomer.living
 - `/tools/monthly-cost-calculator` interactive monthly cost calculator
 - `/tools/newcomer-checklist` interactive checklist with localStorage persistence
 - `/about`
+- `/contact`
 - `/disclaimer`
 - `/privacy-policy`
 
