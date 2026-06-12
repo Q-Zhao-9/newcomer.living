@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "联系我们",
   description: "联系加拿大生活工具箱，反馈过期信息、提出内容建议或报告网站问题。",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 const contactEmail = "service50183816@gmail.com";
 

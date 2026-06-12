@@ -5,9 +5,14 @@ import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { GuideCard } from "@/components/GuideCard";
 import { ToolCard } from "@/components/ToolCard";
 import { categories, guides, site, tools } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/" },
+  ...buildPageMetadata({
+    title: "Newcomer Living | 加拿大生活工具箱",
+    description: site.description,
+    path: "/",
+  }),
 };
 
 export default function Home() {
@@ -45,6 +50,20 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8"><DisclaimerBox /></section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Newcomer Living | 加拿大生活工具箱",
+            alternateName: [site.name, site.nameZh],
+            url: site.url,
+            inLanguage: "zh-CN",
+            description: site.description,
+          }),
+        }}
+      />
     </main>
   );
 }

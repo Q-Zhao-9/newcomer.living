@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "免责声明",
-  description: "加拿大生活工具箱网站免责声明。",
-  alternates: { canonical: "/disclaimer" },
-};
+  description: "加拿大生活工具箱免责声明：本站不是政府网站，内容仅供一般信息参考，不构成法律、移民、税务、财务或医疗建议。",
+  path: "/disclaimer",
+});
 
 export default function DisclaimerPage() {
   return (

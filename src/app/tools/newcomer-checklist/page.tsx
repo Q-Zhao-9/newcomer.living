@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ChecklistSection } from "@/components/ChecklistSection";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "加拿大新移民第一个月清单",
-  description: "加拿大新移民抵达前、第一周和第一个月生活事项互动清单。",
-  alternates: { canonical: "/tools/newcomer-checklist" },
-};
+  description: "加拿大新移民抵达前、第一周和第一个月互动清单，涵盖住房、银行、电话网络、孩子上学、冬季准备和找工作。",
+  path: "/tools/newcomer-checklist",
+});
 export default function NewcomerChecklistPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">

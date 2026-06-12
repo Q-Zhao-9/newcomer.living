@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Guide } from "@/lib/content";
-import { getGuide } from "@/lib/content";
+import { getGuide, site } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { DisclaimerBox } from "./DisclaimerBox";
 
@@ -69,7 +69,23 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
           </div>
         </aside>
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: guide.title, dateModified: guide.updated, inLanguage: "zh-CN" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: guide.title,
+            description: guide.excerpt,
+            datePublished: guide.updated,
+            dateModified: guide.updated,
+            inLanguage: "zh-CN",
+            mainEntityOfPage: `${site.url}/guides/${guide.slug}`,
+            author: { "@type": "Organization", name: site.nameZh },
+            publisher: { "@type": "Organization", name: site.nameZh, url: site.url },
+          }),
+        }}
+      />
     </main>
   );
 }

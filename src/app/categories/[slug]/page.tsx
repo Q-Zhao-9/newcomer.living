@@ -5,16 +5,17 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { GuideCard } from "@/components/GuideCard";
 import { ToolCard } from "@/components/ToolCard";
 import { categories, getCategory, guidesByCategory, toolsByCategory } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() { return categories.map((category) => ({ slug: category.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const category = getCategory(slug);
-  return {
-    title: category ? `${category.titleZh}指南与工具` : "分类",
-    description: category?.description,
-    alternates: { canonical: `/categories/${slug}` },
-  };
+  return buildPageMetadata({
+    title: category ? `${category.titleZh}指南与工具` : "加拿大生活分类",
+    description: category ? `${category.description} 查看加拿大${category.titleZh}相关指南、工具和实用清单。` : "加拿大生活工具箱分类页面，汇总实用生活指南和工具。",
+    path: `/categories/${slug}`,
+  });
 }
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
