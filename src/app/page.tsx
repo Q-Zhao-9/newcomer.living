@@ -20,12 +20,10 @@ export default function Home() {
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-6xl">为留学生、新移民和华人家庭准备的加拿大生活工具箱</h1>
             <p className="mt-6 text-lg leading-8 text-slate-700">{site.tagline}</p>
             <p className="mt-3 text-slate-600">{site.englishTagline}</p>
-            <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
-              <label className="sr-only" htmlFor="guide-search">查找指南</label>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <input id="guide-search" className="min-h-12 flex-1 rounded-2xl border border-slate-200 px-4 outline-none focus:border-teal-500" placeholder="搜索：租房、生活成本、SIN、冬季开车..." />
-                <Link href="/categories/cost-of-living" className="rounded-2xl bg-teal-700 px-5 py-3 text-center font-semibold text-white hover:bg-teal-800">查找指南</Link>
-              </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link href="/tools/monthly-cost-calculator" className="rounded-2xl bg-teal-700 px-5 py-3 text-center font-semibold text-white shadow-sm hover:bg-teal-800">使用生活成本计算器</Link>
+              <Link href="/tools/newcomer-checklist" className="rounded-2xl border border-teal-200 bg-white px-5 py-3 text-center font-semibold text-teal-800 shadow-sm hover:border-teal-300 hover:bg-teal-50">查看新移民第一个月清单</Link>
+              <Link href="/guides/renting-without-credit-history" className="rounded-2xl border border-slate-200 bg-white px-5 py-3 text-center font-semibold text-slate-700 shadow-sm hover:border-teal-200 hover:text-teal-800">阅读租房指南</Link>
             </div>
           </div>
           <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl">
