@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label="Canada Life Toolkit home">
+        <Link href="/" className="flex items-center" aria-label="Canada Life Toolkit homepage">
           <Logo />
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-slate-700 md:flex">

@@ -30,8 +30,9 @@ export type Tool = {
 export const site = {
   name: "Canada Life Toolkit",
   nameZh: "加拿大生活工具箱",
-  tagline: "为留学生、新移民和华人家庭提供实用的加拿大生活指南、清单和计算工具。",
-  description: "加拿大生活工具箱：为留学生、新移民和华人家庭提供实用的加拿大生活指南、清单和计算工具。",
+  tagline: "从租房、找工作、孩子上学、生活成本到冬季驾驶，帮你把复杂问题拆成可执行的步骤。",
+  englishTagline: "Practical guides, checklists, and calculators for Chinese newcomers in Canada.",
+  description: "为加拿大留学生、新移民和华人家庭提供实用生活指南、清单和计算工具，涵盖租房、生活成本、找工作、孩子上学和冬季生活。",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://newcomer.living",
 };
 
@@ -48,7 +49,7 @@ export const categories: Category[] = [
 
 export const tools: Tool[] = [
   { slug: "monthly-cost-calculator", title: "Canada Monthly Cost Calculator", titleZh: "加拿大月生活成本计算器", category: "cost-of-living", description: "输入房租、食品、交通等项目，快速估算每月和每年生活成本。" },
-  { slug: "newcomer-checklist", title: "Newcomer First Month Checklist", titleZh: "加拿大新移民第一个月清单", category: "documents", description: "按阶段勾选抵达前、第一周、第一月、住房、银行、学校等事项。" },
+  { slug: "newcomer-checklist", title: "Newcomer First Month Checklist", titleZh: "加拿大新移民第一个月清单", category: "documents", description: "按阶段勾选抵达前、第一周、第一个月、住房、银行、学校等事项。" },
 ];
 
 export const guides: Guide[] = [

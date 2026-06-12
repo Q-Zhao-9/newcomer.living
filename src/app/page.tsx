@@ -18,8 +18,8 @@ export default function Home() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-teal-700">Canada Life Toolkit / 加拿大生活工具箱</p>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-6xl">为留学生、新移民和华人家庭准备的加拿大生活工具箱</h1>
-            <p className="mt-6 text-lg leading-8 text-slate-700">{site.description}</p>
-            <p className="mt-3 text-slate-600">{site.tagline}</p>
+            <p className="mt-6 text-lg leading-8 text-slate-700">{site.tagline}</p>
+            <p className="mt-3 text-slate-600">{site.englishTagline}</p>
             <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
               <label className="sr-only" htmlFor="guide-search">查找指南</label>
               <div className="flex flex-col gap-3 sm:flex-row">
