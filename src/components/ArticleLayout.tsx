@@ -2,7 +2,15 @@ import Link from "next/link";
 import type { Guide } from "@/lib/content";
 import { getGuide, site } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
-import { DisclaimerBox } from "./DisclaimerBox";
+import { DisclaimerBox, type DisclaimerVariant } from "./DisclaimerBox";
+
+function disclaimerVariantForCategory(category: string): DisclaimerVariant {
+  if (category === "school") return "school";
+  if (category === "documents" || category === "student-life") return "documents";
+  if (category === "car-winter-driving") return "driving";
+  if (category === "customs-travel") return "customs";
+  return "general";
+}
 
 export function ArticleLayout({ guide }: { guide: Guide }) {
   const relatedGuides = guide.related.map(getGuide).filter(Boolean) as Guide[];
@@ -51,7 +59,7 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
               {guide.checklist.map((item) => <li key={item} className="flex gap-3 text-slate-700"><span className="mt-1 h-5 w-5 rounded-full bg-teal-100 text-center text-xs leading-5 text-teal-800">✓</span>{item}</li>)}
             </ul>
           </section>
-          <DisclaimerBox title="阅读前请注意" />
+          <DisclaimerBox title="阅读前请注意" variant={disclaimerVariantForCategory(guide.category)} />
           {relatedGuides.length > 0 ? (
             <section className="mt-10">
               <h2 className="text-2xl font-bold text-slate-950">相关指南</h2>
