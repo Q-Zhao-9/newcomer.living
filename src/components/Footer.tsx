@@ -14,10 +14,13 @@ export function Footer() {
           <p className="font-semibold text-slate-900">常用工具</p>
           <Link className="mt-3 block text-sm text-slate-600 hover:text-teal-700" href="/tools/monthly-cost-calculator">加拿大月生活成本计算器</Link>
           <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/tools/newcomer-checklist">加拿大新移民第一个月清单</Link>
+          <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/tools/ontario-grade-estimator">安省年级估算器</Link>
+          <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/tools/ontario-school-registration-checklist">安省学校注册清单</Link>
         </div>
         <div>
           <p className="font-semibold text-slate-900">重要链接</p>
-          <Link className="mt-3 block text-sm text-slate-600 hover:text-teal-700" href="/about">关于本站</Link>
+          <Link className="mt-3 block text-sm text-slate-600 hover:text-teal-700" href="/school">孩子上学指南</Link>
+          <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/about">关于本站</Link>
           <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/contact">联系我们</Link>
           <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/disclaimer">免责声明</Link>
           <Link className="mt-2 block text-sm text-slate-600 hover:text-teal-700" href="/privacy-policy">隐私政策</Link>

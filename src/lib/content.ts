@@ -57,6 +57,8 @@ export const categories: Category[] = [
 export const tools: Tool[] = [
   { slug: "monthly-cost-calculator", title: "Canada Monthly Cost Calculator", titleZh: "加拿大月生活成本计算器", category: "cost-of-living", description: "输入房租、食品、交通等项目，快速估算每月和每年生活成本。" },
   { slug: "newcomer-checklist", title: "Newcomer First Month Checklist", titleZh: "加拿大新移民第一个月清单", category: "documents", description: "按阶段勾选抵达前、第一周、第一个月、住房、银行、学校等事项。" },
+  { slug: "ontario-grade-estimator", title: "Ontario Grade Estimator", titleZh: "安省年级估算器", category: "school", description: "根据孩子出生年份和目标入学年份，粗略估算可能对应的 Ontario 年级。" },
+  { slug: "ontario-school-registration-checklist", title: "Ontario School Registration Checklist", titleZh: "安省学校注册文件清单", category: "school", description: "按文件类别勾选安省孩子学校注册常见准备事项。" },
 ];
 
 export const guides: Guide[] = [
