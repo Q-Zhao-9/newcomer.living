@@ -1,65 +1,47 @@
-import Image from "next/image";
+import Link from "next/link";
+import { CategoryCard } from "@/components/CategoryCard";
+import { DisclaimerBox } from "@/components/DisclaimerBox";
+import { GuideCard } from "@/components/GuideCard";
+import { ToolCard } from "@/components/ToolCard";
+import { categories, guides, site, tools } from "@/lib/content";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="bg-gradient-to-b from-teal-50 via-white to-white">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-20">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-teal-700">Canada Life Toolkit / 加拿大生活工具箱</p>
+            <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-6xl">为留学生、新移民和华人家庭准备的加拿大生活工具箱</h1>
+            <p className="mt-6 text-lg leading-8 text-slate-700">{site.description}</p>
+            <p className="mt-3 text-slate-600">{site.tagline}</p>
+            <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+              <label className="sr-only" htmlFor="guide-search">查找指南</label>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <input id="guide-search" className="min-h-12 flex-1 rounded-2xl border border-slate-200 px-4 outline-none focus:border-teal-500" placeholder="搜索：租房、生活成本、SIN、冬季开车..." />
+                <Link href="/categories/cost-of-living" className="rounded-2xl bg-teal-700 px-5 py-3 text-center font-semibold text-white hover:bg-teal-800">查找指南</Link>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl">
+            <h2 className="text-xl font-bold text-slate-950">从实用工具开始</h2>
+            <div className="mt-5 grid gap-4">
+              {tools.map((tool) => <ToolCard key={tool.slug} tool={tool} />)}
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="flex items-end justify-between gap-4"><div><p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">生活分类</p><h2 className="mt-2 text-3xl font-bold text-slate-950">主要生活主题</h2></div></div>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{categories.map((category) => <CategoryCard key={category.slug} category={category} />)}</div>
+      </section>
+      <section className="bg-slate-50 py-12">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-950">最新指南</h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{guides.slice(0, 6).map((guide) => <GuideCard key={guide.slug} guide={guide} />)}</div>
         </div>
-      </main>
-    </div>
+      </section>
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8"><DisclaimerBox /></section>
+    </main>
   );
 }

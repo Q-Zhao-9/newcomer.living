@@ -1,0 +1,3 @@
+# ads.txt for Canada Life Toolkit / 加拿大生活工具箱
+# No advertising seller account is configured yet.
+# Add the official Google AdSense record here after a real publisher ID is available.

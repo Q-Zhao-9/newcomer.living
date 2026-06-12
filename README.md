@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Canada Life Toolkit / 加拿大生活工具箱
 
-## Getting Started
+A local production-ready Next.js content-and-tool website for Chinese-speaking newcomers, students, workers, and families in Canada.
 
-First, run the development server:
+## Pages
+
+- `/` Home
+- `/categories/cost-of-living` category layout example
+- `/guides/newcomer-monthly-cost-canada` guide article template example
+- `/tools/monthly-cost-calculator` interactive monthly cost calculator
+- `/tools/newcomer-checklist` interactive checklist with localStorage persistence
+- `/about`
+- `/disclaimer`
+- `/privacy-policy`
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production preview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start -- --hostname 0.0.0.0 --port 3011
+```
 
-## Learn More
+Open http://localhost:3011.
 
-To learn more about Next.js, take a look at the following resources:
+## Build check
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Structure
 
-## Deploy on Vercel
+- `src/lib/content.ts` categories, guides, tools, and site metadata
+- `src/components/` reusable UI components
+- `src/app/` Next.js App Router pages, metadata, robots, and sitemap
+- `public/ads.txt` comments-only AdSense preparation file
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No real Google AdSense code is integrated. Visible ad slots are not shown in the current local production-ready version.
