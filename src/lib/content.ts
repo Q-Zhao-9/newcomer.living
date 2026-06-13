@@ -33,6 +33,7 @@ export type Guide = {
   excerpt: string;
   summary: string[];
   sources?: Source[];
+  relatedGuides?: string[];
   relatedTools?: string[];
   sections: GuideSection[];
   checklist: string[];
@@ -336,6 +337,7 @@ export const guides: Guide[] = [
       "如果秋冬抵达，为冬衣、雪靴或车用冬季物品留出预算",
       "准备一笔应急资金，并保留重要合同、收据和官方链接",
     ],
+    relatedGuides: ["renting-without-credit-history", "canada-phone-plan-guide", "grocery-saving-canada"],
     related: ["renting-without-credit-history", "canada-phone-plan-guide", "grocery-saving-canada"],
   },
   {
@@ -370,6 +372,8 @@ export const guides: Guide[] = [
       { heading: "下一步怎么做", body: ["先用本站月生活成本计算器填入自己的房租、食品、手机和交通预算，再对照新移民第一个月清单安排抵达前后事项。"], links: [{ label: "使用月生活成本计算器", href: "/tools/monthly-cost-calculator" }, { label: "查看新移民第一个月清单", href: "/tools/newcomer-checklist" }, { label: "阅读加拿大第一个月生活成本总览", href: "/guides/newcomer-monthly-cost-canada" }] },
     ],
     checklist: ["确认真实房源价格和包含费用", "估算公交或买车总成本", "为冬季衣物和用品预留预算", "把第一月一次性开支单独列出", "以学校、房东、公交和官方信息为准"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["newcomer-monthly-cost-canada", "student-monthly-living-cost-canada", "renting-without-credit-history"],
     related: ["newcomer-monthly-cost-canada", "student-monthly-living-cost-canada", "renting-without-credit-history"],
   },
   {
@@ -387,6 +391,8 @@ export const guides: Guide[] = [
       { heading: "相关工具", body: ["如果你还不确定城市，可以先阅读全国第一月生活成本指南，再用计算器建立自己的版本。"], links: [{ label: "加拿大第一个月生活成本总览", href: "/guides/newcomer-monthly-cost-canada" }, { label: "月生活成本计算器", href: "/tools/monthly-cost-calculator" }, { label: "加拿大租房看房清单", href: "/guides/canada-rental-viewing-checklist" }] },
     ],
     checklist: ["至少比较 3–5 个真实房源", "把通勤费用和时间加入预算", "确认房租是否含水电暖网", "不要忽略临时住宿费用", "重要条款写入租约"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["newcomer-monthly-cost-canada", "canada-rental-deposit-first-month-rent", "canada-rental-viewing-checklist"],
     related: ["newcomer-monthly-cost-canada", "canada-rental-deposit-first-month-rent", "canada-rental-viewing-checklist"],
   },
   {
@@ -404,6 +410,8 @@ export const guides: Guide[] = [
       { heading: "相关下一步", body: ["办理 SIN、找兼职、选择手机套餐和租房都会影响留学生预算。涉及学校政策和工作资格时，请以学校和政府官方信息为准。"], links: [{ label: "留学生办理 SIN", href: "/guides/student-sin-canada" }, { label: "兼职简历怎么写", href: "/guides/canada-part-time-resume" }, { label: "月生活成本计算器", href: "/tools/monthly-cost-calculator" }] },
     ],
     checklist: ["确认住宿是否含水电网", "查看学校交通福利", "为第一月用品预留预算", "记录每周食品支出", "重要规则以学校和官方信息为准"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["thunder-bay-newcomer-cost", "toronto-newcomer-cost", "canada-phone-plan-guide"],
     related: ["thunder-bay-newcomer-cost", "toronto-newcomer-cost", "canada-phone-plan-guide"],
   },
   {
@@ -421,6 +429,8 @@ export const guides: Guide[] = [
       { heading: "延伸阅读", body: ["如果你还没有本地信用记录，可以先准备材料再看房；如果已开始看房，可使用看房清单逐项确认。"], links: [{ label: "没有加拿大信用记录如何租房", href: "/guides/renting-without-credit-history" }, { label: "加拿大租房看房清单", href: "/guides/canada-rental-viewing-checklist" }, { label: "第一个月生活成本", href: "/guides/newcomer-monthly-cost-canada" }] },
     ],
     checklist: ["问清入住前总付款", "确认每笔费用是否可退", "查看当地租房规则", "保留付款记录", "不要向不可核实对象转账"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["renting-without-credit-history", "canada-rental-viewing-checklist", "canada-rental-lease-things-to-check"],
     related: ["renting-without-credit-history", "canada-rental-viewing-checklist", "canada-rental-lease-things-to-check"],
   },
   {
@@ -438,6 +448,8 @@ export const guides: Guide[] = [
       { heading: "相关页面", body: ["看房后通常会进入付款和签约阶段，建议继续阅读押金和租约注意事项。"], links: [{ label: "租房押金和首月房租", href: "/guides/canada-rental-deposit-first-month-rent" }, { label: "租房合同注意事项", href: "/guides/canada-rental-lease-things-to-check" }, { label: "新移民第一个月清单", href: "/tools/newcomer-checklist" }] },
     ],
     checklist: ["白天看房并确认地址", "问清水电暖网停车", "检查取暖、门窗、水压和洗衣", "记录问题并拍照", "比较总成本而不是只看房租"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["canada-rental-deposit-first-month-rent", "canada-rental-lease-things-to-check", "renting-without-credit-history"],
     related: ["canada-rental-deposit-first-month-rent", "canada-rental-lease-things-to-check", "renting-without-credit-history"],
   },
   {
@@ -455,6 +467,8 @@ export const guides: Guide[] = [
       { heading: "相关指南", body: ["如果你还在看房阶段，先用看房清单筛选；如果已经准备付款，先理解押金和首月房租。"], links: [{ label: "加拿大租房看房清单", href: "/guides/canada-rental-viewing-checklist" }, { label: "租房押金和首月房租", href: "/guides/canada-rental-deposit-first-month-rent" }, { label: "月生活成本计算器", href: "/tools/monthly-cost-calculator" }] },
     ],
     checklist: ["核对租期、金额和地址", "确认费用包含项", "理解维修和提前搬走条款", "入住前拍照", "保存租约和付款记录"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["canada-rental-viewing-checklist", "canada-rental-deposit-first-month-rent", "renting-without-credit-history"],
     related: ["canada-rental-viewing-checklist", "canada-rental-deposit-first-month-rent", "renting-without-credit-history"],
   },
   {
@@ -472,16 +486,18 @@ export const guides: Guide[] = [
       { heading: "下一步", body: ["找到意向房源后，继续用看房清单核对房屋状态，并确认押金、首月房租和租约条款。"], links: [{ label: "加拿大租房看房清单", href: "/guides/canada-rental-viewing-checklist" }, { label: "租房押金和首月房租", href: "/guides/canada-rental-deposit-first-month-rent" }, { label: "月生活成本计算器", href: "/tools/monthly-cost-calculator" }] },
     ],
     checklist: ["准备身份证明", "准备资金或收入证明", "说明无本地信用记录的原因", "阅读租约", "确认押金和预付款规则"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    relatedGuides: ["canada-rental-deposit-first-month-rent", "canada-rental-viewing-checklist", "newcomer-monthly-cost-canada"],
     related: ["canada-rental-deposit-first-month-rent", "canada-rental-viewing-checklist", "newcomer-monthly-cost-canada"],
   },
-  { slug: "canada-part-time-resume", title: "加拿大兼职工作简历怎么写？", category: "jobs", updated: "2026-06-09", readingTime: "5 分钟", excerpt: "适合留学生和新人找兼职的英文简历结构。", summary: ["兼职简历应简洁、突出可用时间和相关经验。"], sections: [{ heading: "简历重点", body: ["建议控制在一页，包含联系方式、可工作时间、技能、工作或志愿经历。避免写过多与岗位无关的信息。"] }], checklist: ["一页简历", "写清可工作时间", "突出沟通和服务经验"], related: ["student-sin-canada"] },
-  { slug: "ontario-school-registration-documents", title: "安省孩子上学注册需要哪些文件？", category: "school", updated: "2026-06-08", readingTime: "6 分钟", excerpt: "安省孩子入学注册常见文件清单。", summary: ["不同教育局要求可能不同，以下为一般参考。"], sections: [{ heading: "常见文件", body: ["一般可能包括孩子身份证明、住址证明、监护人信息、疫苗记录和移民身份相关文件。请以当地教育局官方要求为准。"] }], checklist: ["查找对应教育局", "准备住址证明", "整理疫苗记录"], related: ["newcomer-first-month-checklist"] },
-  { slug: "winter-driving-first-time-canada", title: "加拿大冬天第一次开车要注意什么？", category: "car-winter-driving", updated: "2026-06-07", readingTime: "7 分钟", excerpt: "冬胎、除雪、车距和应急用品基础指南。", summary: ["冬季驾驶风险更高，建议提前练习并关注天气。"], sections: [{ heading: "基础准备", body: ["建议检查冬胎、雨刷、防冻液和电瓶。车内可放雪刷、手套、毯子、充电线和少量应急食品。"] }], checklist: ["安装或检查冬胎", "准备雪刷", "查看天气和路况"], related: ["used-car-checklist-canada"] },
-  { slug: "student-sin-canada", title: "留学生在加拿大如何办理 SIN？", category: "student-life", updated: "2026-06-06", readingTime: "5 分钟", excerpt: "SIN 用途、办理渠道和注意事项的一般说明。", summary: ["SIN 涉及个人敏感信息，应妥善保管。"], sections: [{ heading: "SIN 是什么", body: ["SIN 通常用于工作和税务相关场景。办理资格和材料请以 Service Canada 官方信息为准。不要随意把 SIN 发给不可信对象。"] }], checklist: ["查看 Service Canada 要求", "准备学习许可等材料", "妥善保存 SIN"], related: ["canada-part-time-resume"] },
-  { slug: "canada-phone-plan-guide", title: "加拿大手机套餐如何选择？", category: "documents", updated: "2026-06-05", readingTime: "5 分钟", excerpt: "比较预付费、合约、流量和覆盖范围。", summary: ["先看覆盖、流量需求和是否需要合约。"], sections: [{ heading: "选择思路", body: ["新人可以先选择灵活的预付费或月付方案，等稳定后再比较长期优惠。注意是否包含开通费、自动扣款和国际通话。"] }], checklist: ["确认覆盖范围", "估算流量", "比较总价和合约条款"], related: ["newcomer-monthly-cost-canada"] },
-  { slug: "used-car-checklist-canada", title: "买二手车前应该检查什么？", category: "car-winter-driving", updated: "2026-06-04", readingTime: "7 分钟", excerpt: "二手车历史、试驾、保险和第三方检查。", summary: ["买车前建议做车辆历史和机械检查。"], sections: [{ heading: "检查重点", body: ["查看车况报告、保养记录、轮胎刹车、锈蚀和仪表盘警示灯。价格较高时，建议找可信技师做购前检查。"] }], checklist: ["查看车辆历史", "试驾", "报价保险", "安排机械检查"], related: ["winter-driving-first-time-canada"] },
-  { slug: "grocery-saving-canada", title: "加拿大超市购物如何省钱？", category: "cost-of-living", updated: "2026-06-03", readingTime: "5 分钟", excerpt: "用传单、会员价、冷冻食品和清单购物控制预算。", summary: ["食品支出可通过计划和比价降低。"], sections: [{ heading: "实用方法", body: ["购物前列清单，查看每周 flyer，比较会员价和大包装单价。冷冻蔬菜、豆类和当季食材通常更容易控制成本。"] }], checklist: ["看 flyer", "列购物清单", "比较单位价格"], related: ["newcomer-monthly-cost-canada"] },
-  { slug: "china-to-canada-customs-items", title: "从中国入境加拿大哪些物品需要特别注意？", category: "customs-travel", updated: "2026-06-02", readingTime: "6 分钟", excerpt: "食品、药品、现金和申报事项的一般提醒。", summary: ["入境规则可能更新，务必以 CBSA 官方信息为准。"], sections: [{ heading: "需要谨慎的物品", body: ["食品、植物、肉类、药品、大额现金和商业用途物品需要特别注意。以下不是法律建议，出发前应查询 CBSA 官方页面。"] }], checklist: ["查询 CBSA 官方信息", "保留药品说明", "如实申报"], related: ["newcomer-monthly-cost-canada"] },
+  { slug: "canada-part-time-resume", title: "加拿大兼职工作简历怎么写？", category: "jobs", updated: "2026-06-09", readingTime: "5 分钟", excerpt: "适合留学生和新人找兼职的英文简历结构。", summary: ["兼职简历应简洁、突出可用时间和相关经验。"], sections: [{ heading: "简历重点", body: ["建议控制在一页，包含联系方式、可工作时间、技能、工作或志愿经历。避免写过多与岗位无关的信息。"] }], checklist: ["一页简历", "写清可工作时间", "突出沟通和服务经验"], relatedGuides: ["student-sin-canada", "student-monthly-living-cost-canada"], relatedTools: ["newcomer-checklist"], related: ["student-sin-canada", "student-monthly-living-cost-canada"] },
+  { slug: "ontario-school-registration-documents", title: "安省孩子上学注册需要哪些文件？", category: "school", updated: "2026-06-08", readingTime: "6 分钟", excerpt: "安省孩子入学注册常见文件清单。", summary: ["不同教育局要求可能不同，以下为一般参考。"], sections: [{ heading: "常见文件", body: ["一般可能包括孩子身份证明、住址证明、监护人信息、疫苗记录和移民身份相关文件。请以当地教育局官方要求为准。"] }], checklist: ["查找对应教育局", "准备住址证明", "整理疫苗记录"], relatedGuides: ["student-sin-canada", "canada-phone-plan-guide"], relatedTools: ["ontario-school-registration-checklist", "ontario-grade-estimator"], related: ["student-sin-canada", "canada-phone-plan-guide"] },
+  { slug: "winter-driving-first-time-canada", title: "加拿大冬天第一次开车要注意什么？", category: "car-winter-driving", updated: "2026-06-07", readingTime: "7 分钟", excerpt: "冬胎、除雪、车距和应急用品基础指南。", summary: ["冬季驾驶风险更高，建议提前练习并关注天气。"], sections: [{ heading: "基础准备", body: ["建议检查冬胎、雨刷、防冻液和电瓶。车内可放雪刷、手套、毯子、充电线和少量应急食品。"] }], checklist: ["安装或检查冬胎", "准备雪刷", "查看天气和路况"], relatedGuides: ["used-car-checklist-canada", "newcomer-monthly-cost-canada"], relatedTools: ["monthly-cost-calculator"], related: ["used-car-checklist-canada", "newcomer-monthly-cost-canada"] },
+  { slug: "student-sin-canada", title: "留学生在加拿大如何办理 SIN？", category: "student-life", updated: "2026-06-06", readingTime: "5 分钟", excerpt: "SIN 用途、办理渠道和注意事项的一般说明。", summary: ["SIN 涉及个人敏感信息，应妥善保管。"], sections: [{ heading: "SIN 是什么", body: ["SIN 通常用于工作和税务相关场景。办理资格和材料请以 Service Canada 官方信息为准。不要随意把 SIN 发给不可信对象。"] }], checklist: ["查看 Service Canada 要求", "准备学习许可等材料", "妥善保存 SIN"], relatedGuides: ["canada-part-time-resume", "canada-phone-plan-guide"], relatedTools: ["newcomer-checklist"], related: ["canada-part-time-resume", "canada-phone-plan-guide"] },
+  { slug: "canada-phone-plan-guide", title: "加拿大手机套餐如何选择？", category: "documents", updated: "2026-06-05", readingTime: "5 分钟", excerpt: "比较预付费、合约、流量和覆盖范围。", summary: ["先看覆盖、流量需求和是否需要合约。"], sections: [{ heading: "选择思路", body: ["新人可以先选择灵活的预付费或月付方案，等稳定后再比较长期优惠。注意是否包含开通费、自动扣款和国际通话。"] }], checklist: ["确认覆盖范围", "估算流量", "比较总价和合约条款"], relatedGuides: ["newcomer-monthly-cost-canada", "student-sin-canada"], relatedTools: ["newcomer-checklist", "monthly-cost-calculator"], related: ["newcomer-monthly-cost-canada", "student-sin-canada"] },
+  { slug: "used-car-checklist-canada", title: "买二手车前应该检查什么？", category: "car-winter-driving", updated: "2026-06-04", readingTime: "7 分钟", excerpt: "二手车历史、试驾、保险和第三方检查。", summary: ["买车前建议做车辆历史和机械检查。"], sections: [{ heading: "检查重点", body: ["查看车况报告、保养记录、轮胎刹车、锈蚀和仪表盘警示灯。价格较高时，建议找可信技师做购前检查。"] }], checklist: ["查看车辆历史", "试驾", "报价保险", "安排机械检查"], relatedGuides: ["winter-driving-first-time-canada", "newcomer-monthly-cost-canada"], relatedTools: ["monthly-cost-calculator"], related: ["winter-driving-first-time-canada", "newcomer-monthly-cost-canada"] },
+  { slug: "grocery-saving-canada", title: "加拿大超市购物如何省钱？", category: "cost-of-living", updated: "2026-06-03", readingTime: "5 分钟", excerpt: "用传单、会员价、冷冻食品和清单购物控制预算。", summary: ["食品支出可通过计划和比价降低。"], sections: [{ heading: "实用方法", body: ["购物前列清单，查看每周 flyer，比较会员价和大包装单价。冷冻蔬菜、豆类和当季食材通常更容易控制成本。"] }], checklist: ["看 flyer", "列购物清单", "比较单位价格"], relatedGuides: ["newcomer-monthly-cost-canada", "student-monthly-living-cost-canada"], relatedTools: ["monthly-cost-calculator"], related: ["newcomer-monthly-cost-canada", "student-monthly-living-cost-canada"] },
+  { slug: "china-to-canada-customs-items", title: "从中国入境加拿大哪些物品需要特别注意？", category: "customs-travel", updated: "2026-06-02", readingTime: "6 分钟", excerpt: "食品、药品、现金和申报事项的一般提醒。", summary: ["入境规则可能更新，务必以 CBSA 官方信息为准。"], sections: [{ heading: "需要谨慎的物品", body: ["食品、植物、肉类、药品、大额现金和商业用途物品需要特别注意。以下不是法律建议，出发前应查询 CBSA 官方页面。"] }], checklist: ["查询 CBSA 官方信息", "保留药品说明", "如实申报"], relatedGuides: ["newcomer-monthly-cost-canada", "canada-phone-plan-guide"], relatedTools: ["newcomer-checklist"], related: ["newcomer-monthly-cost-canada", "canada-phone-plan-guide"] },
 ];
 
 export function getCategory(slug: string) { return categories.find((category) => category.slug === slug); }

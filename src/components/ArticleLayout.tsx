@@ -1,8 +1,9 @@
 import Link from "next/link";
 import type { Guide, Source, Tool } from "@/lib/content";
-import { getCategory, getGuide, getTool, site } from "@/lib/content";
+import { getCategory, getGuide, getTool, site, tools, toolsByCategory } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { DisclaimerBox, type DisclaimerVariant } from "./DisclaimerBox";
+import { NextStepCallout } from "./NextStepCallout";
 
 function disclaimerVariantForCategory(category: string): DisclaimerVariant {
   if (category === "school") return "school";
@@ -78,8 +79,18 @@ function RelatedToolLinks({ tools }: { tools: Tool[] }) {
 
 export function ArticleLayout({ guide }: { guide: Guide }) {
   const category = getCategory(guide.category);
-  const relatedGuides = guide.related.map(getGuide).filter(Boolean) as Guide[];
-  const relatedTools = (guide.relatedTools ?? []).map(getTool).filter(Boolean) as Tool[];
+  const relatedGuides = (guide.relatedGuides ?? guide.related).map(getGuide).filter(Boolean) as Guide[];
+  const configuredTools = (guide.relatedTools ?? []).map(getTool).filter(Boolean) as Tool[];
+  const categoryTools = category ? toolsByCategory(category.slug) : [];
+  const fallbackTools = tools.filter((tool) => tool.slug === "monthly-cost-calculator" || tool.slug === "newcomer-checklist");
+  const relatedTools = Array.from(new Map([...configuredTools, ...categoryTools, ...fallbackTools].map((tool) => [tool.slug, tool])).values()).slice(0, 3);
+  const nextStep = relatedTools[0]
+    ? { title: "下一步：用工具把内容变成自己的清单", description: `${relatedTools[0].titleZh} 可以帮助你把本文中的一般参考转换成更贴近自己情况的估算或待办。`, href: `/tools/${relatedTools[0].slug}`, label: `打开${relatedTools[0].titleZh}` }
+    : relatedGuides[0]
+      ? { title: "下一步：继续阅读相关指南", description: "如果你已经了解本文基础内容，可以继续阅读下一篇相关指南，形成更完整的准备路径。", href: `/guides/${relatedGuides[0].slug}`, label: relatedGuides[0].title }
+      : category
+        ? { title: "下一步：回到主题分类", description: "查看同一主题下的更多指南、工具和常见问题。", href: `/categories/${category.slug}`, label: `查看${category.titleZh}分类` }
+        : null;
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <Breadcrumbs items={[{ label: category?.titleZh ?? "指南", href: category ? `/categories/${category.slug}` : undefined }, { label: guide.title }]} />
@@ -116,6 +127,7 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
           </div>
           <ArticleChecklistBox items={guide.checklist} />
           <SourceList sources={guide.sources ?? []} />
+          {nextStep ? <NextStepCallout title={nextStep.title} description={nextStep.description} href={nextStep.href} linkLabel={nextStep.label} /> : null}
           <RelatedToolLinks tools={relatedTools} />
           <DisclaimerBox title="阅读前请注意" variant={disclaimerVariantForCategory(guide.category)} />
           <RelatedGuideLinks guides={relatedGuides} />
