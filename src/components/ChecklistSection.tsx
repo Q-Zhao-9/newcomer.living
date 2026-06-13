@@ -159,8 +159,8 @@ export function ChecklistSection() {
             <p className="mt-1 text-sm text-slate-600">已完成 {done} / {total} 项。勾选结果会保存在本机浏览器。</p>
           </div>
           <div className="flex flex-wrap gap-2 print:hidden">
-            <button type="button" onClick={() => window.print()} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-teal-700 shadow-sm hover:bg-teal-100">打印 / 保存 PDF</button>
-            <button type="button" onClick={resetChecklist} className="rounded-full border border-teal-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700">重置清单</button>
+            <button type="button" onClick={() => window.print()} className="min-h-11 rounded-full bg-white px-4 py-2 text-sm font-semibold text-teal-700 shadow-sm hover:bg-teal-100">打印 / 保存 PDF</button>
+            <button type="button" onClick={resetChecklist} className="min-h-11 rounded-full border border-teal-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:text-teal-700">重置清单</button>
           </div>
         </div>
         <div className="mt-4 h-3 overflow-hidden rounded-full bg-white print:border print:border-slate-200">
@@ -185,8 +185,8 @@ export function ChecklistSection() {
                 {section.items.map((item) => {
                   const id = getItemId(section.title, item.text);
                   return (
-                    <label key={id} className="flex cursor-pointer gap-3 rounded-2xl p-2 hover:bg-slate-50">
-                      <input className="mt-1 h-5 w-5 shrink-0 accent-teal-600" type="checkbox" checked={Boolean(checked[id])} onChange={(event) => setChecked((current) => ({ ...current, [id]: event.target.checked }))} />
+                    <label key={id} className="flex min-h-11 cursor-pointer gap-3 rounded-2xl p-2 hover:bg-slate-50">
+                      <input className="mt-1 h-6 w-6 shrink-0 accent-teal-600" type="checkbox" checked={Boolean(checked[id])} onChange={(event) => setChecked((current) => ({ ...current, [id]: event.target.checked }))} />
                       <span>
                         <span className={checked[id] ? "block text-slate-400 line-through" : "block text-slate-700"}>{item.text}</span>
                         {item.note ? <span className="mt-1 block text-sm leading-6 text-slate-500">{item.note}</span> : null}

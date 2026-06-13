@@ -4,21 +4,21 @@ export function Logo({ size = "header" }: { size?: "header" | "footer" }) {
   const isHeader = size === "header";
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex min-w-0 items-center gap-2 sm:gap-3">
       <Image
         src="/logo-square.svg"
         alt=""
         width={isHeader ? 48 : 44}
         height={isHeader ? 48 : 44}
-        className="shrink-0"
+        className={isHeader ? "h-10 w-10 shrink-0 sm:h-12 sm:w-12" : "h-11 w-11 shrink-0"}
         priority={isHeader}
         aria-hidden="true"
       />
-      <div className="leading-tight">
+      <div className="min-w-0 leading-tight">
         <span
           className={
             isHeader
-              ? "block text-[1.35rem] font-extrabold tracking-[-0.035em] text-slate-950"
+              ? "block truncate text-lg font-extrabold tracking-[-0.035em] text-slate-950 sm:text-[1.35rem]"
               : "block text-xl font-extrabold tracking-[-0.035em] text-slate-950"
           }
         >
@@ -27,7 +27,7 @@ export function Logo({ size = "header" }: { size?: "header" | "footer" }) {
         <span
           className={
             isHeader
-              ? "mt-1 block text-sm font-bold tracking-[0.03em] text-teal-700"
+              ? "mt-1 block truncate text-xs font-bold tracking-[0.03em] text-teal-700 sm:text-sm"
               : "mt-1 block text-sm font-bold tracking-[0.03em] text-teal-700"
           }
         >

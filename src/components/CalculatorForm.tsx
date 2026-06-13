@@ -33,6 +33,7 @@ export function CalculatorForm() {
             <div className="mt-3 flex items-center rounded-xl border border-slate-200 bg-slate-50 px-3 focus-within:border-teal-400 focus-within:bg-white">
               <span className="text-slate-500">C$</span>
               <input
+                aria-label={`${field.label}，${field.helper}`}
                 className="w-full bg-transparent px-2 py-3 outline-none"
                 type="number"
                 min="0"
