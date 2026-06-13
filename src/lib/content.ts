@@ -4,6 +4,11 @@ export type Category = {
   titleZh: string;
   description: string;
   icon: string;
+  intro?: string;
+  startHere?: { label: string; href: string; description?: string }[];
+  faqs?: { question: string; answer: string }[];
+  relatedCategorySlugs?: string[];
+  sensitive?: boolean;
 };
 
 export type Source = {
@@ -52,14 +57,159 @@ export const site = {
 };
 
 export const categories: Category[] = [
-  { slug: "renting", title: "Renting", titleZh: "租房", icon: "🏠", description: "租房流程、看房清单、押金与信用记录等实用指南。" },
-  { slug: "jobs", title: "Jobs", titleZh: "找工作", icon: "💼", description: "兼职、简历、面试和工作权益的一般参考。" },
-  { slug: "school", title: "School", titleZh: "孩子上学", icon: "🎒", description: "孩子入学注册、学校沟通和常见文件准备。" },
-  { slug: "car-winter-driving", title: "Car & Winter Driving", titleZh: "买车与冬季驾驶", icon: "🚗", description: "买二手车、保险、冬胎和冬季驾驶基础。" },
-  { slug: "cost-of-living", title: "Cost of Living", titleZh: "生活成本", icon: "💰", description: "房租、食品、交通、电话等日常预算工具与指南。" },
-  { slug: "student-life", title: "Student Life", titleZh: "留学生生活", icon: "🎓", description: "SIN、电话卡、住宿、打工和校园生活入门。" },
-  { slug: "documents", title: "Documents", titleZh: "文件办理", icon: "📄", description: "常见证件、号码、银行和生活文件的准备清单。" },
-  { slug: "customs-travel", title: "Customs & Travel", titleZh: "入境与旅行", icon: "🧳", description: "入境携带物品、旅行准备和官方信息核对提醒。" },
+  {
+    slug: "renting",
+    title: "Renting",
+    titleZh: "租房",
+    icon: "🏠",
+    description: "租房流程、看房清单、押金与信用记录等实用指南。",
+    intro: "租房通常是来到加拿大后的第一件大事。本栏目帮助你理解看房、付款、信用记录、押金、租约和入住检查，避免只看月租而忽略通勤、暖气、网络、洗衣和合同条款。",
+    startHere: [
+      { label: "没有加拿大信用记录如何租房？", href: "/guides/renting-without-credit-history", description: "适合刚到加拿大、还没有本地信用记录的留学生和新移民。" },
+      { label: "加拿大租房看房清单", href: "/guides/canada-rental-viewing-checklist", description: "看房时逐项检查位置、费用、取暖、洗衣和安全。" },
+      { label: "加拿大租房押金和首月房租怎么理解？", href: "/guides/canada-rental-deposit-first-month-rent", description: "入住前付款、押金和租约金额的基础概念。" },
+    ],
+    faqs: [
+      { question: "没有本地信用记录还能租房吗？", answer: "通常情况下可以尝试准备录取信、工作信、资金证明或推荐信，但要保护隐私，不要随意发送 SIN 或完整银行账号。" },
+      { question: "看房时最容易漏掉什么？", answer: "新人常漏看水电暖网是否包含、洗衣和停车规则、冬季取暖、通勤时间以及维修责任。" },
+    ],
+    relatedCategorySlugs: ["cost-of-living", "documents", "student-life"],
+    sensitive: true,
+  },
+  {
+    slug: "jobs",
+    title: "Jobs",
+    titleZh: "找工作",
+    icon: "💼",
+    description: "兼职、简历、面试和工作权益的一般参考。",
+    intro: "找工作栏目面向留学生、新移民和初到加拿大的求职者，重点整理兼职简历、求职记录、面试准备和基础风险提醒。涉及工作资格和许可条件时，请以官方信息为准。",
+    startHere: [
+      { label: "加拿大兼职工作简历怎么写？", href: "/guides/canada-part-time-resume", description: "用一页英文简历突出可工作时间、服务经验和联系方式。" },
+      { label: "留学生在加拿大如何办理 SIN？", href: "/guides/student-sin-canada", description: "了解 SIN 的用途、敏感性和官方办理入口。" },
+      { label: "加拿大新移民第一个月清单", href: "/tools/newcomer-checklist", description: "把找工作前的手机号、银行、SIN 和文件准备一起检查。" },
+    ],
+    faqs: [
+      { question: "兼职简历要写很长吗？", answer: "通常一页即可。重点写清联系方式、可工作时间、相关经验和技能，不必堆很多无关内容。" },
+      { question: "工作资格怎么确认？", answer: "学习许可、工签或其他身份下的工作条件可能不同，建议以 IRCC、学校或雇主提供的正式信息为准。" },
+    ],
+    relatedCategorySlugs: ["student-life", "documents", "cost-of-living"],
+    sensitive: true,
+  },
+  {
+    slug: "school",
+    title: "School",
+    titleZh: "孩子上学",
+    icon: "🎒",
+    description: "孩子入学注册、学校沟通和常见文件准备。",
+    intro: "孩子上学栏目帮助新移民、留学生和工签家庭了解加拿大入学注册的常见准备，包括教育局、住址证明、监护人信息、免疫记录、年级估算和学校沟通。不同省份和教育局要求可能不同。",
+    startHere: [
+      { label: "安省孩子上学指南", href: "/school", description: "从 Ontario 学校体系、注册文件和身份问题开始。" },
+      { label: "Ontario 学校注册需要准备哪些文件？", href: "/guides/ontario-school-registration-documents", description: "快速了解常见注册文件类型。" },
+      { label: "安省学校注册文件清单", href: "/tools/ontario-school-registration-checklist", description: "按文件类别勾选准备事项。" },
+    ],
+    faqs: [
+      { question: "孩子上学一定要先买房或长期租房吗？", answer: "通常需要提供住址相关材料，但具体接受哪些文件、是否可补交，应向对应教育局或学校确认。" },
+      { question: "年级可以自己决定吗？", answer: "年级通常与出生年份、过往学习记录和教育局安排有关。估算工具只能作一般参考。" },
+    ],
+    relatedCategorySlugs: ["documents", "renting", "cost-of-living"],
+    sensitive: true,
+  },
+  {
+    slug: "car-winter-driving",
+    title: "Car & Winter Driving",
+    titleZh: "买车与冬季驾驶",
+    icon: "🚗",
+    description: "买二手车、保险、冬胎和冬季驾驶基础。",
+    intro: "加拿大很多城市冬季较长，买车、保险、冬胎和雪天驾驶都会影响安全和预算。本栏目提供二手车检查、冬季驾驶准备和费用提醒，帮助新人先建立基础判断。",
+    startHere: [
+      { label: "加拿大冬天第一次开车要注意什么？", href: "/guides/winter-driving-first-time-canada", description: "先了解冬胎、车距、除雪和应急用品。" },
+      { label: "买二手车前应该检查什么？", href: "/guides/used-car-checklist-canada", description: "看车辆历史、试驾、保险报价和购前检查。" },
+      { label: "加拿大月生活成本计算器", href: "/tools/monthly-cost-calculator", description: "把车险、油费和交通成本纳入月度预算。" },
+    ],
+    faqs: [
+      { question: "冬胎是不是必须？", answer: "不同省份和保险条款可能不同，但冬胎通常能提升冬季安全性，也可能影响保险折扣。请以当地规定和保险公司说明为准。" },
+      { question: "买车前为什么要先问保险？", answer: "新司机或新移民的保险报价可能较高，建议先估算总成本，再决定是否买车。" },
+    ],
+    relatedCategorySlugs: ["cost-of-living", "documents", "customs-travel"],
+    sensitive: true,
+  },
+  {
+    slug: "cost-of-living",
+    title: "Cost of Living",
+    titleZh: "生活成本",
+    icon: "💰",
+    description: "房租、食品、交通、电话等日常预算工具与指南。",
+    intro: "生活成本是新移民和留学生最关心的问题之一。本栏目帮助你了解加拿大常见支出，包括房租、食品、交通、手机、网络、保险、孩子开支和第一个月安置成本。",
+    startHere: [
+      { label: "加拿大新移民第一个月生活成本大概需要多少钱？", href: "/guides/newcomer-monthly-cost-canada", description: "先区分每月固定开支、第一月一次性费用和应急资金。" },
+      { label: "加拿大月生活成本计算器", href: "/tools/monthly-cost-calculator", description: "输入自己的房租、食品、交通和车险估算月度预算。" },
+      { label: "加拿大超市购物如何省钱？", href: "/guides/grocery-saving-canada", description: "从 flyer、会员价、清单购物和单位价格开始控制食品支出。" },
+    ],
+    faqs: [
+      { question: "网上看到的生活费数字能直接用吗？", answer: "不建议直接套用。城市、住房方式、家庭人数、是否开车和抵达季节都会影响预算，建议用真实报价重新计算。" },
+      { question: "第一个月为什么通常更贵？", answer: "通常情况下会集中出现临时住宿、押金、床具厨具、冬衣、手机开通和交通安排等一次性开支。" },
+      { question: "预算应该保守还是乐观？", answer: "刚来加拿大时建议保守一些，把固定开支、一次性费用和应急金分开列，重要金额以实际合同和官方信息为准。" },
+    ],
+    relatedCategorySlugs: ["renting", "student-life", "car-winter-driving"],
+    sensitive: true,
+  },
+  {
+    slug: "student-life",
+    title: "Student Life",
+    titleZh: "留学生生活",
+    icon: "🎓",
+    description: "SIN、电话卡、住宿、打工和校园生活入门。",
+    intro: "留学生生活栏目聚焦抵达后的基础事项：生活费预算、SIN、兼职、手机套餐、住宿和校园资源。内容以一般参考为主，涉及学校政策和工作资格时应进一步确认。",
+    startHere: [
+      { label: "留学生在加拿大每月生活费大概多少？", href: "/guides/student-monthly-living-cost-canada", description: "按住宿、食品、交通、教材和冬季用品拆解预算。" },
+      { label: "留学生在加拿大如何办理 SIN？", href: "/guides/student-sin-canada", description: "了解 SIN 的用途和敏感信息保护。" },
+      { label: "加拿大兼职工作简历怎么写？", href: "/guides/canada-part-time-resume", description: "准备一页英文兼职简历。" },
+    ],
+    faqs: [
+      { question: "留学生预算要不要把学费放在一起算？", answer: "建议把学费、每月生活费和第一月安置成本分开计算，这样更容易发现现金流压力。" },
+      { question: "校园资源值得看吗？", answer: "通常值得。学校可能提供住宿、交通、就业、心理健康、国际学生和二手教材资源。" },
+    ],
+    relatedCategorySlugs: ["cost-of-living", "jobs", "documents"],
+    sensitive: true,
+  },
+  {
+    slug: "documents",
+    title: "Documents",
+    titleZh: "文件办理",
+    icon: "📄",
+    description: "常见证件、号码、银行和生活文件的准备清单。",
+    intro: "文件办理栏目整理新移民和留学生常见的生活文件准备，例如 SIN、银行、手机号、学校注册材料、租房文件和重要收据保存。涉及资格和申请流程时，请以官方渠道为准。",
+    startHere: [
+      { label: "加拿大新移民第一个月清单", href: "/tools/newcomer-checklist", description: "按抵达前、第一周和第一个月勾选重要事项。" },
+      { label: "留学生在加拿大如何办理 SIN？", href: "/guides/student-sin-canada", description: "办理 SIN 前先了解用途、材料和安全提醒。" },
+      { label: "加拿大手机套餐如何选择？", href: "/guides/canada-phone-plan-guide", description: "比较预付费、月付、合约、覆盖和总价。" },
+    ],
+    faqs: [
+      { question: "哪些号码或文件要特别保护？", answer: "SIN、银行账号、护照、许可文件和税务资料都应谨慎保存，不要随意发给无法核实的人。" },
+      { question: "文件要求会变吗？", answer: "会。政府、学校、银行或教育局要求可能更新，重要事项建议以官方页面或工作人员说明为准。" },
+    ],
+    relatedCategorySlugs: ["student-life", "school", "renting"],
+    sensitive: true,
+  },
+  {
+    slug: "customs-travel",
+    title: "Customs & Travel",
+    titleZh: "入境与旅行",
+    icon: "🧳",
+    description: "入境携带物品、旅行准备和官方信息核对提醒。",
+    intro: "入境与旅行栏目帮助准备来加拿大的人整理行前文件、携带物品、申报提醒和抵达第一天安排。规则可能随时更新，入境、食品、药品和现金申报等事项应以 CBSA 等官方信息为准。",
+    startHere: [
+      { label: "从中国入境加拿大哪些物品需要特别注意？", href: "/guides/china-to-canada-customs-items", description: "食品、药品、现金和申报事项的一般提醒。" },
+      { label: "加拿大新移民第一个月清单", href: "/tools/newcomer-checklist", description: "把抵达前文件、临时住宿和第一周事项一起检查。" },
+      { label: "加拿大新移民第一个月生活成本大概需要多少钱？", href: "/guides/newcomer-monthly-cost-canada", description: "为临时住宿、交通和第一月安置预留预算。" },
+    ],
+    faqs: [
+      { question: "入境物品清单可以只看经验帖吗？", answer: "不建议。经验帖只能参考，食品、药品、植物、现金和商业物品等应以 CBSA 官方信息为准。" },
+      { question: "抵达当天最重要的准备是什么？", answer: "通常包括离线保存重要文件、确认住宿地址、准备通信方式、了解机场到住处交通，并预留延误和临时住宿预算。" },
+    ],
+    relatedCategorySlugs: ["documents", "cost-of-living", "student-life"],
+    sensitive: true,
+  },
 ];
 
 export const tools: Tool[] = [
