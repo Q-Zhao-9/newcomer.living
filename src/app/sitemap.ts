@@ -3,7 +3,7 @@ import { categories, guides, site, tools } from "@/lib/content";
 import { schoolGuides } from "@/lib/school";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/about", "/contact", "/disclaimer", "/privacy-policy", "/school", "/school/ontario"];
+  const staticRoutes = ["", "/about", "/contact", "/disclaimer", "/privacy-policy", "/tools", "/school", "/school/ontario"];
   const categoryRoutes = categories.map((category) => `/categories/${category.slug}`);
   const guideRoutes = guides.map((guide) => `/guides/${guide.slug}`);
   const schoolGuideRoutes = schoolGuides.map((guide) => `/school/ontario/${guide.slug}`);

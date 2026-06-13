@@ -15,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function OntarioGradeEstimatorPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "孩子上学", href: "/school" }, { label: "安省指南", href: "/school/ontario" }, { label: "年级估算器" }]} />
+      <Breadcrumbs items={[{ label: "工具", href: "/tools" }, { label: "孩子上学", href: "/school" }, { label: "安省年级估算器" }]} />
       <section className="mb-8">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">School tool</p>
         <h1 className="mt-3 text-4xl font-bold text-slate-950">Ontario Grade Estimator / 安省年级估算器</h1>

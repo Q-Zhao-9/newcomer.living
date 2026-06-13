@@ -26,7 +26,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const contentCluster = firstContentClusterGuides();
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "分类" }, { label: category.titleZh }]} />
+      <Breadcrumbs items={[{ label: "分类", href: "/" }, { label: category.titleZh }]} />
       <section className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-teal-50 to-white p-8">
         <p className="text-5xl" aria-hidden>{category.icon}</p>
         <h1 className="mt-4 text-4xl font-bold text-slate-950">{category.titleZh}</h1>
