@@ -40,7 +40,7 @@ function SourceList({ sources }: { sources: Source[] }) {
   return (
     <section className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
       <h2 className="text-xl font-bold text-slate-950">官方与可信来源</h2>
-      <p className="mt-2 text-sm leading-6 text-slate-600">重要规则可能更新，建议以官方页面和机构回复为准。</p>
+      <p className="mt-2 text-sm leading-6 text-slate-600">重要规则可能更新，建议以官方页面和机构回复为准。本站在进行主要内容更新前，会优先重新检查这些来源。</p>
       <ul className="mt-4 space-y-3">
         {sources.map((source) => (
           <li key={source.href}>
