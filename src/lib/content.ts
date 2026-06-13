@@ -43,7 +43,7 @@ export type Tool = {
 };
 
 export const site = {
-  name: "Canada Life Toolkit",
+  name: "Newcomer Living",
   nameZh: "加拿大生活工具箱",
   tagline: "从租房、找工作、孩子上学、生活成本到冬季驾驶，帮你把复杂问题拆成可执行的步骤。",
   englishTagline: "Practical guides, checklists, and calculators for Chinese newcomers in Canada.",

@@ -1,5 +1,5 @@
 <svg width="420" height="88" viewBox="0 0 420 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Canada Life Toolkit horizontal logo</title>
+  <title id="title">Newcomer Living horizontal logo</title>
   <desc id="desc">Flat logo with teal toolbox, checklist, maple leaf, and dark navy text.</desc>
   <rect width="420" height="88" fill="#FFFFFF"/>
   <g transform="translate(8 12)">
@@ -13,7 +13,7 @@
     <path d="M49 10l1.9 6.1 6.1-1.9-4.2 5 5.9 2.4-6.4.8.5 6.4-3.8-5.2-3.8 5.2.5-6.4-6.4-.8 5.9-2.4-4.2-5 6.1 1.9L49 10Z" fill="#14B8A6"/>
   </g>
   <g transform="translate(88 20)">
-    <text x="0" y="24" fill="#0B1F3A" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="800" letter-spacing="-0.8">Canada Life Toolkit</text>
+    <text x="0" y="24" fill="#0B1F3A" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="800" letter-spacing="-0.8">Newcomer Living</text>
     <text x="0" y="52" fill="#0F766E" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="700" letter-spacing="0.4">加拿大生活工具箱</text>
   </g>
 </svg>

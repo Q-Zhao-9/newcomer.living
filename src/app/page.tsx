@@ -24,7 +24,7 @@ export default function Home() {
       <section className="bg-gradient-to-b from-teal-50 via-white to-white">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-20">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-teal-700">Canada Life Toolkit / 加拿大生活工具箱</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-teal-700">Newcomer Living · 加拿大生活工具箱</p>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-6xl">为留学生、新移民和华人家庭准备的加拿大生活工具箱</h1>
             <p className="mt-6 text-lg leading-8 text-slate-700">{site.tagline}</p>
             <p className="mt-3 text-slate-600">{site.englishTagline}</p>

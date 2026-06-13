@@ -22,7 +22,7 @@ export function Logo({ size = "header" }: { size?: "header" | "footer" }) {
               : "block text-xl font-extrabold tracking-[-0.035em] text-slate-950"
           }
         >
-          Canada Life Toolkit
+          Newcomer Living
         </span>
         <span
           className={

@@ -1,4 +1,4 @@
-# Canada Life Toolkit / 加拿大生活工具箱
+# Newcomer Living / 加拿大生活工具箱
 
 A production-ready Next.js content-and-tool website for Chinese-speaking newcomers, students, workers, and families in Canada.
 
