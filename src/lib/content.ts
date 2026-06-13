@@ -6,6 +6,12 @@ export type Category = {
   icon: string;
 };
 
+export type Source = {
+  label: string;
+  href: string;
+  description?: string;
+};
+
 export type GuideSection = {
   heading: string;
   body: string[];
@@ -21,6 +27,8 @@ export type Guide = {
   readingTime: string;
   excerpt: string;
   summary: string[];
+  sources?: Source[];
+  relatedTools?: string[];
   sections: GuideSection[];
   checklist: string[];
   related: string[];
@@ -74,6 +82,12 @@ export const guides: Guide[] = [
       "第一个月通常比平时更贵，因为房租押金、临时住宿、床具厨具、冬衣、交通卡或车辆准备等支出会集中出现。",
       "建议把每月固定支出、一次性安置成本和应急金分开计算，再用本网站工具做个性化估算，并以官方信息和实际报价为准。",
     ],
+    sources: [
+      { label: "Government of Canada - Living in Canada", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/new-life-canada.html", description: "加拿大政府面向新移民的生活信息入口。" },
+      { label: "Service Canada", href: "https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html", description: "SIN、福利和联邦服务相关信息入口。" },
+      { label: "CBSA - Travel and border", href: "https://www.cbsa-asfc.gc.ca/travel-voyage/menu-eng.html", description: "入境、申报和边境相关官方信息。" },
+    ],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
     sections: [
       {
         heading: "快速结论：先按三类钱来准备",

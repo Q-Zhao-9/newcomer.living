@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { Guide } from "@/lib/content";
-import { getCategory, getGuide, site } from "@/lib/content";
+import type { Guide, Source, Tool } from "@/lib/content";
+import { getCategory, getGuide, getTool, site } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { DisclaimerBox, type DisclaimerVariant } from "./DisclaimerBox";
 
@@ -12,9 +12,74 @@ function disclaimerVariantForCategory(category: string): DisclaimerVariant {
   return "general";
 }
 
+function SummaryBox({ items }: { items: string[] }) {
+  return (
+    <section className="mt-8 rounded-3xl border border-teal-100 bg-teal-50 p-6">
+      <h2 className="text-lg font-bold text-slate-950">快速摘要</h2>
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+        {items.map((item) => <li key={item}>{item}</li>)}
+      </ul>
+    </section>
+  );
+}
+
+function ArticleChecklistBox({ items }: { items: string[] }) {
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-bold text-slate-950">实用清单</h2>
+      <ul className="mt-4 space-y-3">
+        {items.map((item) => <li key={item} className="flex gap-3 text-slate-700"><span className="mt-1 h-5 w-5 shrink-0 rounded-full bg-teal-100 text-center text-xs leading-5 text-teal-800">✓</span>{item}</li>)}
+      </ul>
+    </section>
+  );
+}
+
+function SourceList({ sources }: { sources: Source[] }) {
+  if (sources.length === 0) return null;
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+      <h2 className="text-xl font-bold text-slate-950">官方与可信来源</h2>
+      <p className="mt-2 text-sm leading-6 text-slate-600">重要规则可能更新，建议以官方页面和机构回复为准。</p>
+      <ul className="mt-4 space-y-3">
+        {sources.map((source) => (
+          <li key={source.href}>
+            <Link className="font-semibold text-teal-700 hover:underline" href={source.href}>{source.label}</Link>
+            {source.description ? <p className="mt-1 text-sm leading-6 text-slate-600">{source.description}</p> : null}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function RelatedGuideLinks({ guides }: { guides: Guide[] }) {
+  if (guides.length === 0) return null;
+  return (
+    <section className="mt-10">
+      <h2 className="text-2xl font-bold text-slate-950">相关指南</h2>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {guides.map((related) => <Link key={related.slug} className="rounded-2xl border border-slate-200 p-4 font-semibold text-slate-800 hover:border-teal-200 hover:text-teal-700" href={`/guides/${related.slug}`}>{related.title}</Link>)}
+      </div>
+    </section>
+  );
+}
+
+function RelatedToolLinks({ tools }: { tools: Tool[] }) {
+  if (tools.length === 0) return null;
+  return (
+    <section className="mt-10 rounded-3xl border border-teal-100 bg-teal-50 p-6">
+      <h2 className="text-2xl font-bold text-slate-950">相关工具</h2>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {tools.map((tool) => <Link key={tool.slug} className="rounded-2xl bg-white p-4 font-semibold text-teal-700 shadow-sm hover:text-teal-900" href={`/tools/${tool.slug}`}>{tool.titleZh}</Link>)}
+      </div>
+    </section>
+  );
+}
+
 export function ArticleLayout({ guide }: { guide: Guide }) {
   const category = getCategory(guide.category);
   const relatedGuides = guide.related.map(getGuide).filter(Boolean) as Guide[];
+  const relatedTools = (guide.relatedTools ?? []).map(getTool).filter(Boolean) as Tool[];
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <Breadcrumbs items={[{ label: category?.titleZh ?? "指南", href: category ? `/categories/${category.slug}` : undefined }, { label: guide.title }]} />
@@ -23,12 +88,7 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">生活指南</p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-5xl">{guide.title}</h1>
           <p className="mt-4 text-sm text-slate-500">更新日期：{guide.updated} · 阅读时间：{guide.readingTime}</p>
-          <section className="mt-8 rounded-3xl border border-teal-100 bg-teal-50 p-6">
-            <h2 className="text-lg font-bold text-slate-950">快速摘要</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-              {guide.summary.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </section>
+          <SummaryBox items={guide.summary} />
           <div className="prose prose-slate mt-8 max-w-none prose-headings:scroll-mt-24 prose-h2:text-2xl prose-p:leading-8">
             {guide.sections.map((section) => (
               <section key={section.heading}>
@@ -54,21 +114,11 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
               </section>
             ))}
           </div>
-          <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-slate-950">实用清单</h2>
-            <ul className="mt-4 space-y-3">
-              {guide.checklist.map((item) => <li key={item} className="flex gap-3 text-slate-700"><span className="mt-1 h-5 w-5 rounded-full bg-teal-100 text-center text-xs leading-5 text-teal-800">✓</span>{item}</li>)}
-            </ul>
-          </section>
+          <ArticleChecklistBox items={guide.checklist} />
+          <SourceList sources={guide.sources ?? []} />
+          <RelatedToolLinks tools={relatedTools} />
           <DisclaimerBox title="阅读前请注意" variant={disclaimerVariantForCategory(guide.category)} />
-          {relatedGuides.length > 0 ? (
-            <section className="mt-10">
-              <h2 className="text-2xl font-bold text-slate-950">相关指南</h2>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                {relatedGuides.map((related) => <Link key={related.slug} className="rounded-2xl border border-slate-200 p-4 font-semibold text-slate-800 hover:border-teal-200 hover:text-teal-700" href={`/guides/${related.slug}`}>{related.title}</Link>)}
-              </div>
-            </section>
-          ) : null}
+          <RelatedGuideLinks guides={relatedGuides} />
         </article>
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
