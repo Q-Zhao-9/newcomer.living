@@ -255,58 +255,119 @@ export const schoolGuides: SchoolGuide[] = [
     relatedTools: ["ontario-grade-estimator", "ontario-school-registration-checklist"],
   },
   {
-    title: "Ontario 学校注册需要准备哪些文件？",
+    title: "Ontario 孩子注册学校需要哪些文件？新移民家长清单",
     slug: "registration-documents",
     category: "school",
     province: "ontario",
     stage: "general",
-    description: "安省孩子入学注册常见文件清单：身份、住址、监护人、移民身份、免疫记录和过往学校材料。",
-    updatedAt: "2026-06-12",
-    readingTime: "8 分钟",
+    description: "面向新移民家长的 Ontario 学校注册文件指南，整理孩子身份证明、住址证明、家长文件、身份材料、免疫记录和注册前准备步骤。",
+    updatedAt: "2026-06-13",
+    readingTime: "12 分钟",
     summary: [
-      "注册材料通常包括孩子身份证明、家长/监护人信息、住址证明、身份或移民文件、免疫记录和过往学校记录。",
-      "不同教育局、学校和家庭身份要求可能不同，不建议只凭网上清单一次性判断。",
-      "建议把原件、电子扫描件和必要翻译件分开整理，并在提交前查看教育局官网。",
+      "Ontario 孩子注册学校时，通常可能需要孩子身份证明、出生日期证明、家长或监护人身份证明、Ontario 居住地址证明、身份相关文件、免疫记录和过往学校记录。",
+      "很多 school board 会要求家长先通过线上系统或 registration office 提交资料，但不同 school board 的具体要求可能不同。",
+      "请以本地 school board 官方 registration 页面为准；涉及孩子身份、study permit 或费用问题时，建议进一步确认 IRCC 与教育局信息。",
     ],
     sections: [
       {
-        heading: "常见文件类别",
+        heading: "快速结论：先查本地 school board，再整理文件",
         body: [
-          "通常情况下，学校或教育局会要求确认孩子身份、年龄、住址和监护关系。常见材料可能包括护照、出生证明、永久居民卡或其他身份文件、租约或水电账单、父母身份证明、免疫记录和过往成绩单。",
-          "如果孩子刚从中国或其他国家转来，学校可能会要求过往成绩单、在读证明或课程说明。高中阶段尤其建议准备英文翻译或至少清晰扫描件，方便学校判断课程衔接。",
+          "Ontario 学校注册没有一个适用于所有家庭、所有城市的固定清单。通常情况下，家长需要先确认住址对应的 school board，再查看该教育局 registration 页面列出的文件要求和提交方式。不同 school board 可能接受不同类型的住址证明、身份文件或线上表格。",
+          "如果你刚到 Ontario，建议先把文件分成几类：孩子身份与出生日期、家长/监护人身份、Ontario 居住地址、移民或临时身份、免疫记录、过往学校材料。这样即使教育局要求略有不同，也更容易快速补充。",
         ],
       },
       {
-        heading: "住址证明要特别核对",
+        heading: "这篇文章适合谁",
         body: [
-          "很多教育局会根据住址安排学校，因此住址证明非常重要。租房家庭常用租约、房东信、水电账单、银行账单或政府信件等文件，但可接受类型由教育局决定。",
-          "如果刚抵达还住在临时酒店或朋友家，建议先询问教育局是否可以先登记、是否需要补交长期住址证明，以及孩子何时可以开始上课。",
+          "这篇文章适合刚搬到 Ontario、准备给孩子注册公立或其他 school board 学校的中文新移民家庭，也适合父母持工签、学签、永久居民身份或正在转换身份的家庭做一般准备。",
+          "如果孩子是国际学生、父母身份较复杂、或教育局提到 fee-paying/international admission，请不要只按普通注册清单操作。建议直接联系 school board registration office 或 international student office，并保留书面回复。",
         ],
       },
       {
-        heading: "免疫记录和健康文件",
+        heading: "注册前先确认什么",
         body: [
-          "安省学校通常会关注孩子免疫记录。来自中国的疫苗本、翻译件、家庭医生或公共卫生部门记录可能都需要整理。具体要求和补交方式应以当地 public health 或教育局说明为准。",
-          "不要因为材料暂时不完整就放弃联系学校。更稳妥的做法是先说明现有文件，询问是否可以后补、是否需要翻译，以及应该联系哪个机构。",
+          "第一，确认家庭 Ontario 地址对应哪个 school board 和哪所 home school。第二，查看该 school board 对 newcomer registration、online registration 或 student admission 的说明。第三，确认孩子年龄、预计入学时间、过往年级和是否需要语言评估。",
+          "如果你还住在临时地址、租约尚未开始、或刚搬家，建议先询问教育局是否可以开始注册、需要哪类临时证明、以及何时必须补交正式住址文件。不要只根据房东、房产经纪或朋友说法判断学校边界。",
         ],
       },
       {
-        heading: "提交前的整理方法",
+        heading: "常见文件类型：孩子身份证明和出生日期证明",
         body: [
-          "建议为每个孩子建立一个文件夹：身份证明、住址证明、移民/身份文件、免疫记录、成绩单、联系人信息、紧急联系人和特殊需求说明。扫描件文件名可以写成孩子姓名、文件类型和日期。",
-          "如果需要通过线上系统上传，尽量使用清晰 PDF 或图片，并保留提交确认邮件。所有涉及身份、入学资格或收费的问题，建议向教育局取得书面回复。",
+          "很多 school board 会要求能证明孩子姓名、出生日期和身份的文件，例如护照、出生证明、永久居民卡或其他政府文件。不同家庭可用文件不同，具体接受哪些文件应以教育局页面为准。",
+          "如果文件不是英文，学校或教育局可能要求翻译件或补充说明。建议准备清晰扫描件，并把文件名写清楚，例如 child-passport、birth-certificate、landing-document 等，方便线上提交和后续查找。",
+        ],
+      },
+      {
+        heading: "常见文件类型：家长或监护人身份证明",
+        body: [
+          "注册时通常需要提供父母或监护人的姓名、联系方式、身份证明和与孩子关系说明。常见材料可能包括护照、驾照、省身份证、永久居民卡或其他身份文件。",
+          "如果孩子由非父母监护人照顾，或者父母暂时不在加拿大，可能涉及额外监护文件或授权说明。此类情况比较敏感，建议直接联系 school board 确认，不要自行假设某一种文件一定足够。",
+        ],
+      },
+      {
+        heading: "常见文件类型：Ontario 住址证明",
+        body: [
+          "住址证明通常用于确认孩子是否属于某个 school boundary。可被接受的文件可能包括租约、房产文件、水电账单、银行账单、政府信件或其他显示姓名和地址的文件。具体列表由本地 school board 决定。",
+          "刚到加拿大的家庭常遇到的问题是：还没有账单、银行地址刚更新、或暂住亲友家。建议把现有材料列出来，向教育局询问是否可以先提交临时证明、房东信或后补文件。",
+        ],
+      },
+      {
+        heading: "常见文件类型：身份、免疫和过往学校材料",
+        body: [
+          "如果孩子或父母持 study permit、work permit、visitor record、permanent resident 文件或其他身份文件，教育局可能会要求查看相关材料。涉及孩子是否需要 study permit、是否需要缴费或走国际学生流程时，应以 IRCC 和 school board 官方信息为准。",
+          "免疫记录在 Ontario 学校注册中也常被提到。来自中国或其他国家的疫苗记录，可能需要翻译、录入公共卫生系统或补充接种。过往成绩单、在读证明、课程说明和老师评语对高年级学生尤其有帮助。",
+        ],
+      },
+      {
+        heading: "不同身份家庭可能遇到的问题",
+        body: [
+          "永久居民或加拿大公民家庭通常需要重点准备身份、住址、免疫和过往学校材料。父母持 work permit 或 study permit 的家庭，除了常规文件外，还应确认孩子入学资格、是否需要 study permit、是否涉及费用或特定 admission 流程。",
+          "Visitor、临时居民、国际学生或监护安排复杂的情况，不建议根据社交媒体答案做决定。请直接向本地 school board 描述家庭身份、孩子年龄、预计居住时间和学习计划，并同时查看 IRCC 相关页面。",
+        ],
+      },
+      {
+        heading: "注册流程示例",
+        body: [
+          "一个常见流程是：先确认住址和 school board；阅读 registration 页面；在线填写学生资料；上传孩子身份、住址、监护人、免疫和学校记录；等待学校或 registration office 联系；必要时补交文件或预约评估。",
+          "实际流程可能因城市、教育局、学校阶段和家庭身份而变化。有些 school board 可能要求先联系 central registration，有些由学校直接处理。提交后请保存确认邮件、reference number 和工作人员回复。",
+        ],
+      },
+      {
+        heading: "家长常见误区",
+        body: [
+          "误区一：以为只要有租约就一定能上某所学校。住址证明、边界、项目容量和学校安排仍需教育局确认。误区二：以为所有教育局文件要求一样。不同 school board 可能对住址、免疫、身份和线上注册有不同要求。",
+          "误区三：高中生只准备年龄证明，不准备成绩单。高中阶段可能涉及学分评估、课程衔接和英语支持，建议尽量准备过往成绩单或课程说明。误区四：涉及 study permit 或费用时只听他人经验，不查看 IRCC 和教育局官方信息。",
+        ],
+      },
+      {
+        heading: "入学前准备清单如何使用",
+        body: [
+          "注册前建议准备：孩子身份证明、家长/监护人身份证明、Ontario 居住地址证明、孩子出生日期证明、过往成绩单或学校记录（如有）、疫苗记录（如本地要求）、移民或身份相关文件（如适用）。",
+          "你可以先使用本站的 Ontario 学校注册清单，把已准备和待确认项目逐项勾选。清单不能替代教育局要求，但能帮助家庭减少遗漏，尤其适合刚落地、事情很多的新移民家长。",
         ],
       },
     ],
     checklist: [
-      "孩子护照或出生证明等身份证明",
-      "父母或监护人身份证明和联系方式",
-      "租约、账单或教育局接受的住址证明",
-      "孩子在加拿大身份或相关移民文件",
-      "免疫记录、过往成绩单和必要翻译件",
+      "孩子身份证明，例如护照、出生证明或其他教育局接受的文件",
+      "孩子出生日期证明",
+      "家长/监护人身份证明和联系方式",
+      "Ontario 居住地址证明，例如租约、账单或教育局接受的其他文件",
+      "孩子和家长的移民/身份相关文件，如适用",
+      "过往成绩单、在读证明或学校记录，如有",
+      "疫苗或 immunization record，如本地要求",
+      "教育局线上注册确认邮件或 reference number",
     ],
-    warnings: ["不同教育局接受的住址证明可能不同，提交前请查看本地教育局页面。"],
-    sources: ontarioSchoolSources,
+    warnings: [
+      "不同 school board 的具体要求可能不同，请以本地 school board 官方 registration 页面为准。",
+      "本页不保证任何孩子的入学资格、费用状态或具体文件一定被接受。",
+      "涉及 study permit、国际学生费用或复杂身份问题时，请同时查看 IRCC 和教育局官方说明。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "Immunization for children at school", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/vaccines-children-school" },
+      { title: "Toronto District School Board - Registration", publisher: "Toronto District School Board", url: "https://www.tdsb.on.ca/Find-your/School/Registration" },
+      { title: "Peel District School Board - Register for school", publisher: "Peel District School Board", url: "https://www.peelschools.org/register-for-school" },
+    ],
     relatedGuides: ["school-system", "study-permit-for-children"],
     relatedTools: ["ontario-school-registration-checklist", "ontario-grade-estimator"],
   },
