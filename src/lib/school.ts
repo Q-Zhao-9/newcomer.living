@@ -372,58 +372,112 @@ export const schoolGuides: SchoolGuide[] = [
     relatedTools: ["ontario-school-registration-checklist", "ontario-grade-estimator"],
   },
   {
-    title: "父母是学签或工签，孩子在安省上学要注意什么？",
+    title: "孩子来 Ontario 上学需要 Study Permit 吗？家长常见情况说明",
     slug: "study-permit-for-children",
     category: "school",
     province: "ontario",
     stage: "general",
-    description: "整理陪读、学签/工签家庭、未成年孩子在加拿大上学时常见的身份和学校注册问题。",
-    updatedAt: "2026-06-12",
-    readingTime: "8 分钟",
+    description: "谨慎整理孩子来 Ontario 上学时 study permit、家庭身份、school board 注册和官方信息确认方式，帮助家长知道应该问谁、查什么。",
+    updatedAt: "2026-06-13",
+    readingTime: "12 分钟",
     summary: [
-      "未成年孩子在加拿大读书的规则涉及联邦移民规定、省内教育安排和本地教育局要求。",
-      "父母持学签、工签或其他身份时，孩子是否需要 study permit、是否收费、如何注册，都应分别确认。",
-      "本文不构成移民或法律建议，重要决定请以 IRCC、Ontario.ca 和教育局官方信息为准。",
+      "孩子是否需要 study permit，通常不能只用一句话回答。它可能取决于孩子年龄、在加拿大身份、父母身份、学习计划、居住情况和 school board 要求。",
+      "家长应同时查看 IRCC 关于 minor children studying in Canada 的官方说明、本地 Ontario school board 注册页面，以及学校 registration office 的书面回复。",
+      "本页面仅供一般信息参考，不构成移民、法律或教育申请建议；重要决定请以 IRCC 和相关 school board 官方信息为准，必要时咨询合格专业人士。",
     ],
     sections: [
       {
+        heading: "快速结论：不要只听一个简单答案",
+        body: [
+          "很多家长会问：孩子来 Ontario 上学到底需不需要 study permit？这个问题通常不能简单回答。IRCC 对未成年孩子在加拿大读书有专门说明，但每个家庭的身份、入境计划、居住时间、孩子年龄和学习安排都可能不同。",
+          "比较稳妥的做法是：先阅读 IRCC 官方页面，再查看本地 school board 的 registration/admission 说明，最后把自己的家庭情况写清楚，向 school board 或 registration office 取得书面确认。不要只根据微信群、短视频或个别家庭经验做决定。",
+        ],
+      },
+      {
         heading: "为什么这个问题不能简单回答",
         body: [
-          "很多家长会问“父母有学签/工签，孩子是不是一定可以免费上公校”。这个问题通常不能只用一句话回答，因为它可能同时涉及孩子年龄、居住地、父母身份类型、学习或工作状态、教育局政策和学校名额。",
-          "比较稳妥的做法是把问题拆开：孩子在加拿大是否需要 study permit、所在教育局注册时需要哪些文件、是否可能产生学费或国际学生流程、入学时间和年级如何安排。",
+          "Study permit 属于联邦移民规则相关问题，而学校注册又涉及省级教育体系和本地 school board 流程。一个家庭可能在 IRCC 层面需要确认孩子身份，同时在 school board 层面还要确认注册方式、文件、费用状态和入学安排。",
+          "例如，父母是永久居民、工签、学签、访问身份，或孩子自己作为国际学生来加拿大，不同情形可能对应不同文件和流程。即使两个家庭看起来相似，具体结果也可能因为身份细节、居住地、学校阶段或教育局政策不同而不同。",
         ],
       },
       {
-        heading: "先查看 IRCC 关于未成年孩子读书的说明",
+        heading: "常见家庭情况：父母是 PR 或加拿大公民",
         body: [
-          "IRCC 对 minor children studying in Canada 有专门说明，家长应优先查看。不同情形下，孩子可能需要或不需要 study permit。不要只根据微信群或短视频结论做决定。",
-          "如果孩子身份、父母身份或入境计划比较复杂，建议咨询合格的移民顾问或律师，并保留官方页面截图和书面咨询记录。",
+          "如果父母是永久居民或加拿大公民，孩子的学校注册通常更接近普通本地家庭流程，但仍需提供孩子身份、年龄、住址、监护关系、免疫和过往学校材料。孩子本人的身份文件也需要按教育局要求准备。",
+          "即便如此，也不建议在没有确认 school board 要求前假设所有文件都一样。刚登陆、地址未稳定、孩子曾在海外就读或监护安排复杂时，仍应联系教育局确认。",
         ],
       },
       {
-        heading: "再确认教育局注册要求",
+        heading: "常见家庭情况：父母持 study permit 或 work permit",
         body: [
-          "即使联邦层面的问题已确认，学校注册仍要看本地教育局要求。教育局可能会要求父母工作或学习证明、住址证明、孩子身份文件、监护人信息和过往学校记录。",
-          "如果不确定是否需要通过 international student office 或普通本地注册流程，建议直接写邮件给教育局，把家庭身份和孩子年龄说明清楚。",
+          "父母持 study permit 或 work permit 时，孩子是否需要 study permit、是否需要缴纳费用、能否按本地注册流程入学，可能需要同时看 IRCC 和本地 school board 规则。很多 school board 会要求查看父母的 permit、录取或雇主信息、住址证明和孩子身份文件。",
+          "这类家庭尤其建议在抵达前准备好父母 permit 或批准信、孩子护照、出生证明、住址计划、免疫记录和过往学校材料。若涉及费用或国际学生流程，请要求 school board 书面确认。",
         ],
       },
       {
-        heading: "常见准备动作",
+        heading: "常见家庭情况：孩子作为国际学生或 visitor/temporary resident",
         body: [
-          "抵达前可以准备孩子护照、出生证明、父母学签/工签或批准信、学校录取或雇主证明、住址证明、免疫记录和成绩单。抵达后尽快确认住址对应教育局，并询问注册步骤。",
-          "对于高中生，还要尽早讨论学分转换、英语评估、课程选择和毕业路径。不要等开学前最后几天才第一次联系学校。",
+          "如果孩子是以国际学生身份来加拿大，通常需要查看学校或 school board 的 international student admission 页面，并按其流程申请。此类流程可能与普通本地注册不同，可能涉及学费、监护人、保险、录取信和 study permit 申请。",
+          "如果孩子只是短期访问、家庭临时停留、身份正在转换，情况会更复杂。本文不判断任何孩子一定能或不能入学，也不判断是否一定需要 study permit。请优先查看 IRCC，并直接咨询对应 school board。",
+        ],
+      },
+      {
+        heading: "哪些机构的信息需要查看",
+        body: [
+          "第一是 IRCC。它负责解释未成年孩子在加拿大读书时 study permit 相关规则。第二是 Ontario 或本地 school board。它们负责具体注册要求、文件、学校分配和可能的费用流程。第三是学校或 registration office。它们可以根据你的地址和孩子情况说明下一步。",
+          "如果不同来源的信息看起来不一致，建议不要自己拼凑结论，而是把 IRCC 链接、school board 页面和自己的家庭情况整理成邮件，要求 school board 给出书面回复。复杂移民问题建议咨询合格移民顾问或律师。",
+        ],
+      },
+      {
+        heading: "家长需要确认的问题清单",
+        body: [
+          "你可以向 school board 确认：孩子是否应走普通 registration 还是 international student admission；需要哪些身份文件；是否需要 study permit 或其他状态文件；是否可能产生学费；如果地址暂时不稳定能否先注册；孩子过往成绩单和免疫记录如何提交。",
+          "还可以确认：孩子预计进入几年级；是否需要英语评估；是否有 ESL/ELL 支持；高中生如何评估学分；开学前是否需要预约；如果材料暂时不完整，哪些可以后补。",
+        ],
+      },
+      {
+        heading: "常见误区",
+        body: [
+          "误区一：听说某个朋友孩子不需要 study permit，就认为自己孩子一定一样。误区二：只看 IRCC，不看 school board 文件要求。误区三：只看 school board，不确认联邦身份问题。误区四：在没有书面确认前假设一定免费或一定能注册。",
+          "误区五：把 school registration 和 immigration advice 混在一起。学校工作人员可以解释注册流程，但未必能提供个人移民建议。涉及身份、permit 或法律判断时，应以官方信息为准，必要时咨询合格专业人士。",
+        ],
+      },
+      {
+        heading: "给 school board 发邮件可以问什么",
+        body: [
+          "你可以用英文简短说明家庭情况，并请求对方确认注册流程和文件要求。邮件示例：Subject: Question about school registration eligibility for my child. Dear [School Board/Registration Office], My family recently moved to Ontario, and I would like to ask about the school registration process for my child. Could you please let me know what documents are required and whether there are any specific requirements based on our immigration status? Thank you.",
+          "发送前建议补充孩子年龄、预计年级、所在地址或 postal code、父母身份类型、预计入学时间，并避免在邮件里发送不必要的敏感证件照片。等对方回复需要哪些文件后，再按安全方式提交。",
+        ],
+      },
+      {
+        heading: "强免责声明",
+        body: [
+          "本页面仅供一般信息参考，不构成移民、法律或教育申请建议。孩子是否需要 study permit、是否需要缴纳国际学生费用、是否符合本地 school board 入学要求，取决于孩子和家长的具体身份、居住情况、学习计划和本地规定。",
+          "请以 IRCC 和相关 school board 的官方信息为准，必要时咨询合格专业人士。本站不会根据单个家庭情况判断最终资格，也不替代政府、教育局或专业顾问意见。",
         ],
       },
     ],
     checklist: [
       "阅读 IRCC 未成年孩子在加拿大读书官方说明",
-      "确认所在教育局对父母学签/工签家庭的文件要求",
-      "准备孩子和父母身份文件、住址证明、免疫和成绩单",
-      "如涉及收费或国际学生流程，要求教育局书面确认",
-      "复杂身份问题咨询合格专业人士",
+      "确认孩子和父母当前身份文件、permit 或批准信",
+      "查看本地 school board registration/admission 页面",
+      "询问孩子是否应走普通注册或 international student 流程",
+      "确认是否可能涉及 study permit、学费、监护人或额外文件",
+      "把 school board 的关键回复保存为邮件或 PDF",
+      "复杂身份问题咨询合格移民顾问或律师",
     ],
-    warnings: ["本文不判断任何家庭是否一定符合免费入学或免学签条件。重要身份问题请以官方信息和专业意见为准。"],
-    sources: ontarioSchoolSources,
+    warnings: [
+      "本页不判断任何孩子一定需要或一定不需要 study permit。",
+      "本页不保证任何孩子一定符合免费入学、普通注册或特定 school board 要求。",
+      "涉及移民身份、study permit、费用或监护安排时，请以 IRCC 和 school board 官方信息为准。",
+    ],
+    sources: [
+      { title: "Minor children studying in Canada", publisher: "Immigration, Refugees and Citizenship Canada", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/minor-children.html" },
+      { title: "Study permit: Who needs a study permit", publisher: "Immigration, Refugees and Citizenship Canada", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/apply.html" },
+      { title: "Going to school in Ontario", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/going-school-ontario" },
+      { title: "Register your child for school", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/register-your-child-school" },
+      { title: "Toronto District School Board - International Students", publisher: "Toronto District School Board", url: "https://www.tdsb.on.ca/About-Us/International-Students" },
+    ],
     relatedGuides: ["registration-documents", "school-system"],
     relatedTools: ["ontario-school-registration-checklist"],
   },
