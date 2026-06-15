@@ -27,8 +27,10 @@ export default function OntarioGradeEstimatorPage() {
       <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 className="text-xl font-bold text-slate-950">相关指南</h2>
         <div className="mt-4 flex flex-wrap gap-3">
+          <Link className="rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-700 hover:bg-teal-100" href="/school/ontario">安省学校专题</Link>
           <Link className="rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-700 hover:bg-teal-100" href="/school/ontario/school-system">安省学校体系基础</Link>
           <Link className="rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-700 hover:bg-teal-100" href="/school/ontario/registration-documents">学校注册文件</Link>
+          <Link className="rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-700 hover:bg-teal-100" href="/tools/ontario-school-registration-checklist">学校注册清单</Link>
         </div>
       </section>
       <section className="mt-10"><DisclaimerBox variant="school" /></section>
