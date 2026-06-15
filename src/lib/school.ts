@@ -148,61 +148,109 @@ export const schoolTools = [
 
 export const schoolGuides: SchoolGuide[] = [
   {
-    title: "Ontario School System / 安省学校体系基础",
+    title: "Ontario 学校系统介绍：新移民家长入门指南",
     slug: "school-system",
     category: "school",
     province: "ontario",
     stage: "general",
-    description: "面向新移民家长的安省学校体系入门：教育局、年级、学期、高中学分、ESL 支持和家校沟通。",
-    updatedAt: "2026-06-12",
-    readingTime: "9 分钟",
+    description: "用中文解释 Ontario 中小学体系、school board、住址对应学校、幼儿园到高中阶段，以及新移民家长注册前需要先理解的关键概念。",
+    updatedAt: "2026-06-13",
+    readingTime: "13 分钟",
     summary: [
-      "安省公立教育通常由当地 school board 管理，住址、年龄、身份文件和教育局规则都会影响注册流程。",
-      "小学和高中阶段的年级、课程代码、ESL 支持与中国学校经验不同，建议家长先建立基本词汇表。",
-      "本文为一般参考，具体安排应以 Ontario.ca、所在教育局和学校回复为准。",
+      "Ontario 的中小学教育主要由省级教育体系和本地 school boards 管理。家长通常需要先了解孩子所在地址对应的 school board、学校阶段、注册要求以及孩子身份相关要求。",
+      "公立学校、天主教学校、法语学校和私立学校的管理方式、入学条件和费用安排可能不同，不建议只凭朋友经验判断。",
+      "以下为一般信息参考。不同 school board 的流程和文件要求可能不同，实际注册前应查看本地 school board 官方页面，并以学校或教育局书面回复为准。",
     ],
     sections: [
       {
-        heading: "先认识 school board 和 home school",
+        heading: "快速结论：先弄清 school board，再看具体学校",
         body: [
-          "在安省，很多家庭不是直接向省政府注册学校，而是通过当地教育局或学校完成注册。通常情况下，家庭住址会对应一个或多个可申请的学校范围，但具体边界、项目和名额需要查看教育局页面。",
-          "如果你刚到加拿大，建议先确认住址属于哪个 school board，再查看该教育局的新生注册说明。部分城市还会区分英文公校、天主教学校、法语教育局或特殊项目。",
+          "Ontario 的基础教育不是由每一所学校完全独立决定。通常情况下，省级教育部门制定总体框架，本地 school board 负责具体学校、边界、注册流程、交通安排和部分项目。新移民家长最实用的第一步，不是直接问“哪所学校最好”，而是先确认家庭住址对应哪个 school board，以及该 school board 对新生注册的要求。",
+          "很多 school board 会要求家长提供孩子身份证明、出生日期、住址证明、监护人信息、免疫记录和身份相关文件。高中阶段还可能需要过往成绩单、课程说明或英语水平评估。由于不同教育局和家庭身份可能不同，本文只帮助你建立基本框架，不替代教育局、学校或专业人士的判断。",
         ],
       },
       {
-        heading: "年级和年龄只是起点，不是最终决定",
+        heading: "这篇文章适合谁",
         body: [
-          "家长常问“孩子在中国读几年级，来加拿大应该读几年级”。一般来说，学校会参考孩子出生日期、过往成绩单、英语能力、身份文件和教育经历。年龄估算可以帮助准备，但最终分班通常由学校或教育局决定。",
-          "如果孩子年龄接近分界线，或者曾经跳级、休学、转学，建议准备好成绩单、在读证明和翻译件，并提前向教育局说明。",
+          "这篇指南主要面向刚搬到 Ontario、准备带孩子注册学校的中文新移民家庭、留学生家庭、工签家庭、陪读家庭，以及正在比较住址和学校选择的家长。它适合在阅读注册文件清单、study permit 问题或年级估算工具之前先看一遍。",
+          "如果你的孩子已经进入高中、涉及国际学生学费、特殊教育支持、监护人安排或复杂身份问题，建议把本文作为背景资料，同时直接联系对应 school board 或学校 registration office。涉及移民身份、学习许可、费用资格等问题时，应以 IRCC 和 school board 官方信息为准。",
         ],
       },
       {
-        heading: "高中需要特别关注课程路径",
+        heading: "Ontario school system overview：安省学校系统如何大致运作",
         body: [
-          "安省高中不仅是“读几年级”，还涉及学分、必修课、社区服务、读写要求和不同课程类型。Grade 9 之后的选课会逐步影响 Grade 11/12 以及大学、学院或就业路径。",
-          "新移民家庭不要只按照国内文理分科经验做判断。建议尽早联系 guidance counsellor，了解课程代码、先修课和毕业要求。",
+          "Ontario 的中小学通常包括 Kindergarten、Elementary School 和 Secondary/High School。孩子通常根据出生年份、过往学习经历和学校评估进入相应阶段。对于刚从中国或其他国家转来的孩子，学校可能会同时参考年龄、成绩单、英语能力和适应情况。",
+          "省级层面会提供课程和教育政策框架，但家长日常接触更多的是 school board 和具体学校。School board 会管理辖区内学校、注册入口、校车或交通说明、特殊项目、语言支持、学校边界和家校沟通系统。实际操作时，家长通常需要在本地教育局网站上查找 registration、school locator、boundary map 或 newcomer information。",
         ],
       },
       {
-        heading: "英语支持和适应期",
+        heading: "公立学校、天主教学校、法语学校、私立学校有什么基本区别",
         body: [
-          "很多学校会对新来的英语学习者进行评估，并根据情况提供 ESL/ELL 支持。家长可以询问孩子是否需要语言评估、是否有 newcomer support、是否可以安排翻译或双语工作人员协助沟通。",
-          "刚开始的几个月，孩子可能需要适应课堂表达、作业方式、同伴关系和校园规则。家长可以定期查看学校邮件、线上平台和老师反馈。",
+          "Ontario 常见的学校类型包括 English public school board、English Catholic school board、French-language public/catholic school board，以及 private school。不同系统的入学条件、宗教要求、语言要求、边界规则、交通安排和费用结构可能不同。",
+          "很多新移民家庭最先接触的是英文公立教育局，但这不代表所有家庭都只能选择一种系统。天主教学校可能涉及宗教相关要求；法语学校可能有法语资格或语言背景要求；私立学校通常有自己的申请流程和费用。家长在决定前应查看对应 school board 或学校官网，而不是只用中文社群里的经验替代官方确认。",
+        ],
+      },
+      {
+        heading: "Kindergarten、Elementary、High School：各阶段通常怎么理解",
+        body: [
+          "Kindergarten 通常包括 Junior Kindergarten 和 Senior Kindergarten，具体入学年龄与出生年份和教育局安排有关。Elementary School 一般覆盖小学到初中阶段，但不同 school board 的学校组合可能不同，例如有些学校是 JK–Grade 8，有些可能分为 elementary 和 middle school。",
+          "High School 通常从 Grade 9 开始。高中阶段家长需要特别关注学分、必修课、课程代码、先修课、英语支持、社区服务和毕业要求。新移民高中生不应只按中国年级经验直接套用，因为 Ontario 的选课路径可能影响之后的大学、学院或就业方向。",
+        ],
+      },
+      {
+        heading: "School board 是什么，为什么家长必须知道",
+        body: [
+          "School board 可以理解为本地教育局或教育委员会。家长注册学校、查询学校边界、提交文件、询问校车、了解 ESL/ELL 支持、确认入学资格或费用问题时，很多时候都要通过 school board 的网页或工作人员完成。",
+          "如果你只知道住址附近某所学校的名字，但不知道它属于哪个 school board，后续可能会找错注册入口。建议家长先用 Ontario.ca 或本地教育局的 school locator 工具确认 school board，再进入该教育局网站查看 registration 页面。",
+        ],
+      },
+      {
+        heading: "School boundary 和 home address：为什么住址很重要",
+        body: [
+          "很多 Ontario 学校会按家庭住址划分服务范围。住址可能影响孩子应联系哪所学校、是否有校车、是否能申请某些项目，以及是否需要提供额外证明。租房或买房前，如果家长非常在意某个学校，建议先查看 school board boundary map，并向教育局确认当前规则。",
+          "需要注意的是，边界、项目容量和注册流程可能变化。不要只凭房产广告、社交媒体帖子或过期截图判断孩子一定可以进入某所学校。比较稳妥的做法是保存官方页面链接，并在关键决定前向 school board 或学校取得书面确认。",
+        ],
+      },
+      {
+        heading: "新移民家长常见问题",
+        body: [
+          "问题一：孩子英文不好能不能上学？很多 school board 会评估英语水平，并可能提供 ESL/ELL 或 newcomer support，但具体安排由学校或教育局决定。问题二：从中国转学需要成绩单吗？通常建议准备过往成绩单、在读证明和必要翻译，尤其是高中生。",
+          "问题三：父母是学签或工签，孩子是否需要 study permit 或是否要交费？这个问题不能简单回答，取决于家庭身份、孩子情况、居住安排和教育局要求。建议同时查看 IRCC 关于 minor children studying in Canada 的说明，以及本地 school board 的 registration/admission 页面。",
+        ],
+      },
+      {
+        heading: "常见误区",
+        body: [
+          "误区一：以为所有 Ontario school board 的文件要求完全一样。实际上，不同教育局可能接受不同类型的住址证明、身份文件或线上注册流程。误区二：只看学校排名，不看通勤、语言支持、孩子适应和家庭住址稳定性。",
+          "误区三：认为年龄估算就是最终分班。年级估算只是准备工具，实际年级可能由 school board 或学校根据出生日期、过往学习经历、英语能力和评估结果决定。误区四：在没有确认身份和费用问题前做出重大决定。涉及 study permit、国际学生费用或复杂身份时，应以官方信息为准，必要时咨询合格专业人士。",
+        ],
+      },
+      {
+        heading: "下一步：注册文件、身份问题和实用工具",
+        body: [
+          "了解学校系统后，建议继续阅读 Ontario 学校注册文件指南，整理孩子身份、住址、监护人、免疫和过往学校材料。如果你不确定孩子大概对应几年级，可以先使用 Ontario 年级估算器，但结果只能作为一般参考。",
+          "如果家庭涉及父母学签、工签、孩子作为国际学生或其他临时身份，请继续阅读 study permit 与 school status 相关说明，并直接联系本地 school board。本站的 Ontario 学校注册清单也可以帮助你把准备事项逐项勾选。",
         ],
       },
     ],
     checklist: [
-      "确认住址对应的 school board 和学校范围",
-      "保存孩子护照、出生证明、过往成绩单和疫苗记录",
-      "询问是否需要英语水平评估或 ESL/ELL 支持",
-      "高中生尽早预约 guidance counsellor 讨论选课",
-      "所有重要结论以教育局和学校书面回复为准",
+      "确认当前住址对应的 Ontario school board 和学校范围",
+      "查看本地 school board 的 registration 或 newcomer 页面",
+      "整理孩子身份证明、出生日期证明、住址证明和监护人信息",
+      "如孩子从海外转学，准备成绩单、在读证明和必要翻译",
+      "高中生尽早询问学分、ESL/ELL、选课和 guidance counsellor 支持",
+      "涉及 study permit、费用或身份问题时，同时核对 IRCC 和 school board 官方信息",
     ],
     warnings: [
-      "不要只按中国年级直接套用加拿大年级。",
-      "不要在没有确认教育局规则前租房只为了某一所学校。",
+      "本文仅供一般信息参考，不保证每个孩子都一定符合免费入学或特定学校入学条件。",
+      "不要只凭房源广告、社交媒体或他人经验判断 school boundary、注册资格或文件要求。",
+      "涉及移民身份、study permit 或费用问题时，请以 IRCC 和相关 school board 官方信息为准。",
     ],
-    sources: ontarioSchoolSources,
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "Toronto District School Board - Registration", publisher: "Toronto District School Board", url: "https://www.tdsb.on.ca/Find-your/School/Registration" },
+      { title: "Peel District School Board - Register for school", publisher: "Peel District School Board", url: "https://www.peelschools.org/register-for-school" },
+    ],
     relatedGuides: ["registration-documents", "study-permit-for-children"],
     relatedTools: ["ontario-grade-estimator", "ontario-school-registration-checklist"],
   },
