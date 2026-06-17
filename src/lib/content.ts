@@ -4,6 +4,7 @@ export type Category = {
   titleZh: string;
   description: string;
   icon: string;
+  href?: string;
   intro?: string;
   startHere?: { label: string; href: string; description?: string }[];
   faqs?: { question: string; answer: string }[];
@@ -101,6 +102,7 @@ export const categories: Category[] = [
     title: "School",
     titleZh: "孩子上学",
     icon: "🎒",
+    href: "/school",
     description: "孩子入学注册、学校沟通和常见文件准备。",
     intro: "孩子上学栏目帮助新移民、留学生和工签家庭了解加拿大入学注册的常见准备，包括教育局、住址证明、监护人信息、免疫记录、年级估算和学校沟通。不同省份和教育局要求可能不同。",
     startHere: [

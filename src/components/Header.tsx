@@ -24,7 +24,7 @@ export function Header() {
             <Link className="block rounded-xl px-2 py-3" href="/tools/monthly-cost-calculator">月生活成本计算器</Link>
             <Link className="block rounded-xl px-2 py-3" href="/tools/newcomer-checklist">新移民清单</Link>
             <Link className="block rounded-xl px-2 py-3" href="/contact">联系我们</Link>
-            {categories.slice(0, 5).map((category) => <Link key={category.slug} className="block rounded-xl px-2 py-3" href={`/categories/${category.slug}`}>{category.titleZh}</Link>)}
+            {categories.slice(0, 5).map((category) => <Link key={category.slug} className="block rounded-xl px-2 py-3" href={category.href ?? `/categories/${category.slug}`}>{category.titleZh}</Link>)}
           </div>
         </details>
       </div>

@@ -19,7 +19,7 @@ export default function SchoolPage() {
       <section className="rounded-[2rem] bg-gradient-to-br from-teal-50 via-white to-emerald-50 p-8 sm:p-10">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">School Guide</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">孩子在加拿大上学：家长指南</h1>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">为中国家庭、新移民父母、留学生家庭和工签家庭整理加拿大孩子上学的基础问题：年级怎么判断、注册要什么文件、英语不好怎么办、安省高中课程怎么看。当前重点先搭建 Ontario / 安省专题。</p>
+        <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">为中国家庭、新移民父母、留学生家庭和工签家庭整理加拿大孩子上学的基础问题：年级怎么判断、注册要什么文件、英语不好怎么办、安省高中课程怎么看。内容会尽量把教育局、学校沟通和官方信息核对步骤讲清楚，帮助家长更稳妥地做准备。</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link className="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white hover:bg-teal-800" href="/school/ontario">进入安省孩子上学指南</Link>
           <Link className="rounded-full border border-teal-200 bg-white px-5 py-3 text-sm font-semibold text-teal-700 hover:bg-teal-50" href="/tools/ontario-grade-estimator">估算孩子年级</Link>

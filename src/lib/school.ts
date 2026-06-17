@@ -90,17 +90,17 @@ export const parentQuestions = [
   {
     question: "英语不好怎么办？",
     answer: "很多学校会评估英语水平并提供 ESL/ELL 支持，家长可以主动询问适应安排。",
-    href: "/school/ontario/school-system",
+    href: "/school/ontario/english-support-newcomers",
   },
   {
     question: "Ontario Grade 9 怎么选课？",
     answer: "高中选课会影响未来 Grade 11/12 路径。新家庭应尽早联系 guidance counsellor。",
-    href: "/school/ontario/school-system",
+    href: "/school/ontario/grade-9-course-selection",
   },
   {
     question: "4U / 4M / 4C / 4E 是什么意思？",
     answer: "这些代码常见于安省高中课程路径，涉及大学、学院、混合或就业方向。",
-    href: "/school/ontario/school-system",
+    href: "/school/ontario/ontario-high-school-course-codes",
   },
 ];
 
@@ -251,7 +251,7 @@ export const schoolGuides: SchoolGuide[] = [
       { title: "Toronto District School Board - Registration", publisher: "Toronto District School Board", url: "https://www.tdsb.on.ca/Find-your/School/Registration" },
       { title: "Peel District School Board - Register for school", publisher: "Peel District School Board", url: "https://www.peelschools.org/register-for-school" },
     ],
-    relatedGuides: ["registration-documents", "study-permit-for-children"],
+    relatedGuides: ["registration-documents", "study-permit-for-children", "english-support-newcomers", "grade-9-course-selection", "ontario-high-school-course-codes"],
     relatedTools: ["ontario-grade-estimator", "ontario-school-registration-checklist"],
   },
   {
@@ -480,6 +480,220 @@ export const schoolGuides: SchoolGuide[] = [
     ],
     relatedGuides: ["registration-documents", "school-system"],
     relatedTools: ["ontario-school-registration-checklist"],
+  },
+  {
+    title: "孩子英语不好，在 Ontario 上学怎么办？ESL/ELL 支持入门",
+    slug: "english-support-newcomers",
+    category: "school",
+    province: "ontario",
+    stage: "general",
+    description: "为新移民家长解释孩子英语基础较弱时在 Ontario 学校可能遇到的语言评估、ESL/ELL 支持、课堂适应和家校沟通问题。",
+    updatedAt: "2026-06-14",
+    readingTime: "10 分钟",
+    summary: [
+      "孩子英语不好并不代表不能开始适应学校生活。很多 Ontario school board 会根据学生情况进行语言或学习背景评估，并可能提供 ESL/ELL 或 newcomer support。",
+      "支持方式、评估流程和课程安排可能因 school board、学校和孩子年级不同而变化，家长应主动询问本地学校。",
+      "以下为一般参考，不替代学校、教育局或专业评估意见。涉及特殊教育、心理健康或身份问题时，请进一步确认官方渠道。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：先让学校了解孩子的真实情况",
+        body: [
+          "如果孩子刚从中文环境来到 Ontario，英语听说读写跟不上是常见情况。家长不需要把孩子包装成“完全没问题”，也不建议只说“英语不好”。更有帮助的做法是说明孩子过去几年在哪里读书、主要学习语言、英语学习经历、优势科目、阅读和写作大概水平。",
+          "很多学校会根据需要安排语言评估或 newcomer orientation，再决定是否提供 ESL/ELL 支持、课堂调整或额外沟通安排。不同 school board 的流程可能不同，实际安排应以学校和教育局说明为准。",
+        ],
+      },
+      {
+        heading: "ESL / ELL 通常是什么意思",
+        body: [
+          "ESL 常指 English as a Second Language，ELL 常指 English Language Learner。不同学校或教育局使用的名称可能不同，但核心都是帮助英语学习者逐步适应英语课堂、作业、阅读和校园沟通。",
+          "支持形式不一定是单独上一门课。可能包括语言评估、小组支持、课堂老师调整任务、额外阅读材料、词汇支持、写作反馈、同伴帮助或定期跟进。家长应询问孩子所在学校具体如何安排。",
+        ],
+      },
+      {
+        heading: "家长应该主动问哪些问题",
+        body: [
+          "注册或入学初期，家长可以问：孩子是否需要语言评估？学校是否有 ESL/ELL teacher 或 newcomer support？老师如何判断孩子已经理解课堂内容？作业是否可以提供说明或示例？家长如果英文有限，是否可以使用翻译协助沟通？",
+          "如果孩子进入高中，还应询问英语课程路径、必修英语学分、ESL 课程是否影响毕业计划，以及未来 Grade 11/12 课程选择。不要只看年级数字，忽略语言适应对选课和成绩的影响。",
+        ],
+      },
+      {
+        heading: "家庭可以怎么帮助孩子适应",
+        body: [
+          "在家里可以先建立稳定的阅读和沟通习惯：每天读一点学校通知、记录不会的词、练习给老师写简短邮件、鼓励孩子参加低压力活动。刚开始不要只用分数评价适应情况，也要观察孩子是否敢问问题、是否知道作业在哪里、是否能使用学校线上平台。",
+          "如果孩子压力很大、长期拒绝上学、睡眠或情绪明显变化，建议尽早联系老师、guidance counsellor 或学校支持人员。语言适应和心理适应经常同时发生，家长不应只把问题归因于“英语差”。",
+        ],
+      },
+      {
+        heading: "常见误区",
+        body: [
+          "误区一：英语不好就一定要降级。实际年级安排可能参考年龄、过往学习经历、语言能力和学校评估，不应只按英语水平判断。误区二：只在家补语法，不联系学校。学校提供的支持和课堂要求才是孩子每天最直接面对的环境。",
+          "误区三：认为 ESL/ELL 是负面标签。通常情况下，合理支持可以帮助孩子更快理解课堂要求。误区四：高中生忽视英语路径和毕业要求。高中阶段尤其需要和 guidance counsellor 确认课程安排。",
+        ],
+      },
+    ],
+    checklist: [
+      "准备孩子过往学校记录和主要学习语言说明",
+      "询问是否需要语言评估或 newcomer assessment",
+      "确认学校是否有 ESL/ELL、新移民或 guidance 支持",
+      "请老师说明作业平台、沟通方式和需要家长配合的事项",
+      "高中生额外确认英语课程、学分和未来选课影响",
+    ],
+    warnings: [
+      "不要只根据英语水平自行判断孩子应该降级或跳级。",
+      "ESL/ELL 支持方式可能因 school board 和学校不同而变化。",
+      "如果孩子出现明显情绪或适应困难，请尽早联系学校支持人员或合格专业人士。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "English language learners", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/english-language-learners" },
+      { title: "STEP: Steps to English Proficiency", publisher: "Ontario Ministry of Education", url: "https://www.dcp.edu.gov.on.ca/en/assessment-evaluation/step" },
+    ],
+    relatedGuides: ["school-system", "registration-documents", "grade-9-course-selection"],
+    relatedTools: ["ontario-grade-estimator", "ontario-school-registration-checklist"],
+  },
+  {
+    title: "Ontario Grade 9 怎么选课？新移民家庭入门指南",
+    slug: "grade-9-course-selection",
+    category: "school",
+    province: "ontario",
+    stage: "high-school",
+    description: "解释 Ontario Grade 9 选课时新移民家庭应关注的课程类型、必修课、英语支持、未来 Grade 11/12 路径和 guidance counsellor 沟通。",
+    updatedAt: "2026-06-14",
+    readingTime: "11 分钟",
+    summary: [
+      "Ontario Grade 9 选课不只是选几门喜欢的课。它会影响孩子如何适应高中、之后 Grade 10–12 的课程衔接，以及未来大学、学院或就业方向。",
+      "新移民家庭应尽早联系 guidance counsellor，确认必修课、英语支持、数学/科学路径、选修课、学分和毕业要求。",
+      "以下为一般参考。不同 school board 和高中可能有不同 course calendar、时间表和支持方式，请以学校官方信息为准。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：Grade 9 是建立高中路径的第一步",
+        body: [
+          "对刚来 Ontario 的家庭来说，Grade 9 不是简单等同于中国初三或高一。学校通常会根据年龄、过往学习经历、英语能力、成绩单和课程安排来决定孩子进入哪些课程。选课时需要同时考虑孩子现在能否适应，以及未来 Grade 11/12 是否能顺利衔接目标课程。",
+          "家长最应该做的是尽早预约 guidance counsellor，带上成绩单或课程说明，询问 course calendar、必修课、ESL/ELL 支持、数学和科学路径、选修课，以及如果之后想申请大学或学院需要提前注意什么。",
+        ],
+      },
+      {
+        heading: "Grade 9 通常要看哪些课程类别",
+        body: [
+          "常见科目可能包括 English、Math、Science、Geography、French、Health and Physical Education、Arts 或其他选修。具体课程组合由学校、school board 和学生情况决定。近年来 Ontario Grade 9 部分课程有 de-streamed 变化，家长应查看最新学校 course calendar。",
+          "如果孩子英语仍在适应阶段，家长应确认 English 或 ESL 相关安排如何影响时间表和学分。如果孩子数学基础强，也不要只看年级名称，应确认课程内容、评估方式和后续先修要求。",
+        ],
+      },
+      {
+        heading: "为什么 guidance counsellor 很重要",
+        body: [
+          "Guidance counsellor 通常可以帮助学生理解课程选择、毕业要求、学分、先修课和未来路径。新移民家庭不熟悉 Ontario 高中体系时，应该主动预约，而不是等系统自动安排。",
+          "沟通时可以问：孩子现在应该选哪些必修课？是否需要英语支持？过往成绩单如何评估？如果未来想读大学或学院，Grade 10–12 需要注意哪些课程？如果选错课或适应困难，是否有更改时间表的窗口？",
+        ],
+      },
+      {
+        heading: "新移民学生常见挑战",
+        body: [
+          "第一是语言和课堂表达。即使孩子学科基础不错，也可能需要时间适应课堂讨论、项目作业、presentation 和英文写作。第二是课程代码和先修课概念。某些 Grade 11/12 课程可能要求先修课程，不能只看孩子想学什么。",
+          "第三是家长不了解学校线上系统和选课截止时间。建议把 course selection deadline、timetable change deadline 和 guidance appointment 写进日历，并保留学校邮件。",
+        ],
+      },
+      {
+        heading: "给家长的选课步骤",
+        body: [
+          "第一步，拿到学校 course calendar 或选课说明。第二步，列出必修课、可选课和孩子感兴趣方向。第三步，带着过往成绩单或课程说明联系 guidance counsellor。第四步，确认英语支持、数学/科学衔接和未来 Grade 11/12 先修要求。",
+          "如果孩子刚来加拿大，不建议为了追求“难课”而忽略适应压力。比较稳妥的做法是让孩子在语言、学习方法和社交适应之间取得平衡，同时保持未来路径的基本选择空间。",
+        ],
+      },
+    ],
+    checklist: [
+      "下载或保存学校 Grade 9 course calendar",
+      "确认必修课、选修课和选课截止日期",
+      "准备过往成绩单、课程说明和英语学习背景",
+      "预约 guidance counsellor 讨论课程衔接",
+      "询问 ESL/ELL 支持、先修课和未来 Grade 11/12 影响",
+    ],
+    warnings: [
+      "不同高中课程表和可选课程可能不同，请以学校 course calendar 为准。",
+      "不要只按中国年级经验判断 Ontario Grade 9 的课程难度和路径。",
+      "涉及毕业要求和升学路径时，建议取得学校 guidance counsellor 的确认。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "High school graduation requirements", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/high-school-graduation-requirements" },
+      { title: "Ontario curriculum, Grades 9 and 10", publisher: "Ontario Ministry of Education", url: "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary" },
+    ],
+    relatedGuides: ["school-system", "english-support-newcomers", "ontario-high-school-course-codes"],
+    relatedTools: ["ontario-grade-estimator"],
+  },
+  {
+    title: "Ontario 高中课程代码 4U / 4M / 4C / 4E 是什么意思？",
+    slug: "ontario-high-school-course-codes",
+    category: "school",
+    province: "ontario",
+    stage: "high-school",
+    description: "用中文解释 Ontario 高中课程代码中的年级数字、U/M/C/E 等结尾字母、先修课和新移民家长常见误区。",
+    updatedAt: "2026-06-14",
+    readingTime: "11 分钟",
+    summary: [
+      "Ontario 高中课程代码通常包含年级、科目和课程类型信息。家长常见的 4U、4M、4C、4E 多出现在 Grade 12 课程路径中。",
+      "U、M、C、E 等字母通常与大学、大学/学院、学院或就业准备方向有关，但具体含义和入学要求应查看学校 course calendar 与目标院校要求。",
+      "以下为一般参考，不保证某门课程一定满足某个大学、学院或专业要求。申请前必须以学校、college/university 和 Ontario 官方信息为准。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：课程代码是路径提示，不是录取保证",
+        body: [
+          "很多家长看到 ENG4U、MHF4U、SBI4U、BOH4M 这类代码会很困惑。通常情况下，数字 4 代表 Grade 12 层级，最后的 U/M/C/E 等字母提示课程类型或准备方向。它可以帮助家长理解课程路径，但不能单独决定孩子是否符合某个专业申请要求。",
+          "大学、学院和具体专业可能要求特定 Grade 12 课程、最低成绩和先修课组合。家长和学生应同时查看高中 course calendar、guidance counsellor 建议，以及目标院校 admission requirements。",
+        ],
+      },
+      {
+        heading: "代码里的数字通常代表什么",
+        body: [
+          "Ontario 高中课程代码中常见数字 1、2、3、4 通常对应 Grade 9、10、11、12。比如 ENG4U 里的 4 通常表示 Grade 12 英语课程。不同科目代码有不同前三个字母，例如 ENG 常见于 English，MHF 常见于 Advanced Functions。",
+          "不过，家长不应只凭代码猜课程内容。学校 course calendar 会说明课程描述、先修课、学分和适合对象。新移民学生如果过往课程体系不同，尤其应让 guidance counsellor 协助判断。",
+        ],
+      },
+      {
+        heading: "U / M / C / E 一般怎么理解",
+        body: [
+          "U 通常指 university preparation；M 通常指 university/college preparation；C 通常指 college preparation；E 通常指 workplace preparation。部分低年级课程还可能出现其他字母或本地课程类型。具体解释请以 Ontario Ministry of Education、学校 course calendar 和 guidance counsellor 为准。",
+          "对准备申请大学的学生来说，很多专业会要求特定 4U 或 4M 课程；对申请 college 的学生来说，要求可能不同。不能简单认为某个字母“更好”或“更差”，关键是是否适合孩子能力、毕业要求和未来目标。",
+        ],
+      },
+      {
+        heading: "先修课为什么重要",
+        body: [
+          "很多 Grade 11/12 课程有 prerequisite。比如想在 Grade 12 修某门大学准备课程，可能需要先完成对应 Grade 11 课程。如果 Grade 9/10 没有规划好，后面可能需要 summer school、online course 或调整时间表。",
+          "新移民高中生尤其要注意过往成绩单如何被学校认可。即使孩子在国内学过类似内容，Ontario 学校仍可能需要根据本地课程要求安排评估或补课。请提前和 guidance counsellor 确认。",
+        ],
+      },
+      {
+        heading: "家长常见误区",
+        body: [
+          "误区一：只要选了 4U 就一定能申请任何大学专业。实际还要看具体科目、成绩、先修课和院校要求。误区二：看到 C 或 E 就认为没有价值。不同学生目标不同，college、apprenticeship、就业和大学路径都需要根据孩子情况选择。",
+          "误区三：等 Grade 12 才开始研究课程代码。很多关键先修课从 Grade 10/11 就开始影响未来选择。误区四：只让孩子自己选课，家长完全不看 course calendar 和截止日期。",
+        ],
+      },
+    ],
+    checklist: [
+      "保存学校 course calendar，并查每门课的完整描述",
+      "确认课程代码中的年级数字和 U/M/C/E 等类型",
+      "查看目标大学或学院专业的 admission requirements",
+      "确认 Grade 11/12 课程的 prerequisite",
+      "与 guidance counsellor 讨论孩子目前成绩、英语适应和未来路径",
+    ],
+    warnings: [
+      "课程代码解释只能作为一般参考，不能替代学校或院校录取要求。",
+      "申请大学或学院前，请逐项核对目标专业的最新 admission requirements。",
+      "不同 school board 和学校 course calendar 可能存在差异。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "High school course types", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/high-school-course-types" },
+      { title: "High school graduation requirements", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/high-school-graduation-requirements" },
+      { title: "Ontario curriculum, secondary", publisher: "Ontario Ministry of Education", url: "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary" },
+    ],
+    relatedGuides: ["grade-9-course-selection", "school-system", "english-support-newcomers"],
+    relatedTools: ["ontario-grade-estimator"],
   },
 ];
 
