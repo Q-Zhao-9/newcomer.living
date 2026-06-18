@@ -49,25 +49,25 @@ export const schoolStageCards = [
     title: "Preschool / Child Care",
     titleZh: "托儿与学前阶段",
     description: "了解 daycare、child care、等待名单和费用补助的一般概念。",
-    href: "/school/ontario",
+    href: "/school/ontario/child-care-preschool",
   },
   {
     title: "Kindergarten",
     titleZh: "幼儿园",
     description: "安省通常有 Junior Kindergarten 和 Senior Kindergarten，入学年龄与教育局规则有关。",
-    href: "/school/ontario/school-system",
+    href: "/school/ontario/kindergarten-jk-sk",
   },
   {
     title: "Elementary School",
     titleZh: "小学阶段",
     description: "从住址对应学校、注册文件到 ESL 支持，帮助家长先建立框架。",
-    href: "/school/ontario/registration-documents",
+    href: "/school/ontario/elementary-school-guide",
   },
   {
     title: "High School",
     titleZh: "高中阶段",
     description: "了解学分、必修课、选课和毕业要求，避免只按中国年级经验判断。",
-    href: "/school/ontario/school-system",
+    href: "/school/ontario/high-school-guide",
   },
 ];
 
@@ -694,6 +694,291 @@ export const schoolGuides: SchoolGuide[] = [
     ],
     relatedGuides: ["grade-9-course-selection", "school-system", "english-support-newcomers"],
     relatedTools: ["ontario-grade-estimator"],
+  },
+  {
+    title: "Ontario 托儿与学前阶段：Daycare、Child Care 和入学前准备",
+    slug: "child-care-preschool",
+    category: "school",
+    province: "ontario",
+    stage: "child-care",
+    description: "面向中文新移民家庭解释 Ontario 托儿与学前阶段的基本概念，包括 daycare、licensed child care、waiting list、费用补助、入园沟通和上小学前准备。",
+    updatedAt: "2026-06-17",
+    readingTime: "10 分钟",
+    summary: [
+      "Ontario 的 child care / daycare 与义务教育阶段不同，通常需要家长主动申请、排队、比较位置和费用，并进一步确认是否为 licensed child care。",
+      "费用、空位、补助资格和等待时间差异很大。新移民家庭不建议只根据微信群报价或单个家庭经验做决定。",
+      "如果孩子接近 JK/SK 年龄，家长还需要同时了解本地 school board 的 Kindergarten 注册时间、住址证明和免疫记录要求。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：托儿先看安全、许可、位置和费用",
+        body: [
+          "在 Ontario，很多家庭会把 daycare、child care、preschool、before/after school program 混在一起说。实际选择时，家长应先弄清机构是否有 license、服务年龄段、每天时间、接送规则、餐食、病假政策、费用和等待名单。不同城市和机构差异很大，不能只用一个朋友的价格判断。",
+          "对刚到加拿大的家庭来说，托儿安排还会影响父母上课、上班、找工作和通勤。建议把 child care 当作家庭落地计划的一部分，而不是等找到工作后才开始问。很多热门机构可能需要较早加入 waiting list。",
+        ],
+      },
+      {
+        heading: "常见类型：Daycare、Licensed Child Care、Home Child Care",
+        body: [
+          "Licensed child care 通常指受省级规则监管的托儿中心或家庭托儿服务。家长可以查看 Ontario 官方 child care 信息，了解 license、inspection 和投诉记录等。Home child care 可能通过 licensed agency 管理，也可能是私人安排，具体责任和监管不同。",
+          "Preschool 有时用于描述学前活动或半日项目，但名称本身不能说明监管状态。家长应直接问机构：是否 licensed、服务哪个年龄段、师生比例、是否提供收据、假期如何收费、孩子生病如何处理。",
+        ],
+      },
+      {
+        heading: "Waiting list 和费用：为什么要早点问",
+        body: [
+          "很多城市 child care 空位紧张，尤其是 infant、toddler 或学校附近的 before/after school program。Waiting list 可能需要注册账号、填写孩子出生日期、期望开始时间和家庭地址。不同系统是否收费、是否定期确认意向也可能不同。",
+          "费用方面，家长应确认 daily rate 或 monthly fee、是否包含餐食、迟到接送费用、假期是否收费、政府费用减免是否已经体现在报价里。涉及 subsidy 或 fee reduction 时，请以市政或 Ontario 官方信息以及机构书面说明为准。",
+        ],
+      },
+      {
+        heading: "新移民家庭容易忽略什么",
+        body: [
+          "第一，通勤时间。离家近不一定等于方便，冬天接送、停车、公交班次都会影响实际体验。第二，沟通方式。很多机构使用 email、app 或纸质通知，家长需要知道请假、付款、紧急联系人如何处理。第三，孩子语言适应。刚来的孩子可能需要时间理解英文指令和集体规则。",
+          "如果孩子有过敏、用药、特殊饮食、发育评估或行为支持需求，应在申请和入园前主动说明，并询问机构是否能安全支持。不要等入园第一天才临时告知重要健康或安全信息。",
+        ],
+      },
+      {
+        heading: "从托儿过渡到 Kindergarten",
+        body: [
+          "如果孩子接近 4 岁或 5 岁，家长应同时查看本地 school board 的 Kindergarten 注册信息。Ontario 的 Junior Kindergarten 和 Senior Kindergarten 通常由 school board 管理，注册要求、年龄截止、住址证明和免疫记录需要以教育局信息为准。",
+          "托儿机构不一定会自动帮你完成小学注册。家长可以提前整理出生证明、护照或身份文件、住址证明、免疫记录和紧急联系人信息，并关注学校开放日或 orientation。",
+        ],
+      },
+    ],
+    checklist: [
+      "确认托儿机构是否 licensed，以及服务年龄段和开放时间",
+      "询问费用、收据、假期收费、迟到接送和病假政策",
+      "加入合适的 waiting list，并保存申请确认邮件",
+      "准备过敏、用药、紧急联系人和接送授权信息",
+      "接近 JK/SK 年龄时，同步查看本地 school board 注册要求",
+    ],
+    warnings: [
+      "托儿费用、空位和补助资格因地区和机构差异很大，请以官方和机构书面信息为准。",
+      "不要只凭机构名称判断是否受监管，应核对 license 或官方记录。",
+      "涉及孩子健康、安全、过敏或特殊支持需求时，请提前与机构确认。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "Child care in Ontario", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/child-care-ontario" },
+      { title: "Find and pay for child care", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/find-and-pay-child-care" },
+    ],
+    relatedGuides: ["kindergarten-jk-sk", "registration-documents", "school-system"],
+    relatedTools: ["ontario-school-registration-checklist", "ontario-grade-estimator"],
+  },
+  {
+    title: "Ontario Kindergarten 指南：Junior Kindergarten 和 Senior Kindergarten 怎么理解",
+    slug: "kindergarten-jk-sk",
+    category: "school",
+    province: "ontario",
+    stage: "kindergarten",
+    description: "用中文解释 Ontario Kindergarten 阶段，包括 JK/SK 年龄判断、注册时间、常见文件、全天课程、接送沟通和从 daycare 过渡到学校。",
+    updatedAt: "2026-06-17",
+    readingTime: "10 分钟",
+    summary: [
+      "Ontario Kindergarten 通常包括 Junior Kindergarten 和 Senior Kindergarten，但具体入学安排需要看孩子出生年份、本地 school board 和学校规则。",
+      "Kindergarten 已经属于 school board 学校体系，家长通常需要按住址注册，并准备孩子身份、住址、免疫和监护人信息。",
+      "以下为一般参考。注册年龄、开放时间、after-school care 和交通安排请以本地 school board 官方信息为准。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：Kindergarten 不是普通 daycare",
+        body: [
+          "很多新移民家长会把 Kindergarten 理解成幼儿园托管，但在 Ontario，JK/SK 通常是学校体系的一部分。孩子可能进入本地 elementary school 的 Kindergarten 班级，日常沟通、出勤、接送、校历和注册流程都按 school board 要求执行。",
+          "家长应先确认住址对应的 school board 和 home school，再查看 Kindergarten registration 页面。不要只根据孩子中文年龄或国内幼儿园班级判断是否可以入读。",
+        ],
+      },
+      {
+        heading: "JK 和 SK 一般怎么区分",
+        body: [
+          "Junior Kindergarten 通常面向较小年龄段，Senior Kindergarten 通常是进入 Grade 1 前的一年。实际判断会涉及出生年份和当年入学规则。家长可以使用本站年级估算器做初步参考，但最终仍应以教育局或学校确认结果为准。",
+          "如果孩子刚从中国或其他国家来，学校可能还会关注语言、适应、特殊需求或过往托儿经历。年龄估算只是第一步，不代表最终班级安排。",
+        ],
+      },
+      {
+        heading: "注册通常需要准备什么",
+        body: [
+          "Kindergarten 注册常见材料可能包括孩子出生日期证明、护照或其他身份文件、家长/监护人信息、Ontario 住址证明、免疫记录和紧急联系人。不同 school board 对可接受住址证明和提交方式可能不同。",
+          "如果家庭刚到加拿大、暂住亲友家、租约尚未开始或身份文件仍在办理中，建议尽早联系 school board registration office，询问是否可以先注册、哪些材料可以后补。",
+        ],
+      },
+      {
+        heading: "家长需要了解的日常规则",
+        body: [
+          "Kindergarten 日常可能涉及固定接送时间、迟到早退登记、午餐和零食、室外活动、备用衣物、室内鞋、雪裤雪靴、学校 app 或 email 通知。家长应在开学前确认老师如何联系、缺勤如何报告、谁可以接孩子。",
+          "如果孩子英文有限，家长可以主动告诉老师孩子常用语言、过敏或安抚方式，并询问学校是否有语言支持或 newcomer resources。刚开始适应慢是常见情况，建议观察几周后再和老师沟通具体问题。",
+        ],
+      },
+      {
+        heading: "Before/After School Care 要单独确认",
+        body: [
+          "学校上课时间不一定覆盖父母工作时间。很多家庭需要 before school 或 after school care，但这类项目可能由 school board、第三方机构或学校合作方提供，名额、费用和申请方式都需要单独确认。",
+          "不要默认孩子注册了 Kindergarten 就自动获得课前课后托管。家长应尽早查看学校页面或询问 office，特别是父母需要全职上班或上课的家庭。",
+        ],
+      },
+    ],
+    checklist: [
+      "确认孩子出生年份大致对应 JK 还是 SK",
+      "查找住址对应的 school board 和 home school",
+      "准备出生日期、身份、住址、免疫和紧急联系人材料",
+      "确认接送、缺勤报告、午餐零食和冬季衣物要求",
+      "如需要课前课后托管，单独申请并确认费用和名额",
+    ],
+    warnings: [
+      "Kindergarten 注册规则和材料要求可能因 school board 不同而变化。",
+      "年级估算只能作一般参考，最终安排以学校或教育局为准。",
+      "课前课后托管不一定自动包含在学校注册中，请单独确认。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "Kindergarten", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/kindergarten" },
+      { title: "Register your child for school", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/register-your-child-school" },
+    ],
+    relatedGuides: ["child-care-preschool", "elementary-school-guide", "registration-documents"],
+    relatedTools: ["ontario-grade-estimator", "ontario-school-registration-checklist"],
+  },
+  {
+    title: "Ontario Elementary School 小学阶段：新移民家长入门指南",
+    slug: "elementary-school-guide",
+    category: "school",
+    province: "ontario",
+    stage: "elementary",
+    description: "整理 Ontario 小学阶段家长最常遇到的问题：住址对应学校、注册文件、英语支持、作业沟通、校车、午餐、冬季用品和家校沟通。",
+    updatedAt: "2026-06-17",
+    readingTime: "11 分钟",
+    summary: [
+      "Ontario Elementary School 通常覆盖 Kindergarten 到 Grade 8 或其中一部分年级，具体学校结构取决于 school board 和本地学校安排。",
+      "小学阶段家长最需要先弄清住址对应学校、注册文件、ESL/ELL 支持、日常沟通方式和孩子适应情况。",
+      "以下为一般参考。学校边界、校车、项目和文件要求可能变化，请以本地 school board 和学校通知为准。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：小学阶段先稳住日常适应",
+        body: [
+          "对新移民家庭来说，小学阶段的关键不只是孩子进入几年级，而是是否能理解学校日常规则、找到作业和通知、知道如何请假、适应午餐和室外活动，并在英语环境中逐步建立安全感。",
+          "家长应先确认 home school、注册文件和开学安排，再关注语言支持、老师沟通、校历、交通和冬季装备。不要只看学校排名而忽略孩子每天通勤和适应。",
+        ],
+      },
+      {
+        heading: "住址、School Boundary 和注册",
+        body: [
+          "很多小学按家庭住址对应学校。租房或搬家前，如果家长非常在意学校，应查看 school board boundary 或 school locator，并向教育局确认当前规则。房产广告或社交媒体截图不一定准确。",
+          "注册时常见材料包括孩子身份和出生日期证明、家长/监护人信息、Ontario 地址证明、免疫记录和过往学校材料。不同 school board 可能接受不同类型的住址证明，建议查看官方 registration 页面。",
+        ],
+      },
+      {
+        heading: "英语支持和课堂适应",
+        body: [
+          "小学孩子刚来加拿大时，英语听说可能跟不上课堂指令。很多 school board 会根据需要提供 ESL/ELL 或 newcomer support，但具体方式由学校决定。家长可以告诉老师孩子过去在哪里上学、主要学习语言、优势科目和需要帮助的地方。",
+          "刚开始不要只用成绩判断适应。更实际的观察包括：孩子是否知道作业在哪里、是否敢问老师、是否能找到教室和洗手间、是否有同伴互动、是否理解学校安全规则。",
+        ],
+      },
+      {
+        heading: "家校沟通：邮件、App 和面谈",
+        body: [
+          "Ontario 小学常通过 email、学校网站、app、纸质通知或家长会沟通。家长应尽早确认老师和 office 的联系方式、缺勤报告方式、紧急联系人更新方式，以及 report card 和 parent-teacher interview 时间。",
+          "如果家长英文有限，可以使用简短英文邮件或翻译工具表达具体问题。建议每次只问一两个明确事项，例如作业平台、英语支持、午餐规则或孩子社交适应，不要一次发送过长背景。",
+        ],
+      },
+      {
+        heading: "午餐、校车、冬季和安全事项",
+        body: [
+          "很多小学没有统一热午餐，孩子需要带 lunch、snack 和水壶。学校可能有 nut-free 或过敏规则，家长应认真阅读。冬季通常需要雪裤、雪靴、手套、帽子和备用袜子，因为孩子可能每天户外活动。",
+          "校车资格和路线由 school board 或交通机构决定，不是所有家庭都有校车。家长还应确认接送授权、恶劣天气停课通知、迟到早退流程和孩子放学后去向。",
+        ],
+      },
+    ],
+    checklist: [
+      "用 school locator 确认住址对应 school board 和 home school",
+      "整理身份、住址、免疫和过往学校材料",
+      "询问 ESL/ELL 或 newcomer support 安排",
+      "确认老师、office、缺勤报告和学校 app/邮箱沟通方式",
+      "准备午餐用品、室内鞋、冬季衣物和接送授权信息",
+    ],
+    warnings: [
+      "学校边界、校车资格和项目安排可能变化，请以 school board 官方信息为准。",
+      "不要只根据排名或他人经验决定住址和学校，通勤与孩子适应同样重要。",
+      "涉及身份、费用或特殊教育支持时，请直接联系 school board 或合格专业人士。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "School year calendars", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/school-year-calendars" },
+      { title: "English language learners", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/english-language-learners" },
+    ],
+    relatedGuides: ["registration-documents", "english-support-newcomers", "kindergarten-jk-sk"],
+    relatedTools: ["ontario-school-registration-checklist", "ontario-grade-estimator"],
+  },
+  {
+    title: "Ontario High School 高中阶段：学分、选课和毕业要求入门",
+    slug: "high-school-guide",
+    category: "school",
+    province: "ontario",
+    stage: "high-school",
+    description: "为新移民家庭解释 Ontario 高中阶段的基本框架，包括 Grade 9–12、学分、必修课、课程代码、ESL/ELL、guidance counsellor 和升学路径。",
+    updatedAt: "2026-06-17",
+    readingTime: "12 分钟",
+    summary: [
+      "Ontario High School 通常从 Grade 9 到 Grade 12。高中阶段需要关注学分、必修课、先修课、课程代码和毕业要求，而不只是孩子当前年龄。",
+      "新移民高中生应尽早联系 guidance counsellor，评估过往成绩、英语支持、课程衔接和未来大学/学院/就业路径。",
+      "以下为一般参考。毕业要求、课程可选性和院校申请要求可能更新，请以学校、Ontario 官方信息和目标院校要求为准。",
+    ],
+    sections: [
+      {
+        heading: "快速结论：高中阶段要提前规划路径",
+        body: [
+          "如果孩子在高中阶段来到 Ontario，家长不能只问“对应几年级”。更重要的是：过往成绩如何转换、还需要多少学分、英语课程如何安排、哪些课程是毕业必修、哪些 Grade 11/12 课程是未来申请的先修要求。",
+          "建议尽早与 guidance counsellor 沟通，并准备成绩单、课程说明、英文水平信息和孩子未来大致目标。即使目标还不清楚，也应避免因为不了解先修课而过早关闭一些选择。",
+        ],
+      },
+      {
+        heading: "学分和毕业要求是什么",
+        body: [
+          "Ontario 高中通常以 credits / 学分来记录课程完成情况。学生需要完成一定数量的必修和选修学分，并满足其他毕业要求。具体要求可能随政策更新，家长应查看 Ontario 官方页面和学校 guidance office 信息。",
+          "从海外转入的学生，学校可能会评估以前课程并决定可认可学分。这个过程可能需要成绩单、课程描述、翻译或面谈。不同学校处理时间和要求可能不同。",
+        ],
+      },
+      {
+        heading: "课程代码、先修课和 Grade 11/12 路径",
+        body: [
+          "高中课程代码里的数字和字母通常提示年级与课程类型，例如 4U、4M、4C、4E 等。准备申请大学或学院的学生，需要查看目标项目要求哪些 Grade 12 课程和成绩。不能只凭课程名称判断是否满足申请要求。",
+          "很多 Grade 11/12 课程有 prerequisite。如果 Grade 9/10 或转学时没有规划好，后面可能需要补课、summer school 或调整时间表。家长可以结合本站课程代码指南进一步了解。",
+        ],
+      },
+      {
+        heading: "英语支持与新移民适应",
+        body: [
+          "高中生英语适应往往比小学生更直接影响成绩、选课和申请。学校可能提供 ESL/ELL 课程或支持，但具体安排会影响时间表和学分计划。家长和学生应明确询问 English credit、ESL credit、毕业要求和未来课程衔接。",
+          "除了语言，高中生还要适应项目作业、presentation、小组讨论、线上平台、学术诚信和选课截止时间。刚来时不建议只追求最难课程而忽视适应压力。",
+        ],
+      },
+      {
+        heading: "Guidance counsellor 要问什么",
+        body: [
+          "可以准备一份问题清单：孩子目前被评估到哪个年级？已认可多少学分？还缺哪些必修课？英语如何安排？未来如果申请大学或学院，需要哪些 Grade 11/12 课程？是否有 summer school、online course 或 timetable change 选项？",
+          "如果孩子未来目标还不确定，可以请 counsellor 解释 university、college、apprenticeship、workplace 等不同路径的大致区别。涉及移民身份、国际学生费用或 study permit 问题时，还需联系 school board 或相关官方部门。",
+        ],
+      },
+    ],
+    checklist: [
+      "准备海外成绩单、课程说明和必要翻译",
+      "预约 guidance counsellor 评估学分和课程安排",
+      "确认毕业要求、必修课、英语课程和社区服务等事项",
+      "查看目标大学/学院项目的 Grade 12 课程要求",
+      "记录选课、改课、summer school 和申请截止日期",
+    ],
+    warnings: [
+      "高中课程选择可能影响未来升学路径，请以学校 guidance counsellor 和目标院校要求为准。",
+      "课程代码解释不能替代具体专业 admission requirements。",
+      "涉及国际学生费用、study permit 或复杂身份问题时，请以 IRCC 和 school board 官方信息为准。",
+    ],
+    sources: [
+      ...ontarioSchoolSources,
+      { title: "High school graduation requirements", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/high-school-graduation-requirements" },
+      { title: "High school course types", publisher: "Ontario.ca", url: "https://www.ontario.ca/page/high-school-course-types" },
+      { title: "Ontario curriculum, secondary", publisher: "Ontario Ministry of Education", url: "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary" },
+    ],
+    relatedGuides: ["grade-9-course-selection", "ontario-high-school-course-codes", "english-support-newcomers"],
+    relatedTools: ["ontario-grade-estimator", "ontario-school-registration-checklist"],
   },
 ];
 

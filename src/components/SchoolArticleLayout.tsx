@@ -52,6 +52,10 @@ export function SchoolArticleLayout({ guide }: { guide: SchoolGuide }) {
           <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
             <h2 className="font-bold text-slate-950">安省学校专题</h2>
             <Link className="mt-3 block text-sm text-teal-700 hover:underline" href="/school/ontario/school-system">安省学校体系基础</Link>
+            <Link className="mt-2 block text-sm text-teal-700 hover:underline" href="/school/ontario/child-care-preschool">托儿与学前阶段</Link>
+            <Link className="mt-2 block text-sm text-teal-700 hover:underline" href="/school/ontario/kindergarten-jk-sk">Kindergarten / JK 与 SK</Link>
+            <Link className="mt-2 block text-sm text-teal-700 hover:underline" href="/school/ontario/elementary-school-guide">小学阶段</Link>
+            <Link className="mt-2 block text-sm text-teal-700 hover:underline" href="/school/ontario/high-school-guide">高中阶段</Link>
             <Link className="mt-2 block text-sm text-teal-700 hover:underline" href="/school/ontario/registration-documents">学校注册文件</Link>
             <Link className="mt-2 block text-sm text-teal-700 hover:underline" href="/school/ontario/study-permit-for-children">学签/工签家庭孩子上学</Link>
           </div>
