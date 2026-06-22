@@ -122,16 +122,17 @@ export const categories: Category[] = [
     title: "Car & Winter Driving",
     titleZh: "买车与冬季驾驶",
     icon: "🚗",
-    description: "买二手车、保险、冬胎和冬季驾驶基础。",
-    intro: "加拿大很多城市冬季较长，买车、保险、冬胎和雪天驾驶都会影响安全和预算。本栏目提供二手车检查、冬季驾驶准备和费用提醒，帮助新人先建立基础判断。",
+    description: "驾照申请、买车、保险、租车、冬季驾驶、保养和事故处理。",
+    intro: "加拿大很多城市冬季较长，买车、驾照、保险、冬胎和雪天驾驶都会影响安全和预算。本栏目从新司机与海外驾照换领、买新车/二手车、车险、租车、保养、交通规则到事故和故障处理，帮助新人先建立一套可执行的判断框架。",
     startHere: [
+      { label: "加拿大驾照、买车、保险与冬季驾驶总指南", href: "/guides/canada-driving-car-ownership-guide", description: "从驾照申请、买车租车、车险、保养到事故处理的完整入门。" },
       { label: "加拿大冬天第一次开车要注意什么？", href: "/guides/winter-driving-first-time-canada", description: "先了解冬胎、车距、除雪和应急用品。" },
       { label: "买二手车前应该检查什么？", href: "/guides/used-car-checklist-canada", description: "看车辆历史、试驾、保险报价和购前检查。" },
-      { label: "加拿大月生活成本计算器", href: "/tools/monthly-cost-calculator", description: "把车险、油费和交通成本纳入月度预算。" },
     ],
     faqs: [
-      { question: "冬胎是不是必须？", answer: "不同省份和保险条款可能不同，但冬胎通常能提升冬季安全性，也可能影响保险折扣。请以当地规定和保险公司说明为准。" },
-      { question: "买车前为什么要先问保险？", answer: "新司机或新移民的保险报价可能较高，建议先估算总成本，再决定是否买车。" },
+      { question: "中国驾照在安省可以直接换 G 牌吗？", answer: "中国大陆驾照通常不属于安省可直接换领 G 牌的司法辖区。通常需要先通过 G1 笔试；如果能用原件、翻译件和符合要求的经验证明证明 2 年以上驾驶经验，可能获得直接参加 G 路考的机会，从而跳过 G2 路考。请以 DriveTest 当次审核为准。" },
+      { question: "冬胎是不是必须？", answer: "不同省份和保险条款可能不同。魁北克等地有明确冬胎季节要求，其他省份也常因安全和保险折扣而强烈建议使用冬胎。请以当地规定和保险公司说明为准。" },
+      { question: "买车前为什么要先问保险？", answer: "新司机或新移民的保险报价可能较高，同一辆车在不同城市、车型、司机记录和保障组合下价格差异很大，建议先拿到保险报价，再决定是否买车和买哪种车。" },
     ],
     relatedCategorySlugs: ["cost-of-living", "documents", "customs-travel"],
     sensitive: true,
@@ -494,6 +495,291 @@ export const guides: Guide[] = [
   },
   { slug: "canada-part-time-resume", title: "加拿大兼职工作简历怎么写？", category: "jobs", updated: "2026-06-09", readingTime: "5 分钟", excerpt: "适合留学生和新人找兼职的英文简历结构。", summary: ["兼职简历应简洁、突出可用时间和相关经验。"], sources: [{ label: "Job Bank - Resume Builder", href: "https://www.jobbank.gc.ca/findajob/resume-builder", description: "加拿大 Job Bank 简历工具入口。" }, { label: "Ontario.ca - Employment standards", href: "https://www.ontario.ca/document/your-guide-employment-standards-act-0", description: "安省就业标准一般信息。" }, { label: "IRCC - Work while studying", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work.html", description: "留学生工作规则官方入口。" }], sections: [{ heading: "简历重点", body: ["建议控制在一页，包含联系方式、可工作时间、技能、工作或志愿经历。避免写过多与岗位无关的信息。"] }], checklist: ["一页简历", "写清可工作时间", "突出沟通和服务经验"], relatedGuides: ["student-sin-canada", "student-monthly-living-cost-canada"], relatedTools: ["newcomer-checklist"], related: ["student-sin-canada", "student-monthly-living-cost-canada"] },
   { slug: "ontario-school-registration-documents", title: "安省孩子上学注册需要哪些文件？", category: "school", updated: "2026-06-08", readingTime: "6 分钟", excerpt: "安省孩子入学注册常见文件清单。", summary: ["不同教育局要求可能不同，以下为一般参考。"], sources: [{ label: "Ontario.ca - Register for school", href: "https://www.ontario.ca/page/register-child-school", description: "安省孩子入学注册官方信息。" }, { label: "Ontario.ca - Going to school in Ontario", href: "https://www.ontario.ca/page/going-school-ontario", description: "安省学校体系官方信息。" }, { label: "Public Health Ontario - Immunization", href: "https://www.publichealthontario.ca/en/Health-Topics/Immunization", description: "疫苗和公共卫生信息入口。" }], sections: [{ heading: "常见文件", body: ["一般可能包括孩子身份证明、住址证明、监护人信息、疫苗记录和移民身份相关文件。请以当地教育局官方要求为准。"] }], checklist: ["查找对应教育局", "准备住址证明", "整理疫苗记录"], relatedGuides: ["student-sin-canada", "canada-phone-plan-guide"], relatedTools: ["ontario-school-registration-checklist", "ontario-grade-estimator"], related: ["student-sin-canada", "canada-phone-plan-guide"] },
+  {
+    slug: "canada-driving-car-ownership-guide",
+    title: "加拿大驾照、买车、保险与冬季驾驶总指南",
+    category: "car-winter-driving",
+    updated: "2026-06-22",
+    readingTime: "22 分钟",
+    excerpt: "面向中文新人整理加拿大驾照申请、海外驾照换领、买新车和二手车、车险、租车、保养、冬季驾驶、交通规则与事故处理。",
+    summary: [
+      "加拿大驾照、车辆登记、保险和交通规则主要由省或地区管理；搬到某个省后，应优先查看当地交通部门、DriveTest/ICBC/SAAQ/SGI/MPI 等官方页面。",
+      "中国大陆驾照在 Ontario 通常不能直接换 G 牌；如果能证明足够海外驾驶经验，通常可在通过 G1 笔试后获得路考等待期或考试路径上的经验抵扣，满足 2 年以上经验时可能直接尝试 G 路考，从而跳过 G2 路考。",
+      "买车前建议先确认保险报价、总预算、停车和冬季维护成本；二手车要查历史、试驾、做购前检查，Ontario 私人交易还要关注 UVIP 和 Safety Standards Certificate。",
+      "冬季驾驶的核心不是开得更快，而是提前准备、减速、加大车距、清雪除冰、查看路况，并在车内放应急用品。",
+    ],
+    sources: [
+      { label: "IRCC / Canada.ca - Driving in Canada", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/driving.html", description: "加拿大政府面向新移民的驾照、保险、购车、租车和事故基础说明。" },
+      { label: "DriveTest Ontario - Exchanges & Foreign Licences", href: "https://drivetest.ca/licences/exchanges-foreign-licences/", description: "安省外省和外国驾照换领、申请和 60 天规则。" },
+      { label: "DriveTest Ontario - Foreign Licence Experience Credits", href: "https://drivetest.ca/licences/exchanges-foreign-licences/foreign-licence-experience-credits/", description: "安省海外驾驶经验抵扣和翻译/认证文件要求。" },
+      { label: "Ontario.ca - Buy or sell a used vehicle", href: "https://www.ontario.ca/page/buy-or-sell-used-vehicle-ontario", description: "安省二手车买卖、登记和文件信息入口。" },
+      { label: "Ontario.ca - Used Vehicle Information Package", href: "https://www.ontario.ca/page/used-vehicle-information-package", description: "安省 UVIP 二手车信息包说明。" },
+      { label: "Canada.ca - Car insurance", href: "https://www.canada.ca/en/financial-consumer-agency/services/insurance/car.html", description: "加拿大金融消费者署关于车险、保障、免赔额和比较报价的说明。" },
+      { label: "Transport Canada - Winter Driving Emergency Kit", href: "https://tc.canada.ca/en/winter-driving-emergency-kit", description: "加拿大交通部冬季车载应急包建议。" },
+    ],
+    sections: [
+      {
+        heading: "先理解：加拿大不是全国统一驾照系统",
+        body: [
+          "加拿大的普通乘用车驾照由各省和地区签发。你在一个省拿到的正式驾照通常可在加拿大境内驾驶，但新居民搬到另一个省后，需要在当地规定期限内换领或申请当地驾照。Ontario 常见期限是成为居民后 60 天；其他省份期限和流程可能不同。",
+          "各地名称不同，但多数省份都有 graduated licensing（分级/渐进式驾照）制度：先通过知识考试拿学习者阶段驾照，再经过一段练习期和路考，逐步获得更完整的驾驶权限。新人不要只问“能不能开”，还要确认：是否为居民、可用外国驾照多久、是否需要 IDP、能否获得海外经验抵扣、保险公司是否接受你的驾驶记录。",
+        ],
+        table: {
+          headers: ["省/地区", "常见签发/管理机构", "新人理解重点"],
+          rows: [
+            ["Ontario", "DriveTest / Ministry of Transportation", "常见 G1、G2、G；外国驾照换领和经验抵扣在 DriveTest 办理。"],
+            ["British Columbia", "ICBC", "常见 L、N、Class 5；保险与驾照都常与 ICBC 相关。"],
+            ["Alberta", "Registry agents / Alberta Transportation", "常见 Class 7、Class 5 GDL、full Class 5；通过 registry agent 办理。"],
+            ["Quebec", "SAAQ", "法语环境较多，冬胎有明确季节要求，驾照和车辆登记由 SAAQ 管理。"],
+            ["Manitoba", "MPI", "常见 Learner、Intermediate、Full；保险和车辆登记常与 MPI 相关。"],
+            ["Saskatchewan", "SGI", "常见 Class 7、Novice 阶段和 Class 5；保险/登记常与 SGI 相关。"],
+            ["Atlantic provinces / Territories", "各省或地区交通部门", "流程、等待期、换领规则和文件要求不同，搬家前后应查当地官网。"],
+          ],
+        },
+        links: [
+          { label: "Canada.ca: Driving in Canada", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/driving.html" },
+          { label: "Ontario 驾驶与道路入口", href: "https://www.ontario.ca/page/driving-and-roads" },
+          { label: "ICBC Driver Licensing", href: "https://www.icbc.com/driver-licensing" },
+          { label: "SAAQ", href: "https://saaq.gouv.qc.ca/en" },
+        ],
+      },
+      {
+        heading: "新司机如何申请驾照：一般流程",
+        body: [
+          "如果你没有任何可被认可的驾驶经验，通常会从知识考试开始。以 Ontario 为例，普通小汽车路线通常是 G1 笔试、G2 路考、G 路考；其他省份名称不同，但逻辑类似：先学习规则，再受限制驾驶，最后通过更完整路考。",
+          "建议步骤是：下载或阅读本省官方驾驶手册；预约或前往指定机构参加知识考试和视力检查；拿到学习阶段驾照后按限制练习；需要时找持牌教练或驾校；达到等待期和练习要求后预约路考。考试语言、费用、等待期和可重考规则都可能变化，应以官方页面为准。",
+        ],
+        table: {
+          headers: ["阶段", "通常要做什么", "新人提醒"],
+          rows: [
+            ["知识考试/视力检查", "学习交通标志、路权、限速、酒驾/药驾和安全规则", "不要只刷题；要理解本地路权和校车、行人、四向停牌等规则。"],
+            ["学习者阶段", "在限制条件下练车", "可能限制高速、夜间、乘客、陪同司机或酒精浓度。"],
+            ["初级路考", "证明基础控制、变道、转弯、停车和观察", "提前熟悉考试车辆、保险和考场规则。"],
+            ["完整驾照路考", "证明独立驾驶、高速/复杂路况和风险判断", "通过不代表没有风险，冬季和陌生城市仍需保守驾驶。"],
+          ],
+        },
+      },
+      {
+        heading: "有中国驾照或其他外国驾照：如何处理经验抵扣和翻译",
+        body: [
+          "如果你持有外国驾照，先区分“直接换领”和“用海外经验抵扣等待期/考试路径”。Ontario 对部分国家和地区有直接换领协议；中国大陆通常不在可直接换领 G 牌的名单内，因此一般不能拿中国驾照直接换 Ontario G。台湾等特定司法辖区可能有不同安排，应以 DriveTest 最新名单为准。",
+          "以 Ontario 为例，很多中国驾照持有人会走这类路径：带原始有效驾照、身份证明、必要翻译和经验证明到 DriveTest；通过 G1 知识考试；DriveTest 根据材料给予海外驾驶经验 credit。通常可主张 12 个月经验；如果能提供符合要求的 authentication letter/经验证明并证明 2 年以上经验，可能获得直接参加 G road test 的一次机会。这样不是“免考 G2 后直接拿 G”，而是“通过 G1 后可跳过 G2 路考路径，直接尝试 G 路考”；若 G 路考未通过，后续路径以 DriveTest 安排为准。",
+          "翻译要求非常重要。Ontario 要求非英文/法文的外国驾照通常需要由 MTO-recognized translator 翻译；经验认证信和驾照也通常需要英文或法文，或附认可翻译。DriveTest 明确不接受保险公司或第三方验证网站作为经验证明。中国驾照、车管所证明、公证书、领馆/使领馆证明等材料是否接受，取决于文件内容、语言、日期和柜台审核。出发前应准备原件和可核验翻译，现场不要交出唯一原件而不留备份。",
+        ],
+        table: {
+          headers: ["你的情况", "可能路径", "重点文件"],
+          rows: [
+            ["完全新司机", "从本省学习者阶段开始", "身份证明、地址、知识考试材料。"],
+            ["外国驾照且属于互换司法辖区", "可能直接换领同等或接近等级驾照", "原始有效驾照、身份证明、可能的驾驶记录/翻译。"],
+            ["中国大陆驾照且经验不足 2 年", "通常先 G1，再按经验抵扣减少等待期或进入 G2/G 路径", "原驾照、MTO 认可翻译、可证明发证/经验日期的材料。"],
+            ["中国大陆驾照且可证明 2 年以上经验", "Ontario 通常可在 G1 后争取直接尝试 G road test，从而跳过 G2 road test", "原驾照、MTO 认可翻译、authentication/经验证明，具体以 DriveTest 审核为准。"],
+          ],
+        },
+        links: [
+          { label: "DriveTest: Exchanges & Foreign Licences", href: "https://drivetest.ca/licences/exchanges-foreign-licences/" },
+          { label: "DriveTest: Foreign Licence Experience Credits", href: "https://drivetest.ca/licences/exchanges-foreign-licences/foreign-licence-experience-credits/" },
+          { label: "Ontario.ca: Exchange an out-of-province licence", href: "https://www.ontario.ca/page/exchange-out-province-drivers-licence" },
+        ],
+      },
+      {
+        heading: "不同驾照类型有什么区别？",
+        body: [
+          "每个省份的名称不同，但普通家庭最常见的是乘用车驾照；摩托车、商用卡车、校车、公交和带气刹车辆通常需要额外类别、背书或测试。不要用普通小车驾照去驾驶不符合类别的车辆。",
+          "Ontario 常见小车为 G 系列，摩托车为 M 系列，卡车/商用车辆为 A、B、C、D、E、F 等类别。BC、Alberta、Manitoba 等地常见 Class 5 代表普通乘用车，Class 7 常为学习者阶段。租车、保险和雇主用车时，除了驾照类别，还可能看年龄、持照时间、信用卡和保险记录。",
+        ],
+        table: {
+          headers: ["类别", "常见用途", "提醒"],
+          rows: [
+            ["普通乘用车", "日常小汽车、SUV、小型 van", "新司机通常从学习者/初级阶段开始，限制条件因省份不同。"],
+            ["摩托车", "摩托车、机车", "通常需要单独知识考试、路考和安全装备要求。"],
+            ["商用/重型车辆", "卡车、公交、校车、气刹车辆", "需要专门类别、体检、背景或雇主要求，不能用普通驾照替代。"],
+            ["租车公司内部条件", "租车、共享车、公司车", "即使驾照合法，也可能因年龄、信用卡、保险和持照时间被限制。"],
+          ],
+        },
+      },
+      {
+        heading: "买车总流程：先算总成本，再看车",
+        body: [
+          "买车前先算总拥有成本，而不是只看车价。常见成本包括车价、税费、注册/牌照、保险、油费或充电费、停车、冬胎、保养、维修、洗车、轮胎存放、贷款利息和折旧。新移民或新司机的保险可能让预算明显上升。",
+          "建议先做三件事：第一，确认自己能否合法驾驶和投保；第二，用目标车型拿 2–3 家保险报价；第三，确认住处停车、单位/学校停车、冬季清雪和通勤距离。没有稳定收入、信用记录或停车位时，先租车、公交、共享车或短期用车可能更稳妥。",
+        ],
+        links: [
+          { label: "AutoTrader Canada", href: "https://www.autotrader.ca/" },
+          { label: "Kijiji Autos", href: "https://www.kijijiautos.ca/" },
+          { label: "Kijiji Cars & Vehicles", href: "https://www.kijiji.ca/b-cars-vehicles/canada/c27l0" },
+          { label: "Facebook Marketplace", href: "https://www.facebook.com/marketplace/category/vehicles" },
+          { label: "CARFAX Canada", href: "https://www.carfax.ca/" },
+        ],
+      },
+      {
+        heading: "买新车指南：dealer、贷款、订单和交车",
+        body: [
+          "买新车的优点是车况透明、保修清楚、融资选择多；缺点是价格、税费、保险、折旧和附加项目可能较高。看车时不要只问月供，要问 out-the-door price（落地总价）：车价、运费/PDI、空调税、轮胎费、文件费、配件、延保、保护膜、贷款利率、贷款期限、提前还款规则和交车时间。",
+          "如果 dealer 只强调低月供，要把贷款总额、利息总额和期限写下来比较。对新移民来说，信用记录短可能影响贷款利率或首付要求。签字前逐项阅读 bill of sale，不理解的附加产品可以要求删除或回家再比较，不要在压力下当天签。提车时检查 VIN、里程、颜色配置、轮胎、两把钥匙、保修文件、用户手册、临时牌照/正式牌照、保险生效时间和任何承诺的配件。",
+        ],
+        table: {
+          headers: ["项目", "要问清楚", "常见风险"],
+          rows: [
+            ["现金价/贷款价", "总价是否因融资方式变化", "只看月供，忽略总利息。"],
+            ["附加产品", "延保、防锈、保护膜、轮胎险是否可选", "被打包加入而没有意识到。"],
+            ["交车时间", "现车还是 factory order", "等待期间价格、利率或旧车 trade-in 条件变化。"],
+            ["保险", "提车当天保险何时生效", "没有保险无法合法上路。"],
+          ],
+        },
+      },
+      {
+        heading: "买二手车指南：私人卖家和车行都要查",
+        body: [
+          "二手车最怕信息不透明。建议先看 VIN、里程、事故记录、登记地、是否有 lien（留置权/贷款）、保养记录、召回、轮胎刹车、锈蚀、底盘、漏油、仪表盘警示灯、空调暖风和电子设备。价格明显低于市场时要格外谨慎。",
+          "Ontario 私人买卖通常涉及 UVIP（Used Vehicle Information Package）和 Safety Standards Certificate。UVIP 可帮助查看车辆 Ontario 历史、liens 和登记信息；Safety Standards Certificate 是车辆达到最低安全标准的证明，但它不是“车况完美”保证，也不等于没有事故或未来不会维修。高价二手车建议做 pre-purchase inspection（购前检查）。",
+        ],
+        table: {
+          headers: ["步骤", "怎么做", "不要忽略"],
+          rows: [
+            ["筛选广告", "比较 AutoTrader、Kijiji、Facebook Marketplace、dealer 网站", "过低价格、催促转账、拒绝见面/试驾。"],
+            ["核对身份和 VIN", "VIN 与车身、ownership、UVIP/报告一致", "不要只看卖家截图。"],
+            ["试驾", "冷启动、刹车、转向、高速、倒车、异响", "试驾前确认保险和合法性。"],
+            ["购前检查", "找独立技师检查底盘、刹车、轮胎、锈蚀和故障码", "不要只相信“刚做过 safety”。"],
+            ["成交和登记", "按省份要求办 transfer、税费、牌照和保险", "付款方式、收据、钥匙、ownership 文件。"],
+          ],
+        },
+        links: [
+          { label: "Ontario.ca: Used Vehicle Information Package", href: "https://www.ontario.ca/page/used-vehicle-information-package" },
+          { label: "Ontario.ca: Safety Standards Certificate", href: "https://www.ontario.ca/page/safety-standards-certificate" },
+          { label: "Transport Canada recalls", href: "https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats" },
+        ],
+      },
+      {
+        heading: "车险指南：买车前先报价",
+        body: [
+          "加拿大开车必须有车险。车险通常包括第三方责任、事故福利、碰撞、综合险、租车/代步车、道路救援、首次事故宽恕等不同保障或附加项。每个省份制度不同：有的以公营保险为主，有的主要向私营保险公司购买。",
+          "报价会受地址、年龄、驾龄、驾驶记录、车型、用途、年公里数、停车位置、是否有冬胎、免赔额和保障额度影响。新移民可以询问保险公司是否接受海外无事故证明或驾驶经验证明，但是否认可由保险公司决定。不要为了便宜隐瞒真实住址、主要驾驶人或商业用途，否则理赔时可能出问题。",
+        ],
+        table: {
+          headers: ["要比较", "含义", "提醒"],
+          rows: [
+            ["Liability 责任险", "赔付你对他人造成的损失，额度很重要", "最低额度不一定适合每个人。"],
+            ["Collision 碰撞险", "自己车辆碰撞后的维修/替换", "旧车可权衡保费和车值。"],
+            ["Comprehensive 综合险", "盗抢、火灾、冰雹、玻璃等非碰撞风险", "冬季和户外停车可重点考虑。"],
+            ["Deductible 免赔额", "理赔时自己先承担的金额", "免赔额越高，保费可能越低但出险压力更大。"],
+            ["Listed drivers", "家庭成员或经常开车的人", "未列名司机出事故可能影响保费或理赔。"],
+          ],
+        },
+        links: [
+          { label: "Canada.ca: Car insurance", href: "https://www.canada.ca/en/financial-consumer-agency/services/insurance/car.html" },
+          { label: "FSRA Ontario auto insurance", href: "https://www.fsrao.ca/consumers/auto-insurance" },
+        ],
+      },
+      {
+        heading: "租车指南：适合短期用车，但要看清保险和限制",
+        body: [
+          "租车适合搬家、旅行、临时通勤或试探自己是否真的需要买车。租车前确认驾照是否被接受、最低年龄、年轻驾驶人费用、信用卡押金、取还车地点、里程限制、跨省/跨境限制、冬胎是否可选、儿童座椅、加油规则和 late return 费用。",
+          "保险方面，租车柜台常见 Collision Damage Waiver / Loss Damage Waiver（碰撞/损失豁免），信用卡也可能提供租车碰撞损失保障，但条件很多，例如必须用该卡全额支付、租期限制、车型限制和不能违反租车合同。自己的车险也可能延伸到租车。不要只听口头说“信用卡 cover”，应查看信用卡保险 certificate、租车合同和省级监管提示。",
+        ],
+        table: {
+          headers: ["租车前", "要确认", "为什么重要"],
+          rows: [
+            ["驾照和年龄", "外国驾照、IDP、持照时间、年龄费用", "不满足条件可能无法取车。"],
+            ["押金/信用卡", "是否必须主驾驶本人信用卡", "debit card 或他人信用卡可能不被接受。"],
+            ["保险/豁免", "LDW/CDW、第三方责任、信用卡保障", "事故后谁赔、赔多少、哪些情况除外。"],
+            ["车辆检查", "取车拍照录像，记录划痕和油量", "避免还车争议。"],
+            ["冬季配置", "冬胎、雪刷、washer fluid", "山区或雪天尤其重要。"],
+          ],
+        },
+        links: [
+          { label: "FSRA: Protecting yourself when renting a vehicle", href: "https://www.fsrao.ca/consumers/auto-insurance/protect-yourself/protecting-yourself-when-renting-vehicle" },
+        ],
+      },
+      {
+        heading: "冬季驾驶：先准备，再决定要不要出门",
+        body: [
+          "加拿大冬季常见风险包括黑冰、湿雪、暴风雪、低能见度、结冰雨、冻住的车门和电瓶亏电。出门前看天气和路况，清除车顶、车窗、后视镜、车灯和牌照上的雪冰；不要只刮前挡风玻璃一小块。雪天要提前刹车、轻柔转向、加大车距、减少变道，遇到 whiteout 或 freezing rain 时宁可推迟出行。",
+          "冬胎通常比四季胎更适合低温和冰雪路面。部分省份或路段有强制要求，保险公司也可能提供冬胎折扣。车内建议常备雪刷、铲子、防冻 washer fluid、搭电线、手套、毯子、反光背心、手电、充电宝、水和不易坏食物。油车冬季不要总把油箱开到很低；电动车要考虑低温续航下降和充电计划。",
+        ],
+        links: [
+          { label: "Transport Canada winter emergency kit", href: "https://tc.canada.ca/en/winter-driving-emergency-kit" },
+          { label: "Ontario winter driving", href: "https://www.ontario.ca/page/winter-driving" },
+          { label: "511 Ontario road conditions", href: "https://511on.ca/" },
+        ],
+      },
+      {
+        heading: "日常维护：加油、换油、洗车和基础检查",
+        body: [
+          "加油时先确认油品等级（regular/premium/diesel）和车辆油箱盖方向。加拿大很多加油站可自助刷卡预授权，也可进店预付。冬季建议使用低温适用的 washer fluid，不要用水代替。长途前检查油量、胎压、灯光、雨刷和玻璃水。",
+          "换油周期取决于车型、机油类型和驾驶条件，以车主手册和仪表提示为准。二手车刚买来如果保养记录不清，建议尽快做一次基础检查：机油、刹车、轮胎、电瓶、冷却液、防冻液、雨刷、空调暖风和底盘锈蚀。冬季和盐路地区要定期洗车，尤其注意底盘冲洗；但极低温时洗车后要防止门锁、车窗和刹车部位结冰。",
+        ],
+        table: {
+          headers: ["项目", "多久关注", "新人提醒"],
+          rows: [
+            ["胎压和轮胎", "每月/换季/长途前", "低温会降低胎压；看门框标签而不是轮胎侧壁最大值。"],
+            ["机油和滤芯", "按手册或保养提示", "不要只按网上固定公里数，车型和用车环境不同。"],
+            ["雨刷和玻璃水", "秋冬前重点检查", "冬季用 -35°C 或适合当地低温的 washer fluid。"],
+            ["电瓶", "入冬前或启动困难时", "寒冷天气会放大电瓶老化问题。"],
+            ["洗车/底盘", "盐路季节定期", "洗完擦门缝，防止冻门。"],
+          ],
+        },
+      },
+      {
+        heading: "常见交通规则和安全建议",
+        body: [
+          "规则因省份不同，但一些高风险点在全国都很重要：礼让行人和校区，遇 emergency vehicle 靠边让行，看到 school bus 红灯和 stop arm 时按规则停车，四向 stop sign 按先到先走/右侧优先，转弯让直行和行人，变道必须看盲区，限速不是恶劣天气下的安全速度。",
+          "不要酒驾、药驾、疲劳驾驶或边开车边看手机。加拿大对 impaired driving、分心驾驶、超速、危险驾驶和肇事逃逸处罚通常很重。新人最容易出错的是：不理解 all-way stop、环岛、右转红灯限制、公交/校车规则、高速 merge、冬季跟车太近、停车标志线和 school zone 时间牌。建议阅读当地官方驾驶手册，而不是只依赖中文经验帖。",
+        ],
+        table: {
+          headers: ["场景", "一般做法", "提醒"],
+          rows: [
+            ["All-way stop", "完全停稳，通常按到达顺序通行", "同时到达时注意右侧车辆和手势沟通。"],
+            ["校车", "红灯闪烁/stop arm 展开时按当地规则停车", "双向是否都停取决于道路结构和省份规则。"],
+            ["紧急车辆", "安全条件下靠右停车让行", "不要跟在消防车/救护车后面抢行。"],
+            ["行人和骑行者", "转弯和过人行横道时充分观察", "冬季夜晚能见度差，提前减速。"],
+            ["手机", "驾驶中不要手持或操作", "导航也应出发前设置好。"],
+          ],
+        },
+      },
+      {
+        heading: "故障或事故怎么处理",
+        body: [
+          "如果车辆故障，先保证人身安全：打开双闪，尽量移到安全位置；高速或恶劣天气下不要站在车道边；必要时拨打 911。普通道路救援可联系保险、CAA、租车公司或拖车服务。冬季被困时，保持排气管周围无积雪，避免一氧化碳风险；间歇运行发动机取暖时保持通风，并节省电量和燃油。",
+          "发生事故时，不要离开现场。先检查是否有人受伤，必要时拨打 911；如果安全，拍照记录车辆位置、损伤、牌照、道路环境、保险和驾照信息；交换联系方式和保险信息；不要在现场争吵或随意承认法律责任；按当地规则向 collision reporting centre、警方或保险公司报告。租车事故还要立即联系租车公司并按合同流程处理。",
+        ],
+        table: {
+          headers: ["情况", "第一步", "后续"],
+          rows: [
+            ["轻微剐蹭无人伤", "移到安全位置并拍照交换信息", "按省份/保险要求报告，不要私下草率收现金了结。"],
+            ["有人受伤或道路危险", "立即拨打 911", "等待警方/急救，保护现场安全。"],
+            ["高速爆胎/故障", "握稳方向，缓慢减速到安全位置", "开双闪，联系道路救援，不在车道边修车。"],
+            ["冬季被困", "留在安全位置，求助并节省燃油/电量", "清理排气管周围积雪，使用应急包保暖。"],
+            ["租车事故", "先保安全和报警/报告", "联系租车公司、信用卡保险和个人保险，保存 case number。"],
+          ],
+        },
+      },
+      {
+        heading: "新人行动清单：按这个顺序做",
+        body: [
+          "如果你刚到加拿大，建议按顺序处理：确认本省驾照规则；准备翻译和经验证明；通过知识考试或换领；拿保险报价；决定买车、租车还是暂时公交；看车前确认总预算；入冬前准备冬胎和应急包。",
+          "本文是一般参考，不替代官方规则、法律建议、保险建议或机械检查。驾照、保险、车辆登记、税费和事故报告要求会按省份和时间变化，重要决定请以政府、DriveTest/ICBC/SAAQ/SGI/MPI、保险公司、租车公司和持牌技师的书面信息为准。",
+        ],
+        links: [
+          { label: "月生活成本计算器：把车险油费算入预算", href: "/tools/monthly-cost-calculator" },
+          { label: "加拿大冬天第一次开车要注意什么？", href: "/guides/winter-driving-first-time-canada" },
+          { label: "买二手车前应该检查什么？", href: "/guides/used-car-checklist-canada" },
+        ],
+      },
+    ],
+    checklist: [
+      "查看所在省/地区官方驾照流程和外国驾照期限",
+      "如使用中国驾照经验，准备原件、MTO/当地认可翻译和可核验经验证明",
+      "买车前先拿保险报价，并把停车、冬胎、保养、油费和税费加入预算",
+      "二手车核对 VIN、历史、lien、safety/UVIP 或当地等效文件，并考虑购前检查",
+      "冬季准备冬胎、雪刷、防冻玻璃水、应急包和道路救援联系方式",
+      "租车前确认驾照、年龄、信用卡押金、保险/信用卡保障和跨境/里程限制",
+      "学习当地驾驶手册，重点理解校车、四向停牌、紧急车辆、分心驾驶和事故报告规则",
+      "事故或故障先保人身安全，必要时拨打 911，拍照记录并按保险/警方/租车公司流程报告",
+    ],
+    relatedGuides: ["winter-driving-first-time-canada", "used-car-checklist-canada", "newcomer-monthly-cost-canada"],
+    relatedTools: ["monthly-cost-calculator", "newcomer-checklist"],
+    related: ["winter-driving-first-time-canada", "used-car-checklist-canada", "newcomer-monthly-cost-canada"],
+  },
   { slug: "winter-driving-first-time-canada", title: "加拿大冬天第一次开车要注意什么？", category: "car-winter-driving", updated: "2026-06-07", readingTime: "7 分钟", excerpt: "冬胎、除雪、车距和应急用品基础指南。", summary: ["冬季驾驶风险更高，建议提前练习并关注天气。"], sources: [{ label: "Ontario.ca - Winter driving", href: "https://www.ontario.ca/page/winter-driving", description: "安省冬季驾驶官方提醒。" }, { label: "Ontario.ca - Driving and roads", href: "https://www.ontario.ca/page/driving-and-roads", description: "驾驶、路况和车辆相关官方入口。" }], sections: [{ heading: "基础准备", body: ["建议检查冬胎、雨刷、防冻液和电瓶。车内可放雪刷、手套、毯子、充电线和少量应急食品。"] }], checklist: ["安装或检查冬胎", "准备雪刷", "查看天气和路况"], relatedGuides: ["used-car-checklist-canada", "newcomer-monthly-cost-canada"], relatedTools: ["monthly-cost-calculator"], related: ["used-car-checklist-canada", "newcomer-monthly-cost-canada"] },
   { slug: "student-sin-canada", title: "留学生在加拿大如何办理 SIN？", category: "student-life", updated: "2026-06-06", readingTime: "5 分钟", excerpt: "SIN 用途、办理渠道和注意事项的一般说明。", summary: ["SIN 涉及个人敏感信息，应妥善保管。"], sources: [{ label: "Service Canada - Social Insurance Number", href: "https://www.canada.ca/en/employment-social-development/services/sin.html", description: "SIN 申请和保护官方说明。" }, { label: "IRCC - Work while studying", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work.html", description: "留学生工作资格官方入口。" }, { label: "Office of the Privacy Commissioner of Canada - SIN", href: "https://www.priv.gc.ca/en/privacy-topics/identities/social-insurance-numbers/", description: "SIN 隐私保护官方说明。" }], sections: [{ heading: "SIN 是什么", body: ["SIN 通常用于工作和税务相关场景。办理资格和材料请以 Service Canada 官方信息为准。不要随意把 SIN 发给不可信对象。"] }], checklist: ["查看 Service Canada 要求", "准备学习许可等材料", "妥善保存 SIN"], relatedGuides: ["canada-part-time-resume", "canada-phone-plan-guide"], relatedTools: ["newcomer-checklist"], related: ["canada-part-time-resume", "canada-phone-plan-guide"] },
   { slug: "canada-phone-plan-guide", title: "加拿大手机套餐如何选择？", category: "documents", updated: "2026-06-05", readingTime: "5 分钟", excerpt: "比较预付费、合约、流量和覆盖范围。", summary: ["先看覆盖、流量需求和是否需要合约。"], sources: [{ label: "CRTC - Wireless Code", href: "https://crtc.gc.ca/eng/phone/mobile/code.htm", description: "加拿大无线服务消费者规则。" }, { label: "CRTC - Cellphone and wireless services", href: "https://crtc.gc.ca/eng/phone/mobile.htm", description: "手机和无线服务官方信息入口。" }], sections: [{ heading: "选择思路", body: ["新人可以先选择灵活的预付费或月付方案，等稳定后再比较长期优惠。注意是否包含开通费、自动扣款和国际通话。"] }], checklist: ["确认覆盖范围", "估算流量", "比较总价和合约条款"], relatedGuides: ["newcomer-monthly-cost-canada", "student-sin-canada"], relatedTools: ["newcomer-checklist", "monthly-cost-calculator"], related: ["newcomer-monthly-cost-canada", "student-sin-canada"] },
