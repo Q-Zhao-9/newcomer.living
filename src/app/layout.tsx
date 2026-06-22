@@ -14,6 +14,21 @@ export const metadata: Metadata = buildRootMetadata();
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="zh-CN" className={`${notoSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <head>
+        <script
+          id="microsoft-clarity"
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "xb3mjg4lzn");
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full bg-white text-slate-900">
         <Header />
         {children}
