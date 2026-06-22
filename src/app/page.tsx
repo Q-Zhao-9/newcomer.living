@@ -6,15 +6,9 @@ import { GuideCard } from "@/components/GuideCard";
 import { ToolCard } from "@/components/ToolCard";
 import { categories, firstContentClusterGuides, guides, site, tools } from "@/lib/content";
 import { schoolGuides, schoolTools } from "@/lib/school";
-import { buildPageMetadata } from "@/lib/seo";
+import { homePageJsonLd, homePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  ...buildPageMetadata({
-    title: "Newcomer Living | 加拿大生活工具箱",
-    description: site.description,
-    path: "/",
-  }),
-};
+export const metadata: Metadata = homePageMetadata;
 
 export default function Home() {
   const contentCluster = firstContentClusterGuides();
@@ -97,15 +91,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Newcomer Living | 加拿大生活工具箱",
-            alternateName: [site.name, site.nameZh],
-            url: site.url,
-            inLanguage: "zh-CN",
-            description: site.description,
-          }),
+          __html: JSON.stringify(homePageJsonLd),
         }}
       />
     </main>
