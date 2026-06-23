@@ -7,12 +7,11 @@ export function Logo({ size = "header" }: { size?: "header" | "footer" }) {
     <div className="flex min-w-0 items-center gap-2 sm:gap-3">
       <Image
         src="/logo-square.svg"
-        alt=""
+        alt="Newcomer Living 加拿大生活工具箱 logo"
         width={isHeader ? 48 : 44}
         height={isHeader ? 48 : 44}
         className={isHeader ? "h-10 w-10 shrink-0 sm:h-12 sm:w-12" : "h-11 w-11 shrink-0"}
         priority={isHeader}
-        aria-hidden="true"
       />
       <div className="min-w-0 leading-tight">
         <span

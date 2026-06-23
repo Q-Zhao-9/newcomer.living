@@ -38,7 +38,7 @@ export function CategoryPageLayout({
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "分类", href: "/" }, { label: category.titleZh }]} />
+      <Breadcrumbs currentPath={`/categories/${category.slug}`} items={[{ label: "分类", href: "/" }, { label: category.titleZh }]} />
 
       <section className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-teal-50 via-white to-white p-6 sm:p-8">
         <p className="text-5xl" aria-hidden>{category.icon}</p>

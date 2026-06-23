@@ -15,7 +15,7 @@ export function SchoolArticleLayout({ guide }: { guide: SchoolGuide }) {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "孩子上学", href: "/school" }, { label: "安省指南", href: "/school/ontario" }, { label: guide.title }]} />
+      <Breadcrumbs currentPath={`/school/ontario/${guide.slug}`} items={[{ label: "孩子上学", href: "/school" }, { label: "安省指南", href: "/school/ontario" }, { label: guide.title }]} />
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         <article className="min-w-0">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">Ontario School Guide</p>

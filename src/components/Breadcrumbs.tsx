@@ -1,26 +1,8 @@
 import Link from "next/link";
-import { site } from "@/lib/content";
+import { buildBreadcrumbJsonLd, type BreadcrumbSchemaItem } from "@/lib/seo";
 
-type BreadcrumbItem = { label: string; href?: string };
-
-function absoluteUrl(href?: string) {
-  if (!href) return undefined;
-  if (href.startsWith("http")) return href;
-  return `${site.url}${href}`;
-}
-
-export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
-  const allItems = [{ label: "首页", href: "/" }, ...items];
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: allItems.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.label,
-      ...(absoluteUrl(item.href) ? { item: absoluteUrl(item.href) } : {}),
-    })),
-  };
+export function Breadcrumbs({ items, currentPath }: { items: BreadcrumbSchemaItem[]; currentPath?: string }) {
+  const jsonLd = buildBreadcrumbJsonLd(items, currentPath);
 
   return (
     <>

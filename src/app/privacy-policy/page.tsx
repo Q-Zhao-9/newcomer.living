@@ -78,7 +78,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "隐私政策" }]} />
+      <Breadcrumbs currentPath="/privacy-policy" items={[{ label: "隐私政策" }]} />
       <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">Privacy Policy</p>
       <h1 className="mt-3 text-4xl font-bold text-slate-950">隐私政策</h1>
       <p className="mt-3 text-sm text-slate-500">最近更新：2026-06-13</p>

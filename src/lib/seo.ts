@@ -14,7 +14,6 @@ type SeoOptions = {
   modifiedTime?: string;
 };
 
-
 const homeSeoTitle = "加拿大新移民指南｜加拿大生活成本 & Canada Newcomer Guide";
 const homeSeoDescription = "Newcomer Living 是中文加拿大新移民指南，提供加拿大生活指南、加拿大生活成本计算、租房、孩子上学、买车和冬季驾驶内容，帮助 newcomers plan Cost of living in Canada and daily life.";
 const homeKeywords = [
@@ -28,6 +27,80 @@ const homeKeywords = [
   "加拿大孩子上学",
   "加拿大冬季驾驶",
 ];
+
+const socialProfiles = [
+  "https://x.com/newcomerliving",
+  "https://www.facebook.com/profile.php?id=61591382335212",
+] as const;
+
+export type BreadcrumbSchemaItem = { label: string; href?: string };
+
+function absoluteUrl(path: string) {
+  return path.startsWith("http") ? path : `${site.url}${path}`;
+}
+
+export function buildOrganizationJsonLd() {
+  return {
+    "@type": "Organization",
+    "@id": `${site.url}/#organization`,
+    name: site.name,
+    alternateName: site.nameZh,
+    url: site.url,
+    description: site.description,
+    logo: {
+      "@type": "ImageObject",
+      "@id": `${site.url}/#logo`,
+      url: absoluteUrl(defaultImage),
+      contentUrl: absoluteUrl(defaultImage),
+      caption: `${site.name} 加拿大生活工具箱 logo`,
+    },
+    sameAs: [...socialProfiles],
+    areaServed: { "@type": "Country", name: "Canada" },
+    knowsAbout: [...homeKeywords, "加拿大生活工具箱", "留学生生活", "新移民生活"],
+    publishingPrinciples: `${site.url}/disclaimer`,
+  } as const;
+}
+
+export function buildWebSiteJsonLd() {
+  return {
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    name: site.name,
+    alternateName: [site.nameZh, "Canada newcomer guide", "加拿大新移民指南"],
+    url: site.url,
+    inLanguage: ["zh-CN", "en-CA"],
+    description: homeSeoDescription,
+    keywords: homeKeywords.join(", "),
+    publisher: { "@id": `${site.url}/#organization` },
+    about: [
+      { "@type": "Thing", name: "Canada newcomer guide" },
+      { "@type": "Thing", name: "加拿大新移民指南" },
+      { "@type": "Thing", name: "Cost of living in Canada" },
+      { "@type": "Thing", name: "加拿大生活成本" },
+    ],
+    isAccessibleForFree: true,
+  } as const;
+}
+
+export function buildBreadcrumbJsonLd(items: BreadcrumbSchemaItem[], currentPath?: string) {
+  const allItems = [{ label: "首页", href: "/" }, ...items];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: allItems.map((item, index) => {
+      const href = item.href ?? (index === allItems.length - 1 ? currentPath : undefined);
+      const itemUrl = href ? absoluteUrl(href) : undefined;
+
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.label,
+        ...(itemUrl ? { item: itemUrl } : {}),
+      };
+    }),
+  } as const;
+}
 
 export const homePageMetadata: Metadata = {
   title: homeSeoTitle,
@@ -73,29 +146,8 @@ export const homePageMetadata: Metadata = {
 export const homePageJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${site.url}/#organization`,
-      name: site.name,
-      alternateName: site.nameZh,
-      url: site.url,
-      logo: `${site.url}${defaultImage}`,
-      sameAs: [
-        "https://x.com/newcomerliving",
-        "https://www.facebook.com/profile.php?id=61591382335212",
-      ],
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${site.url}/#website`,
-      name: site.name,
-      alternateName: [site.nameZh, "Canada newcomer guide", "加拿大新移民指南"],
-      url: site.url,
-      inLanguage: ["zh-CN", "en-CA"],
-      description: homeSeoDescription,
-      keywords: homeKeywords.join(", "),
-      publisher: { "@id": `${site.url}/#organization` },
-    },
+    buildOrganizationJsonLd(),
+    buildWebSiteJsonLd(),
     {
       "@type": "WebPage",
       "@id": `${site.url}/#webpage`,
@@ -114,7 +166,7 @@ export const homePageJsonLd = {
         "@type": "Audience",
         audienceType: "Chinese-speaking newcomers, international students, and families in Canada",
       },
-      primaryImageOfPage: `${site.url}${defaultImage}`,
+      primaryImageOfPage: absoluteUrl(defaultImage),
       inLanguage: "zh-CN",
     },
   ],

@@ -93,7 +93,7 @@ export function ArticleLayout({ guide }: { guide: Guide }) {
         : null;
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: category?.titleZh ?? "指南", href: category ? `/categories/${category.slug}` : undefined }, { label: guide.title }]} />
+      <Breadcrumbs currentPath={`/guides/${guide.slug}`} items={[{ label: category?.titleZh ?? "指南", href: category ? `/categories/${category.slug}` : undefined }, { label: guide.title }]} />
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
         <article className="min-w-0">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">生活指南</p>

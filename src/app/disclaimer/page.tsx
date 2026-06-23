@@ -11,7 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function DisclaimerPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "免责声明" }]} />
+      <Breadcrumbs currentPath="/disclaimer" items={[{ label: "免责声明" }]} />
       <h1 className="text-4xl font-bold text-slate-950">免责声明</h1>
       <div className="mt-6 space-y-5 text-lg leading-8 text-slate-700">
         <p>Newcomer Living / 加拿大生活工具箱不是加拿大政府网站，也不代表任何政府机构、学校、银行、保险公司或专业服务机构。</p>

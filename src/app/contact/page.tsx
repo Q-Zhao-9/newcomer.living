@@ -14,7 +14,7 @@ const contactEmail = "service50183816@gmail.com";
 export default function ContactPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "联系我们" }]} />
+      <Breadcrumbs currentPath="/contact" items={[{ label: "联系我们" }]} />
       <section className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-teal-50 to-white p-8">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">Contact / 联系我们</p>
         <h1 className="mt-3 text-4xl font-bold text-slate-950">联系我们</h1>

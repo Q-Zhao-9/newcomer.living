@@ -25,7 +25,7 @@ const sections = [
 export default function OntarioSchoolPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "孩子上学", href: "/school" }, { label: "安省指南" }]} />
+      <Breadcrumbs currentPath="/school/ontario" items={[{ label: "孩子上学", href: "/school" }, { label: "安省指南" }]} />
       <section className="rounded-[2rem] bg-gradient-to-br from-teal-50 via-white to-emerald-50 p-8 sm:p-10">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">Ontario School Guide</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">Ontario School Guide / 安省孩子上学指南</h1>

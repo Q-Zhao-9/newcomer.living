@@ -14,7 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ToolsPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "工具" }]} />
+      <Breadcrumbs currentPath="/tools" items={[{ label: "工具" }]} />
       <section className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-teal-50 to-white p-8">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">工具清单</p>
         <h1 className="mt-3 text-4xl font-bold text-slate-950">加拿大生活工具</h1>

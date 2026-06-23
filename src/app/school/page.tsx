@@ -15,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function SchoolPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs items={[{ label: "孩子上学" }]} />
+      <Breadcrumbs currentPath="/school" items={[{ label: "孩子上学" }]} />
       <section className="rounded-[2rem] bg-gradient-to-br from-teal-50 via-white to-emerald-50 p-8 sm:p-10">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-700">School Guide</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">孩子在加拿大上学：家长指南</h1>
