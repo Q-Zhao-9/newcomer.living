@@ -9,6 +9,24 @@ export function Footer() {
         <div>
           <Logo size="footer" />
           <p className="mt-3 text-sm leading-6 text-slate-600">{site.tagline}</p>
+          <div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold">
+            <a
+              className="rounded-full border border-slate-200 bg-white px-3 py-2 text-slate-700 hover:border-teal-200 hover:text-teal-700"
+              href="https://x.com/newcomerliving"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X / Twitter
+            </a>
+            <a
+              className="rounded-full border border-slate-200 bg-white px-3 py-2 text-slate-700 hover:border-teal-200 hover:text-teal-700"
+              href="https://www.facebook.com/profile.php?id=61591382335212"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </div>
         </div>
         <div>
           <p className="font-semibold text-slate-900">常用工具</p>

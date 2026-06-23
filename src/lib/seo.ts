@@ -80,6 +80,10 @@ export const homePageJsonLd = {
       alternateName: site.nameZh,
       url: site.url,
       logo: `${site.url}${defaultImage}`,
+      sameAs: [
+        "https://x.com/newcomerliving",
+        "https://www.facebook.com/profile.php?id=61591382335212",
+      ],
     },
     {
       "@type": "WebSite",
