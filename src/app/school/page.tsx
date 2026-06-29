@@ -12,6 +12,29 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/school",
 });
 
+const schoolFaqs = [
+  {
+    question: "孩子刚到加拿大，可以马上注册学校吗？",
+    answer: "通常情况下，家长需要先确认居住地址对应的 school board，再按教育局要求提交身份证明、住址证明、监护人信息和免疫记录等材料。不同省份和教育局流程可能不同，建议以本地 school board 官方页面为准。",
+  },
+  {
+    question: "孩子英文不好，会不会影响入学？",
+    answer: "多数公立学校会接收需要英语支持的新生，并可能安排英语水平评估、ESL/ELL 支持或 newcomer support。具体支持方式由学校或教育局决定，注册时可以主动询问。",
+  },
+  {
+    question: "加拿大年级能不能直接按中国年级换算？",
+    answer: "不建议直接套用。学校通常会参考出生日期、目标入学年份、过往成绩、英语能力和适应情况。本站的年级估算器只能帮助家长做初步准备，最终安排仍以学校或教育局为准。",
+  },
+  {
+    question: "父母是学签或工签，孩子一定可以免费上学吗？",
+    answer: "这个问题与家庭身份、居住地、孩子情况和本地教育局规则有关，不能简单保证。涉及 study permit、国际学生费用或入学资格时，建议同时核对 IRCC 与 school board 官方说明。",
+  },
+  {
+    question: "现在只有安省内容，其他省份怎么办？",
+    answer: "本站目前优先把 Ontario 学校专题做完整。BC、Alberta、Manitoba 等省份的流程可能不同，家长可以先用本页理解加拿大中小学常见概念，再查看所在省份和本地教育局的官方资料。",
+  },
+];
+
 export default function SchoolPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
@@ -76,6 +99,23 @@ export default function SchoolPage() {
               <p className="mt-2 text-sm text-slate-500">更新日期：{guide.updatedAt} · {guide.readingTime}</p>
               <p className="mt-3 text-sm leading-6 text-slate-600">{guide.description}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 rounded-[2rem] border border-teal-100 bg-teal-50/60 p-6 sm:p-8">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">FAQ</p>
+        <h2 className="mt-2 text-3xl font-bold text-slate-950">常见问题</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">以下回答为一般信息参考，适合家长在联系本地教育局或学校前先建立基本框架。</p>
+        <div className="mt-6 space-y-3">
+          {schoolFaqs.map((item) => (
+            <details key={item.question} className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left text-lg font-semibold text-slate-950 marker:hidden">
+                <span>{item.question}</span>
+                <span className="mt-1 text-2xl leading-none text-teal-700 transition group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{item.answer}</p>
+            </details>
           ))}
         </div>
       </section>
