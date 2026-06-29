@@ -8,6 +8,7 @@ import "./globals.css";
 
 const notoSans = Noto_Sans_SC({ variable: "--font-noto-sans", subsets: ["latin"], display: "swap" });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const googleTagId = "G-H4CF922WW7";
 
 export const metadata: Metadata = buildRootMetadata();
 
@@ -15,6 +16,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="zh-CN" className={`${notoSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`} />
+        <script
+          id="google-tag-config"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${googleTagId}');
+            `,
+          }}
+        />
         <script
           id="microsoft-clarity"
           type="text/javascript"
